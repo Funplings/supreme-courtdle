@@ -42,6 +42,11 @@ export interface JusticeInfo {
   terms: JusticeTerm[];
 }
 
+export interface VoteCounts {
+  first: number;
+  second: number;
+}
+
 export interface AppState {
   date: string;
   caseKeys: string[];
@@ -50,4 +55,5 @@ export interface AppState {
   guesses: (Guess | null)[];
   score: number;
   phase: 'playing' | 'revealed' | 'finished';
+  voteCounts: VoteCounts | null;
 }

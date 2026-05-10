@@ -1,6 +1,8 @@
 import './style.css';
-import type { AppState, CaseData, Guess, JusticeInfo } from './types';
+import type { AppState, CaseData, Guess, JusticeInfo, VoteCounts } from './types';
 import { getDailyCase, updateStreak } from './game';
+
+const loadTime = Date.now();
 
 // ─── Justice data & name matching ────────────────────────────────────────────
 
@@ -285,6 +287,32 @@ function renderPartyButtons(c: CaseData): string {
   `;
 }
 
+function renderVoteBar(state: AppState): string {
+  const vc = state.voteCounts;
+  if (!vc) return '';
+  const c = state.cases[state.currentIndex];
+  const total = vc.first + vc.second;
+  if (total === 0) return '';
+  const firstPct  = Math.round((vc.first  / total) * 100);
+  const secondPct = 100 - firstPct;
+  const fp = c.first_party  ?? 'First Party';
+  const sp = c.second_party ?? 'Second Party';
+  return `
+    <div class="mt-4 fade-up">
+      <p class="text-xs uppercase tracking-widest text-stone-400 mb-2">How others voted</p>
+      <div class="flex rounded-full overflow-hidden h-5 text-[11px] font-semibold">
+        <div class="flex items-center justify-center bg-navy text-white transition-all"
+             style="width:${firstPct}%">${firstPct > 12 ? firstPct + '%' : ''}</div>
+        <div class="flex items-center justify-center bg-stone-200 text-stone-600 transition-all"
+             style="width:${secondPct}%">${secondPct > 12 ? secondPct + '%' : ''}</div>
+      </div>
+      <div class="flex justify-between text-[11px] text-stone-400 mt-1">
+        <span>${fp} — ${firstPct}%</span>
+        <span>${secondPct}% — ${sp}</span>
+      </div>
+    </div>`;
+}
+
 function renderRevealed(state: AppState): string {
   const c = state.cases[state.currentIndex];
   const guess = state.guesses[state.currentIndex];
@@ -311,6 +339,7 @@ function renderRevealed(state: AppState): string {
         <strong>${winnerName}</strong> prevailed over <strong>${loserName}</strong>.
       </p>
       ${conclusionHtml}
+      ${renderVoteBar(state)}
     </div>
     ${c.oyez_url ? `
       <a href="${c.oyez_url}" target="_blank" rel="noopener noreferrer"
@@ -344,18 +373,53 @@ function render(state: AppState): void {
   `;
 }
 
+// ─── API ─────────────────────────────────────────────────────────────────────
+
+async function fetchVoteCounts(docket: string): Promise<VoteCounts> {
+  try {
+    const res = await fetch(`/api/guess?docket=${encodeURIComponent(docket)}`);
+    if (!res.ok) return { first: 0, second: 0 };
+    return await res.json() as VoteCounts;
+  } catch {
+    return { first: 0, second: 0 };
+  }
+}
+
+async function postGuess(
+  date: string, docket: string, guess: Guess, correct: boolean, elapsed_ms: number,
+): Promise<VoteCounts> {
+  try {
+    const res = await fetch('/api/guess', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ date, docket, guess, correct, elapsed_ms }),
+    });
+    if (!res.ok) return { first: 0, second: 0 };
+    return await res.json() as VoteCounts;
+  } catch {
+    return { first: 0, second: 0 };
+  }
+}
+
 // ─── Events ──────────────────────────────────────────────────────────────────
 
-function handleGuess(state: AppState, side: Guess): AppState {
-  const correct = side === state.cases[state.currentIndex].winner;
+async function handleGuess(state: AppState, side: Guess): Promise<AppState> {
+  const c = state.cases[state.currentIndex];
+  const correct = side === c.winner;
   const guesses = [...state.guesses];
   guesses[state.currentIndex] = side;
   updateStreak(state.date);
+
+  const docket = state.caseKeys[state.currentIndex];
+  const elapsed_ms = Date.now() - loadTime;
+  const voteCounts = await postGuess(state.date, docket, side, correct, elapsed_ms);
+
   return {
     ...state,
     guesses,
     score: correct ? state.score + 1 : state.score,
     phase: 'revealed',
+    voteCounts,
   };
 }
 
@@ -379,6 +443,10 @@ async function init(): Promise<void> {
 
   if (stored && stored.date === today) {
     state = { ...stored, cases: dailyCases };
+    // Fetch current vote counts for returning visitors already in revealed state
+    if (state.phase === 'revealed' && !state.voteCounts) {
+      state = { ...state, voteCounts: await fetchVoteCounts(dailyKey) };
+    }
   } else {
     state = {
       date: today,
@@ -388,18 +456,19 @@ async function init(): Promise<void> {
       guesses: new Array<Guess | null>(dailyCases.length).fill(null),
       score: 0,
       phase: 'playing',
+      voteCounts: null,
     };
   }
 
   render(state);
 
   // Event delegation on document
-  document.addEventListener('click', (e) => {
+  document.addEventListener('click', async (e) => {
     const btn = (e.target as Element).closest<HTMLElement>('[data-action]');
     if (!btn) return;
 
     if (btn.dataset.action === 'guess') {
-      state = handleGuess(state, btn.dataset.side as Guess);
+      state = await handleGuess(state, btn.dataset.side as Guess);
     }
 
     saveState(state);
