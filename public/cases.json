@@ -1,286 +1,32 @@
 {
-  "5us137": {
-    "oyez_url": "https://www.oyez.org/cases/1789-1850/5us137",
-    "first_party": "William Marbury",
-    "second_party": "James Madison, Secretary of State",
+  "1940-1955/343us579": {
+    "oyez_url": "https://www.oyez.org/cases/1940-1955/343us579",
+    "first_party": "Youngstown Sheet & Tube Company",
+    "second_party": "Charles Sawyer, Secretary of Commerce",
     "first_party_label": "Petitioner",
     "second_party_label": "Respondent",
-    "name": "Marbury v. Madison",
-    "docket_number": "5us137",
-    "manner_of_jurisdiction": "Original jurisdiction",
-    "facts_of_the_case": "<p>Thomas Jefferson defeated John Adams in the 1800 presidential election. Before Jefferson took office on March 4, 1801, Adams and Congress passed the Judiciary Act of 1801, which created new courts, added judges, and gave the president more control over appointment of judges. The Act was essentially an attempt by Adams and his party to frustrate his successor, as he used the act to appoint 16 new circuit judges and 42 new justices of the peace. The appointees were approved by the Senate, but they would not be valid until their commissions were delivered by the Secretary of State.\u00a0</p>\n<p>William Marbury had been appointed Justice of the Peace in the District of Columbia, but his commission was not delivered. Marbury petitioned the Supreme Court to compel the new Secretary of State, James Madison, to deliver the documents. Marbury, joined by three other similarly situated appointees, petitioned for a writ of mandamus compelling the delivery of the commissions.\u00a0</p>\n",
-    "question": "<ol><li>Do the plaintiffs have a right to receive their commissions?</li>\n<li>Can they sue for their commissions in court?</li>\n<li>Does the Supreme Court have the authority to order the delivery of their commissions?</li>\n</ol>",
-    "conclusion": "<p>The Court found that Madison\u2019s refusal to deliver the commission was illegal, but did not order Madison to hand over Marbury\u2019s commission via writ of mandamus. Instead, the Court held that the provision of the Judiciary Act of 1789 enabling Marbury to bring his claim to the Supreme Court was itself unconstitutional, since it purported to extend the Court\u2019s original jurisdiction beyond that which Article III, Section 2, established.\u00a0</p>\n<p>Marshall expanded that a writ of mandamus was the proper way to seek a remedy, but concluded the Court could not issue it. Marshall reasoned that the Judiciary Act of 1789 conflicted with the Constitution. Congress did not have power to modify the Constitution through regular legislation because Supremacy Clause places the Constitution before the laws.\u00a0</p>\n<p>In so holding, Marshall established the principle of judicial review, i.e., the power to declare a law unconstitutional.\u00a0</p>\n",
-    "winner": "first",
-    "decisions": [
-      {
-        "description": "Though Marbury was entitled to it, the Court was unable to grant it because Section 13 of the Judiciary Act of 1789 conflicted with Article III Section 2 of the U.S. Constitution and was therefore null and void.",
-        "winning_party": "Marbury",
-        "votes": [
-          {
-            "name": "John Marshall",
-            "vote": "majority"
-          },
-          {
-            "name": "William Paterson",
-            "vote": "majority"
-          },
-          {
-            "name": "Samuel Chase",
-            "vote": "majority"
-          },
-          {
-            "name": "Bushrod Washington",
-            "vote": "majority"
-          },
-          {
-            "name": "Alfred Moore",
-            "vote": "none"
-          },
-          {
-            "name": "William Cushing",
-            "vote": "none"
-          }
-        ]
-      }
-    ]
-  },
-  "17us316": {
-    "oyez_url": "https://www.oyez.org/cases/1789-1850/17us316",
-    "first_party": "McCulloch",
-    "second_party": "Maryland",
-    "first_party_label": "Petitioner",
-    "second_party_label": "Respondent",
-    "name": "McCulloch v. Maryland",
-    "docket_number": "17us316",
+    "name": "Youngstown Sheet & Tube Company v. Sawyer",
+    "docket_number": "744",
     "manner_of_jurisdiction": "Writ of certiorari",
-    "facts_of_the_case": "<p>In 1816, Congress chartered The Second Bank of the United States. In 1818, the state of Maryland passed legislation to impose taxes on the bank. James W. McCulloch, the cashier of the Baltimore branch of the bank, refused to pay the tax. The state appeals court held that the Second Bank was unconstitutional because the Constitution did not provide a textual commitment for the federal government to charter a bank.\u00a0</p>\n",
-    "question": "<ol><li>Did Congress have the authority to establish the bank?</li>\n<li>Did the Maryland law unconstitutionally interfere with congressional powers?</li>\n</ol>",
-    "conclusion": "<p>In a unanimous decision, the Court held that Congress had the power to incorporate the bank and that Maryland could not tax instruments of the national government employed in the execution of constitutional powers.\u00a0</p>\n<p>Pursuant to the Necessary and Proper Clause (Art. I, Section 8), Chief Justice Marshall noted that Congress possessed powers not explicitly outlined in the U.S. Constitution. Marshall redefined \u201cnecessary\u201d to mean \u201cappropriate and legitimate,\u201d covering all methods for furthering objectives covered by the enumerated powers.\u00a0 Marshall also held that while the states retained the power of taxation, the Constitution and the laws made in pursuance thereof are supreme and cannot be controlled by the states.\u00a0</p>\n<p>\u00a0</p>\n",
+    "facts_of_the_case": "<p>In April of 1952, during the Korean War, President Truman issued an executive order directing Secretary of Commerce Charles Sawyer to seize and operate most of the nation's steel mills. This was done in order to avert the expected effects of a strike by the United Steelworkers of America.</p>\n",
+    "question": "<p>Did the President have the constitutional authority to seize and operate the steel mills?</p>\n",
+    "conclusion": "<p>In a 6-to-3 decision, the Court held that the President did not have the authority to issue such an order. The Court found that there was no congressional statute that authorized the President to take possession of private property. The Court also held that the President's military power as Commander in Chief of the Armed Forces did not extend to labor disputes. The Court argued that \"the President's power to see that the laws are faithfully executed refutes the idea that he is to be a lawmaker.\"</p>\n",
     "winner": "first",
     "decisions": [
       {
-        "description": "Congress has the power under the Necessary and Proper Clause to charter the second Bank of the United States.",
-        "winning_party": "McCulloch",
+        "description": "The president lacks constitutional authority to seize and operate the steel mills",
+        "winning_party": "Youngstown Sheet & Tube",
         "votes": [
-          {
-            "name": "John Marshall",
-            "vote": "majority"
-          },
-          {
-            "name": "Bushrod Washington",
-            "vote": "majority"
-          },
-          {
-            "name": "William Johnson",
-            "vote": "majority"
-          },
-          {
-            "name": "Henry Brockholst Livingston",
-            "vote": "majority"
-          },
-          {
-            "name": "Gabriel Duvall",
-            "vote": "majority"
-          },
-          {
-            "name": "Joseph Story",
-            "vote": "majority"
-          },
-          {
-            "name": "Thomas Todd",
-            "vote": "none"
-          }
-        ]
-      },
-      {
-        "description": "Maryland may not impose a tax on the bank.",
-        "winning_party": "McCulloch",
-        "votes": [
-          {
-            "name": "John Marshall",
-            "vote": "majority"
-          },
-          {
-            "name": "Bushrod Washington",
-            "vote": "majority"
-          },
-          {
-            "name": "William Johnson",
-            "vote": "majority"
-          },
-          {
-            "name": "Henry Brockholst Livingston",
-            "vote": "majority"
-          },
-          {
-            "name": "Gabriel Duvall",
-            "vote": "majority"
-          },
-          {
-            "name": "Joseph Story",
-            "vote": "majority"
-          },
-          {
-            "name": "Thomas Todd",
-            "vote": "none"
-          }
-        ]
-      }
-    ]
-  },
-  "None": {
-    "oyez_url": "https://www.oyez.org/cases/1850-1900/60us393",
-    "first_party": "Dred Scott",
-    "second_party": "John F. A. Sanford",
-    "first_party_label": "Petitioner",
-    "second_party_label": "Respondent",
-    "name": "Dred Scott v. Sandford",
-    "docket_number": "None",
-    "manner_of_jurisdiction": "Other",
-    "facts_of_the_case": "<p>Dred Scott was a slave in Missouri. From 1833 to 1843, he resided in Illinois (a free state) and in the Louisiana Territory, where slavery was forbidden by the Missouri Compromise of 1820. After returning to Missouri, Scott filed suit in Missouri court for his freedom, claiming that his residence in free territory made him a free man. After losing, Scott brought a new suit in federal court. Scott's master maintained that no \u201cnegro\u201d or descendant of slaves could be a citizen in the sense of Article III of the Constitution.</p>\n",
-    "question": "<p>Was Dred Scott free or a slave?</p>\n",
-    "conclusion": "<p>The majority held that \u201ca negro, whose ancestors were imported into [the U.S.], and sold as slaves,\u201d whether enslaved or free, could not be an American citizen and therefore did not have standing to sue in federal court. Because the Court lacked jurisdiction, Taney dismissed the case on procedural grounds.</p>\n<p>Taney further held that the Missouri Compromise of 1820 was unconstitutional and foreclose Congress from freeing slaves within Federal territories. The opinion showed deference to the Missouri courts, which held that moving to a free state did not render Scott emancipated. Finally, Taney ruled that slaves were property under the Fifth Amendment, and that any law that would deprive a slave owner of that property was unconstitutional.\u00a0</p>\n<p>In dissent, Benjamin Robbins Curtis criticized Taney for addressing the claim\u2019s substance after finding the Court lacked jurisdiction. He pointed out that invalidating the Missouri Compromise was not necessary to resolve the case, and cast doubt on Taney\u2019s position that the Founders categorically opposed anti-slavery laws.\u00a0</p>\n<p>John McLean echoed Curtis, finding the majority improperly reviewed the claim\u2019s substance when its holding should have been limited to procedure. He also argued that men of African descent could be citizens because they already had the right to vote in five states.\u00a0</p>\n<p>\u00a0</p>\n",
-    "winner": "second",
-    "decisions": [
-      {
-        "description": "Held portions of the Missouri Compromise unconstitutional in violation of the Fifth Amendment, treating Scott as property, not as a person.",
-        "winning_party": "Sanford",
-        "votes": [
-          {
-            "name": "Roger B. Taney",
-            "vote": "majority"
-          },
-          {
-            "name": "James M. Wayne",
-            "vote": "majority"
-          },
-          {
-            "name": "Samuel Nelson",
-            "vote": "majority"
-          },
-          {
-            "name": "Robert C. Grier",
-            "vote": "majority"
-          },
-          {
-            "name": "John Catron",
-            "vote": "majority"
-          },
-          {
-            "name": "Peter V. Daniel",
-            "vote": "majority"
-          },
-          {
-            "name": "John A. Campbell",
-            "vote": "majority"
-          },
-          {
-            "name": "Benjamin R. Curtis",
-            "vote": "minority"
-          },
-          {
-            "name": "John McLean",
-            "vote": "minority"
-          }
-        ]
-      }
-    ]
-  },
-  "210": {
-    "oyez_url": "https://www.oyez.org/cases/1850-1900/163us537",
-    "first_party": "Homer Adolph Plessy",
-    "second_party": "John Ferguson",
-    "first_party_label": "Petitioner",
-    "second_party_label": "Respondent",
-    "name": "Plessy v. Ferguson",
-    "docket_number": "210",
-    "manner_of_jurisdiction": "Writ of certiorari",
-    "facts_of_the_case": "<p>Louisiana enacted the Separate Car Act, which required separate railway cars for blacks and whites. In 1892, Homer Plessy \u2013 who was seven-eighths Caucasian \u2013 agreed to participate in a test to challenge the Act. He was solicited by the Comite des Citoyens (Committee of Citizens), a group of New Orleans residents who sought to repeal the Act. They asked Plessy, who was technically black under Louisiana law, to sit in a \"whites only\" car of a Louisiana train.\u00a0</p>\n<p>The railroad cooperated because it thought the Act imposed unnecessary costs via the purchase of additional railroad cars. When Plessy was told to vacate the whites-only car, he refused and was arrested.\u00a0</p>\n<p>At trial, Plessy\u2019s lawyers argued that the Separate Car Act violated the Thirteenth and Fourteenth Amendments. The judge found that Louisiana could enforce this law insofar as it affected railroads within its boundaries. Plessy was convicted.</p>\n",
-    "question": "<p>Does the Separate Car Act violate the Fourteenth Amendment?\u00a0</p>\n",
-    "conclusion": "<p>The Court held that the state law was constitutional. In an opinion authored by Justice Henry Billings Brown, the majority upheld state-imposed racial segregation. Justice Brown conceded that the 14th Amendment intended to establish absolute equality for the races before the law, but held that separate treatment did not imply the inferiority of African Americans.</p>\n<p>In short, segregation did not in itself constitute unlawful discrimination.</p>\n<p>In dissent, John Marshall Harlan argued that the Constitution was color-blind and that the United States had no class system. Accordingly, all citizens should have equal access to civil rights.\u00a0</p>\n<p>\u00a0</p>\n",
-    "winner": "second",
-    "decisions": [
-      {
-        "description": "Equal but separate accommodations for whites and blacks  imposed by Louisiana do not violate the Equal Protection Clause of the Fourteenth Amendment",
-        "winning_party": "Ferguson",
-        "votes": [
-          {
-            "name": "Henry B. Brown",
-            "vote": "majority"
-          },
-          {
-            "name": "Melville W. Fuller",
-            "vote": "majority"
-          },
-          {
-            "name": "Stephen J. Field",
-            "vote": "majority"
-          },
-          {
-            "name": "Horace Gray",
-            "vote": "majority"
-          },
-          {
-            "name": "George Shiras, Jr.",
-            "vote": "majority"
-          },
-          {
-            "name": "Edward D. White",
-            "vote": "majority"
-          },
-          {
-            "name": "Rufus Peckham",
-            "vote": "majority"
-          },
-          {
-            "name": "John M. Harlan",
-            "vote": "minority"
-          },
-          {
-            "name": "David J. Brewer",
-            "vote": "none"
-          }
-        ]
-      }
-    ]
-  },
-  "1": {
-    "oyez_url": "https://www.oyez.org/cases/1940-1955/347us483",
-    "first_party": "Oliver Brown, Mrs. Richard Lawton, Mrs. Sadie Emmanuel, et al.",
-    "second_party": "Board of Education of Topeka, Shawnee County, Kansas, et al.",
-    "first_party_label": "Appellant",
-    "second_party_label": "Appellee",
-    "name": "Brown v. Board of Education of Topeka (1)",
-    "docket_number": "1",
-    "manner_of_jurisdiction": "Appeal",
-    "facts_of_the_case": "<p>This case was the consolidation of cases arising in Kansas, South Carolina, Virginia, Delaware, and Washington D.C. relating to the segregation of public schools on the basis of race. In each of the cases, African American students had been denied admittance to certain public schools based on laws allowing public education to be segregated by race. They argued that such segregation violated the Equal Protection Clause of the Fourteenth Amendment. The plaintiffs were denied relief in the lower courts based on <em>Plessy v. Ferguson</em>, which held that racially segregated public facilities were legal so long as the facilities for blacks and whites were equal. (This was known as the \u201cseparate but equal\u201d doctrine.)\u00a0</p>\n",
-    "question": "<p>Does the segregation of public education based solely on race violate the Equal Protection Clause of the Fourteenth Amendment?</p>\n",
-    "conclusion": "<p>Separate but equal educational facilities for racial minorities is inherently unequal, violating the Equal Protection Clause of the Fourteenth Amendment.</p>\n<p>Chief Justice Earl Warren delivered the opinion of the unanimous Court. The Supreme Court held that \u201cseparate but equal\u201d facilities are inherently unequal and violate the protections of the Equal Protection Clause of the Fourteenth Amendment. The Court reasoned that the segregation of public education based on race instilled a sense of inferiority that had a hugely detrimental effect on the education and personal growth of African American children. Warren based much of his opinion on information from social science studies rather than court precedent. The decision also used language that was relatively accessible to non-lawyers because Warren felt it was necessary for all Americans to understand its logic.\u00a0</p>\n<p>\u00a0</p>\n",
-    "winner": "first",
-    "decisions": [
-      {
-        "description": "Separate but equal educational facilities for racial minorities is inherently unequal violating the Equal Protection Clause of the Fourteenth Amendment",
-        "winning_party": "Brown et al.",
-        "votes": [
-          {
-            "name": "Earl Warren",
-            "vote": "majority"
-          },
           {
             "name": "Hugo L. Black",
             "vote": "majority"
           },
           {
-            "name": "Stanley Reed",
+            "name": "William O. Douglas",
             "vote": "majority"
           },
           {
             "name": "Felix Frankfurter",
-            "vote": "majority"
-          },
-          {
-            "name": "William O. Douglas",
             "vote": "majority"
           },
           {
@@ -296,601 +42,425 @@
             "vote": "majority"
           },
           {
+            "name": "Fred M. Vinson",
+            "vote": "minority"
+          },
+          {
+            "name": "Stanley Reed",
+            "vote": "minority"
+          },
+          {
             "name": "Sherman Minton",
-            "vote": "majority"
+            "vote": "minority"
           }
         ]
       }
     ]
   },
-  "155": {
-    "oyez_url": "https://www.oyez.org/cases/1962/155",
-    "first_party": "Clarence Earl Gideon",
-    "second_party": "Louie L. Wainwright, Director, Division of Corrections",
+  "1940-1955/316us535": {
+    "oyez_url": "https://www.oyez.org/cases/1940-1955/316us535",
+    "first_party": "Skinner",
+    "second_party": "Oklahoma ex rel. Williamson",
     "first_party_label": "Petitioner",
     "second_party_label": "Respondent",
-    "name": "Gideon v. Wainwright",
-    "docket_number": "155",
+    "name": "Skinner v. Oklahoma ex rel. Williamson",
+    "docket_number": "782",
     "manner_of_jurisdiction": "Writ of certiorari",
-    "facts_of_the_case": "<p>Clarence Earl Gideon was charged in Florida state court with felony breaking and entering. When he appeared in court without a lawyer, Gideon requested that the court appoint one for him. According to Florida state law, however, an attorney may only be appointed to an indigent defendant in capital cases, so the trial court did not appoint one. Gideon represented himself in trial. He was found guilty and sentenced to five years in prison. Gideon filed a habeas corpus petition in the Florida Supreme Court, arguing that the trial court's decision violated his constitutional right to be represented by counsel. The Florida Supreme Court denied habeas corpus relief.</p>\n",
-    "question": "<p>Does the Sixth Amendment's right to counsel in criminal cases extend to felony defendants in state courts?</p>\n",
-    "conclusion": "<p>The Sixth Amendment's guarantee of a right to assistance of counsel applies to criminal defendants in state court by way of the Fourteenth Amendment.</p>\n<p>In a unanimous opinion authored by Justice Hugo L. Black, the Court held that it was consistent with the Constitution to require state courts to appoint attorneys for defendants who could not afford to retain counsel on their own. The Court reasoned that the Sixth Amendment's guarantee of counsel is a fundamental and essential right made obligatory upon the states by the Fourteenth Amendment. The Sixth Amendment guarantees the accused the right to the assistance of counsel in all criminal prosecutions and requires courts to provide counsel for defendants unable to hire counsel unless the right was competently and intelligently waived.\u00a0</p>\n<p>Justice Douglas, while joining the Court's opinion, elaborated, in a separate opinion, the relation between the Bill of Rights and the first section of the Fourteenth Amendment.</p>\n<p>Justices Clark and Harlan concurred in separate decisions.\u00a0</p>\n<p>\u00a0</p>\n",
-    "winner": "first",
-    "decisions": [
-      {
-        "description": null,
-        "winning_party": "Clarence Earl Gideon",
-        "votes": [
-          {
-            "name": "John M. Harlan II",
-            "vote": "majority"
-          },
-          {
-            "name": "Hugo L. Black",
-            "vote": "majority"
-          },
-          {
-            "name": "William O. Douglas",
-            "vote": "majority"
-          },
-          {
-            "name": "Potter Stewart",
-            "vote": "majority"
-          },
-          {
-            "name": "William J. Brennan, Jr.",
-            "vote": "majority"
-          },
-          {
-            "name": "Byron R. White",
-            "vote": "majority"
-          },
-          {
-            "name": "Earl Warren",
-            "vote": "majority"
-          },
-          {
-            "name": "Tom C. Clark",
-            "vote": "majority"
-          },
-          {
-            "name": "Arthur J. Goldberg",
-            "vote": "majority"
-          }
-        ]
-      }
-    ]
-  },
-  "759": {
-    "oyez_url": "https://www.oyez.org/cases/1965/759",
-    "first_party": "Miranda",
-    "second_party": "Arizona",
-    "first_party_label": "Petitioner",
-    "second_party_label": "Respondent",
-    "name": "Miranda v. Arizona",
-    "docket_number": "759",
-    "manner_of_jurisdiction": "Writ of certiorari",
-    "facts_of_the_case": "<p>This case represents the consolidation of four cases, in each of which the defendant confessed guilt after being subjected to a variety of interrogation techniques without being informed of his Fifth Amendment rights during an interrogation.</p>\n<p>On March 13, 1963, Ernesto Miranda was arrested in his house and brought to the police station where he was questioned by police officers in connection with a kidnapping and rape. After two hours of interrogation, the police obtained a written confession from Miranda. The written confession was admitted into evidence at trial despite the objection of the defense attorney and the fact that the police officers admitted that they had not advised Miranda of his right to have an attorney present during the interrogation. The jury found Miranda guilty. On appeal, the Supreme Court of Arizona affirmed and held that Miranda\u2019s constitutional rights were not violated because he did not specifically request counsel.</p>\n",
-    "question": "<p>Does the Fifth Amendment\u2019s protection against self-incrimination extend to the police interrogation of a suspect?</p>\n",
-    "conclusion": "<p>The Fifth Amendment requires that law enforcement officials advise suspects of their right to remain silent and to obtain an attorney during interrogations while in police custody.</p>\n<p>Chief Justice Earl Warren delivered the opinion of the 5-4 majority, concluding that defendant\u2019s interrogation violated the Fifth Amendment. To protect the privilege, the Court reasoned, procedural safeguards were required. A defendant was required to be warned before questioning that he had the right to remain silent, and that anything he said can be used against him in a court of law. A defendant was required to be told that he had the right to an attorney, and if he could not afford an attorney, one was to be appointed for him prior to any questioning if he so desired. After these warnings were given, a defendant could knowingly and intelligently waive these rights and agree to answer questions or make a statement. Evidence obtained as a result of interrogation was not to be used against a defendant at trial unless the prosecution demonstrated the warnings were given, and knowingly and intelligently waived.\u00a0</p>\n<p>Justice Tom C. Clark wrote a dissenting opinion in which he argued that the majority\u2019s opinion created an unnecessarily strict interpretation of the Fifth Amendment that curtails the ability of the police to effectively execute their duties. He wrote that the state should have the burden to prove that the suspect was aware of his rights during the interrogation, but that statements resulting from interrogation should not be automatically excluded if the suspect was not explicitly informed of his rights. In his separate dissenting opinion, Justice John M. Harlan wrote that the judicial precedent and legislative history surrounding the Fifth Amendment does not support the view that the Fifth Amendment prohibits all pressure on the suspect. He also argued that there was no legal precedent to support the requirement to specifically inform suspects of their rights. Justices Potter Stewart and Byron R. White joined in the dissent.</p>\n<p>Justice White wrote a separate dissent in which he argued that the Fifth Amendment only protects defendants from giving self-incriminating testimony if explicitly compelled to do so. He argued that custodial interrogation was not inherently coercive and did not require such a broad interpretation of the protections of the Fifth Amendment. Such an interpretation harms the criminal process by destroying the credibility of confessions. Justices Harlan and Stewart joined in the dissenting opinion.</p>\n",
-    "winner": "first",
-    "decisions": [
-      {
-        "description": "The Fifth Amendment requires that law enforcement officials advise suspects of their right to remain silent and to obtain an attorney during interrogations while in police custody.",
-        "winning_party": "Miranda",
-        "votes": [
-          {
-            "name": "Earl Warren",
-            "vote": "majority"
-          },
-          {
-            "name": "Hugo L. Black",
-            "vote": "majority"
-          },
-          {
-            "name": "William O. Douglas",
-            "vote": "majority"
-          },
-          {
-            "name": "William J. Brennan, Jr.",
-            "vote": "majority"
-          },
-          {
-            "name": "Abe Fortas",
-            "vote": "majority"
-          },
-          {
-            "name": "Tom C. Clark",
-            "vote": "minority"
-          },
-          {
-            "name": "John M. Harlan II",
-            "vote": "minority"
-          },
-          {
-            "name": "Potter Stewart",
-            "vote": "minority"
-          },
-          {
-            "name": "Byron R. White",
-            "vote": "minority"
-          }
-        ]
-      }
-    ]
-  },
-  "39": {
-    "oyez_url": "https://www.oyez.org/cases/1963/39",
-    "first_party": "New York Times Company",
-    "second_party": "Sullivan",
-    "first_party_label": "Petitioner",
-    "second_party_label": "Respondent",
-    "name": "New York Times Company v. Sullivan",
-    "docket_number": "39",
-    "manner_of_jurisdiction": "Writ of certiorari",
-    "facts_of_the_case": "<p>During the Civil Rights movement of the 1960s, the <em>New York Times</em> published an ad for contributing donations to defend Martin Luther King, Jr., on perjury charges. The ad contained several minor factual inaccuracies. The city Public Safety Commissioner, L.B. Sullivan, felt that the criticism of his subordinates reflected on him, even though he was not mentioned in the ad. Sullivan sent a written request to the <em>Times</em> to publicly retract the information, as required for a public figure to seek punitive damages in a libel action under Alabama law.\u00a0</p>\n<p>When the <em>Times</em> refused and claimed that they were puzzled by the request, Sullivan filed a libel action against the <em>Times</em> and a group of African American ministers mentioned in the ad. A jury in state court awarded him $500,000 in damages. The state supreme court affirmed and the <em>Times</em> appealed.\u00a0</p>\n",
-    "question": "<p>Did Alabama's libel law unconstitutionally infringe on the First Amendment's freedom of speech and freedom of press protections?</p>\n",
-    "conclusion": "<p>To sustain a claim of defamation or libel, the First Amendment requires that the plaintiff show that the defendant knew that a statement was false or was reckless in deciding to publish the information without investigating whether it was accurate.\u00a0</p>\n<p>In a unanimous opinion authored by Justice Brennan, the Court ruled for the <em>Times</em>. When a statement concerns a public figure, the Court held, it is not enough to show that it is false for the press to be liable for libel. Instead, the target of the statement must show that it was made with knowledge of or reckless disregard for its falsity. Brennan used the term \"actual malice\" to summarize this standard, although he did not intend the usual meaning of a malicious purpose. In libel law, \u201cmalice\u201d had meant knowledge or gross recklessness rather than intent, since courts found it difficult to imagine that someone would knowingly disseminate false information without a bad intent.\u00a0</p>\n",
-    "winner": "first",
-    "decisions": [
-      {
-        "description": null,
-        "winning_party": "New York Times Company",
-        "votes": [
-          {
-            "name": "John M. Harlan II",
-            "vote": "majority"
-          },
-          {
-            "name": "Hugo L. Black",
-            "vote": "majority"
-          },
-          {
-            "name": "William O. Douglas",
-            "vote": "majority"
-          },
-          {
-            "name": "Potter Stewart",
-            "vote": "majority"
-          },
-          {
-            "name": "William J. Brennan, Jr.",
-            "vote": "majority"
-          },
-          {
-            "name": "Byron R. White",
-            "vote": "majority"
-          },
-          {
-            "name": "Earl Warren",
-            "vote": "majority"
-          },
-          {
-            "name": "Tom C. Clark",
-            "vote": "majority"
-          },
-          {
-            "name": "Arthur J. Goldberg",
-            "vote": "majority"
-          }
-        ]
-      }
-    ]
-  },
-  "395": {
-    "oyez_url": "https://www.oyez.org/cases/1966/395",
-    "first_party": "Loving et ux.",
-    "second_party": "Virginia",
-    "first_party_label": "Appellant",
-    "second_party_label": "Appellee",
-    "name": "Loving v. Virginia",
-    "docket_number": "395",
-    "manner_of_jurisdiction": "Appeal",
-    "facts_of_the_case": "<p>In 1958, two residents of Virginia, Mildred Jeter, a black woman, and Richard Loving, a white man, were married in the District of Columbia. The Lovings returned to Virginia shortly thereafter. The couple was then charged with violating the state's antimiscegenation statute, which banned inter-racial marriages. The Lovings were found guilty and sentenced to a year in jail (the trial judge agreed to suspend the sentence if the Lovings would leave Virginia and not return for 25 years).</p>\n",
-    "question": "<p>Did Virginia's antimiscegenation law violate the Equal Protection Clause of the Fourteenth Amendment?</p>\n",
-    "conclusion": "<p>Yes. In a unanimous decision, the Court held that distinctions drawn according to race were generally \"odious to a free people\" and were subject to \"the most rigid scrutiny\" under the Equal Protection Clause. The Virginia law, the Court found, had no legitimate purpose \"independent of invidious racial discrimination.\" The Court rejected the state's argument that the statute was legitimate because it applied equally to both blacks and whites and found that racial classifications were not subject to a \"rational purpose\" test under the Fourteenth Amendment. The Court also held that the Virginia law violated the Due Process Clause of the Fourteenth Amendment. \"Under our Constitution,\" wrote Chief Justice Earl Warren, \"the freedom to marry, or not marry, a person of another race resides with the individual, and cannot be infringed by the State.\"</p>\n",
-    "winner": "first",
-    "decisions": [
-      {
-        "description": null,
-        "winning_party": "Loving",
-        "votes": [
-          {
-            "name": "John M. Harlan II",
-            "vote": "majority"
-          },
-          {
-            "name": "Hugo L. Black",
-            "vote": "majority"
-          },
-          {
-            "name": "William O. Douglas",
-            "vote": "majority"
-          },
-          {
-            "name": "Potter Stewart",
-            "vote": "majority"
-          },
-          {
-            "name": "William J. Brennan, Jr.",
-            "vote": "majority"
-          },
-          {
-            "name": "Byron R. White",
-            "vote": "majority"
-          },
-          {
-            "name": "Earl Warren",
-            "vote": "majority"
-          },
-          {
-            "name": "Tom C. Clark",
-            "vote": "majority"
-          },
-          {
-            "name": "Abe Fortas",
-            "vote": "majority"
-          }
-        ]
-      }
-    ]
-  },
-  "70-18": {
-    "oyez_url": "https://www.oyez.org/cases/1971/70-18",
-    "first_party": "Jane Roe",
-    "second_party": "Henry Wade",
-    "first_party_label": "Appellant",
-    "second_party_label": "Appellee",
-    "name": "Roe v. Wade",
-    "docket_number": "70-18",
-    "manner_of_jurisdiction": "Appeal",
-    "facts_of_the_case": "<p>In 1970, Jane Roe (a fictional name used in court documents to protect the plaintiff\u2019s identity) filed a lawsuit against Henry Wade, the district attorney of Dallas County, Texas, where she resided, challenging a Texas law making abortion illegal except by a doctor\u2019s orders to save a woman\u2019s life. In her lawsuit, Roe alleged that the state laws were unconstitutionally vague and abridged her right of personal privacy, protected by the First, Fourth, Fifth, Ninth, and Fourteenth Amendments.</p>\n",
-    "question": "<p>Does the Constitution recognize a woman's right to terminate her pregnancy by abortion?</p>\n",
-    "conclusion": "<p>Inherent in the Due Process Clause of the Fourteenth Amendment is a fundamental \u201cright to privacy\u201d that protects a pregnant woman\u2019s choice whether to have an abortion. However, this right is balanced against the government\u2019s interests in protecting women's health and protecting \u201cthe potentiality of human life.\u201d The Texas law challenged in this case violated this right.</p>\n<p>Justice Harry Blackmun delivered the opinion for the 7-2 majority of the Court.</p>\n<p>First, the Court considered whether the case was moot, concluding that it was not. When the subject of litigation is \u201ccapable of repetition yet evading review,\u201d a case need not be dismissed as moot. Pregnancy is a \u201cclassic justification for a conclusion of nonmootness.\u201d</p>\n<p>The Due Process Clause of the Fourteenth Amendment protects against state action the right to privacy, and a woman\u2019s right to choose to have an abortion falls within that right to privacy. A state law that broadly prohibits abortion without respect to the stage of pregnancy or other interests violates that right. Although the state has legitimate interests in protecting the health of pregnant women and the \u201cpotentiality of human life,\u201d the relative weight of each of these interests varies over the course of pregnancy, and the law must account for this variability.</p>\n<p>In the first trimester of pregnancy, the state may not regulate the abortion decision; only the pregnant woman and her attending physician can make that decision. In the second trimester, the state may impose regulations on abortion that are reasonably related to maternal health. In the third trimester, once the fetus reaches the point of \u201cviability,\u201d a state may regulate abortions or prohibit them entirely, so long as the laws contain exceptions for cases when abortion is necessary to save the life or health of the mother.</p>\n",
-    "winner": "first",
-    "decisions": [
-      {
-        "description": null,
-        "winning_party": "Jane Roe",
-        "votes": [
-          {
-            "name": "William O. Douglas",
-            "vote": "majority"
-          },
-          {
-            "name": "Potter Stewart",
-            "vote": "majority"
-          },
-          {
-            "name": "Thurgood Marshall",
-            "vote": "majority"
-          },
-          {
-            "name": "William J. Brennan, Jr.",
-            "vote": "majority"
-          },
-          {
-            "name": "Byron R. White",
-            "vote": "minority"
-          },
-          {
-            "name": "Warren E. Burger",
-            "vote": "majority"
-          },
-          {
-            "name": "Harry A. Blackmun",
-            "vote": "majority"
-          },
-          {
-            "name": "Lewis F. Powell, Jr.",
-            "vote": "majority"
-          },
-          {
-            "name": "William H. Rehnquist",
-            "vote": "minority"
-          }
-        ]
-      }
-    ]
-  },
-  "73-1766": {
-    "oyez_url": "https://www.oyez.org/cases/1973/73-1766",
-    "first_party": "United States",
-    "second_party": "Richard M. Nixon, et al.",
-    "first_party_label": "Petitioner",
-    "second_party_label": "Respondent",
-    "name": "United States v. Nixon",
-    "docket_number": "73-1766",
-    "manner_of_jurisdiction": "Writ of certiorari",
-    "facts_of_the_case": "<p>A grand jury returned indictments against seven of President Richard Nixon's closest aides in the Watergate affair. The special prosecutor appointed by Nixon and the defendants sought audio tapes of conversations recorded by Nixon in the Oval Office. Nixon asserted that he was immune from the subpoena claiming \"executive privilege,\" which is the right to withhold information from other government branches to preserve confidential communications within the executive branch or to secure the national interest. Decided together with Nixon v. United States.</p>\n",
-    "question": "<p>Is the President's right to safeguard certain information, using his \"executive privilege\" confidentiality power, entirely immune from judicial review?</p>\n",
-    "conclusion": "<p>No. The Court held that neither the doctrine of separation of powers, nor the generalized need for confidentiality of high-level communications, without more, can sustain an absolute, unqualified, presidential privilege. The Court granted that there was a limited executive privilege in areas of military or diplomatic affairs, but gave preference to \"the fundamental demands of due process of law in the fair administration of justice.\" Therefore, the president must obey the subpoena and produce the tapes and documents. Nixon resigned shortly after the release of the tapes.</p>\n",
-    "winner": "first",
-    "decisions": [
-      {
-        "description": null,
-        "winning_party": null,
-        "votes": [
-          {
-            "name": "William O. Douglas",
-            "vote": "majority"
-          },
-          {
-            "name": "Potter Stewart",
-            "vote": "majority"
-          },
-          {
-            "name": "Thurgood Marshall",
-            "vote": "majority"
-          },
-          {
-            "name": "William J. Brennan, Jr.",
-            "vote": "majority"
-          },
-          {
-            "name": "Byron R. White",
-            "vote": "majority"
-          },
-          {
-            "name": "Warren E. Burger",
-            "vote": "majority"
-          },
-          {
-            "name": "Harry A. Blackmun",
-            "vote": "majority"
-          },
-          {
-            "name": "Lewis F. Powell, Jr.",
-            "vote": "majority"
-          },
-          {
-            "name": "William H. Rehnquist",
-            "vote": "none"
-          }
-        ]
-      },
-      {
-        "description": null,
-        "winning_party": null,
-        "votes": [
-          {
-            "name": "William O. Douglas",
-            "vote": "majority"
-          },
-          {
-            "name": "Potter Stewart",
-            "vote": "majority"
-          },
-          {
-            "name": "Thurgood Marshall",
-            "vote": "majority"
-          },
-          {
-            "name": "William J. Brennan, Jr.",
-            "vote": "majority"
-          },
-          {
-            "name": "Byron R. White",
-            "vote": "majority"
-          },
-          {
-            "name": "Warren E. Burger",
-            "vote": "majority"
-          },
-          {
-            "name": "Harry A. Blackmun",
-            "vote": "majority"
-          },
-          {
-            "name": "Lewis F. Powell, Jr.",
-            "vote": "majority"
-          },
-          {
-            "name": "William H. Rehnquist",
-            "vote": "none"
-          }
-        ]
-      }
-    ]
-  },
-  "00-949": {
-    "oyez_url": "https://www.oyez.org/cases/2000/00-949",
-    "first_party": "George W. Bush",
-    "second_party": "Albert Gore",
-    "first_party_label": "Petitioner",
-    "second_party_label": "Respondent",
-    "name": "Bush v. Gore",
-    "docket_number": "00-949",
-    "manner_of_jurisdiction": "Writ of certiorari",
-    "facts_of_the_case": "<p>Following the U.S. Supreme Court's decision in <em>Bush v. Palm Beach County Canvassing Board</em>, and concurrent with Vice President Al Gore's contest of the certification of Florida presidential election results, on December 8, 2000 the Florida Supreme Court ordered that the Circuit Court in Leon County tabulate by hand 9000 contested ballots from Miami-Dade County. It also ordered that every county in Florida must immediately begin manually recounting all \"under-votes\" (ballots which did not indicate a vote for president) because there were enough contested ballots to place the outcome of the election in doubt. Governor George Bush and his running mate, Richard Cheney, filed a request for review in the U.S. Supreme Court and sought an emergency petition for a stay of the Florida Supreme Court's decision. The U.S. Supreme Court granted review and issued the stay on December 9. It heard oral argument two days later.</p>\n",
-    "question": "<p>Did the Florida Supreme Court violate Article II Section 1 Clause 2 of the U.S. Constitution by making new election law? Do standardless manual recounts violate the Equal Protection and Due Process Clauses of the Constitution?</p>\n",
-    "conclusion": "<p>Noting that the Equal Protection clause guarantees individuals that their ballots cannot be devalued by \"later arbitrary and disparate treatment,\" the per curiam opinion held 7-2 that the Florida Supreme Court's scheme for recounting ballots was unconstitutional. Even if the recount was fair in theory, it was unfair in practice. The record suggested that different standards were applied from ballot to ballot, precinct to precinct, and county to county. Because of those and other procedural difficulties, the court held, 5 to 4, that no constitutional recount could be fashioned in the time remaining (which was short because the Florida legislature wanted to take advantage of the \"safe harbor\" provided by 3 USC Section 5).</p>\n<p>Loathe to make broad precedents, the per curiam opinion limited its holding to the present case. Rehnquist (in a concurring opinion joined by Scalia and Thomas) argued that the recount scheme was also unconstitutional because the Florida Supreme Court's decision made new election law, which only the state legislature may do. Breyer and Souter (writing separately) agreed with the per curiam holding that the Florida Court's recount scheme violated the Equal Protection Clause, but they dissented with respect to the remedy, believing that a constitutional recount could be fashioned. Time is insubstantial when constitutional rights are at stake. Ginsburg and Stevens (writing separately) argued that for reasons of federalism, the Florida Supreme Court's decision ought to be respected. Moreover, the Florida decision was fundamentally right; the Constitution requires that every vote be counted.</p>\n",
-    "winner": "first",
-    "decisions": [
-      {
-        "description": "No other recount method could be decided and executed within the election time limit per 3 U.S.C. \u00a7 5.",
-        "winning_party": "George W. Bush",
-        "votes": [
-          {
-            "name": "William H. Rehnquist",
-            "vote": "majority"
-          },
-          {
-            "name": "John Paul Stevens",
-            "vote": "minority"
-          },
-          {
-            "name": "Sandra Day O'Connor",
-            "vote": "majority"
-          },
-          {
-            "name": "Antonin Scalia",
-            "vote": "majority"
-          },
-          {
-            "name": "Anthony M. Kennedy",
-            "vote": "majority"
-          },
-          {
-            "name": "David H. Souter",
-            "vote": "minority"
-          },
-          {
-            "name": "Clarence Thomas",
-            "vote": "majority"
-          },
-          {
-            "name": "Ruth Bader Ginsburg",
-            "vote": "minority"
-          },
-          {
-            "name": "Stephen G. Breyer",
-            "vote": "minority"
-          }
-        ]
-      },
-      {
-        "description": "Standardless manual recounts violate the Fourteenth Amendment\u2019s Equal Protection Clause.",
-        "winning_party": "George W. Bush",
-        "votes": [
-          {
-            "name": "William H. Rehnquist",
-            "vote": "majority"
-          },
-          {
-            "name": "John Paul Stevens",
-            "vote": "minority"
-          },
-          {
-            "name": "Sandra Day O'Connor",
-            "vote": "majority"
-          },
-          {
-            "name": "Antonin Scalia",
-            "vote": "majority"
-          },
-          {
-            "name": "Anthony M. Kennedy",
-            "vote": "majority"
-          },
-          {
-            "name": "David H. Souter",
-            "vote": "majority"
-          },
-          {
-            "name": "Clarence Thomas",
-            "vote": "majority"
-          },
-          {
-            "name": "Ruth Bader Ginsburg",
-            "vote": "minority"
-          },
-          {
-            "name": "Stephen G. Breyer",
-            "vote": "majority"
-          }
-        ]
-      }
-    ]
-  },
-  "14-556": {
-    "oyez_url": "https://www.oyez.org/cases/2014/14-556",
-    "first_party": "James Obergefell, et al.",
-    "second_party": "Richard Hodges, Director of the Ohio Department of Health, et al.",
-    "first_party_label": "Petitioner",
-    "second_party_label": "Respondent",
-    "name": "Obergefell v. Hodges",
-    "docket_number": "14-556",
-    "manner_of_jurisdiction": "Writ of certiorari",
-    "facts_of_the_case": "<p>Groups of same-sex couples sued their relevant state agencies in Ohio, Michigan, Kentucky, and Tennessee to challenge the constitutionality of those states' bans on same-sex marriage or refusal to recognize legal same-sex marriages that occurred in jurisdictions that provided for such marriages. The plaintiffs in each case argued that the states' statutes violated the Equal Protection Clause and Due Process Clause of the Fourteenth Amendment, and one group of plaintiffs also brought claims under the Civil Rights Act. In all the cases, the trial court found in favor of the plaintiffs. The U.S. Court of Appeals for the Sixth Circuit reversed and held that the states' bans on same-sex marriage and refusal to recognize marriages performed in other states did not violate the couples' Fourteenth Amendment rights to equal protection and due process.</p>\n",
-    "question": "<p>(1) Does the Fourteenth Amendment require a state to license a marriage between two people of the same sex?</p>\n<p>(2) Does the Fourteenth Amendment require a state to recognize a marriage between two people of the same sex that was legally licensed and performed in another state?</p>\n",
-    "conclusion": "<p>Yes, yes. Justice Anthony M. Kennedy delivered the opinion for the 5-4 majority. The Court held that the Due Process Clause of the Fourteenth Amendment guarantees the right to marry as one of the fundamental liberties it protects, and that analysis applies to same-sex couples in the same manner as it does to opposite-sex couples. Judicial precedent has held that the right to marry is a fundamental liberty because it is inherent to the concept of individual autonomy, it protects the most intimate association between two people, it safeguards children and families by according legal recognition to building a home and raising children, and it has historically been recognized as the keystone of social order. Because there are no differences between a same-sex union and an opposite-sex union with respect to these principles, the exclusion of same-sex couples from the right to marry violates the Due Process Clause of the Fourteenth Amendment. The Equal Protection Clause of the Fourteenth Amendment also guarantees the right of same-sex couples to marry as the denial of that right would deny same-sex couples equal protection under the law. Marriage rights have traditionally been addressed through both parts of the Fourteenth Amendment, and the same interrelated principles of liberty and equality apply with equal force to these cases; therefore, the Constitution protects the fundamental right of same-sex couples to marry. The Court also held that the First Amendment protects the rights of religious organizations to adhere to their principles, but it does not allow states to deny same-sex couples the right to marry on the same terms as those for opposite-sex couples.</p>\n<p>Chief Justice John G. Roberts, Jr. wrote a dissent in which he argued that, while same-sex marriage might be good and fair policy, the Constitution does not address it, and therefore it is beyond the purview of the Court to decide whether states have to recognize or license such unions. Instead, this issue should be decided by individual state legislatures based on the will of their electorates. The Constitution and judicial precedent clearly protect a right to marry and require states to apply laws regarding marriage equally, but the Court cannot overstep its bounds and engage in judicial policymaking. The precedents regarding the right to marry only strike down unconstitutional limitations on marriage as it has been traditionally defined and government intrusions, and therefore there is no precedential support for making a state alter its definition of marriage. Chief Justice Roberts also argued that the majority opinion relied on an overly expansive reading of the Due Process and Equal Protection Clauses of the Fourteenth Amendment without engaging with the judicial analysis traditionally applied to such claims and while disregarding the proper role of the courts in the democratic process. Justice Antonin Scalia and Justice Clarence Thomas joined in the dissent. In his separate dissent, Justice Scalia wrote that the majority opinion overstepped the bounds of the Court\u2019s authority both by exercising the legislative, rather than judicial, power and by doing so in a realm that the Constitution reserves for the states. Justice Scalia argued that the question of whether same-sex marriage should be recognized is one for the state legislatures, and that for the issue to be decided by unelected judges goes against one of the most basic precepts of the Constitution: that political change should occur through the votes of elected representatives. In taking on this policymaking role, the majority opinion departed from established Fourteenth Amendment jurisprudence to create a right where none exists in the Constitution. Justice Thomas joined in the dissent. Justice Thomas also wrote a separate dissent in which he argued that the majority opinion stretched the doctrine of substantive due process rights found in the Fourteenth Amendment too far and in doing so distorted the democratic process by taking power from the legislature and putting it in the hands of the judiciary. Additionally, the legislative history of the Due Process Clause in both the Fifth and Fourteenth Amendments indicates that they were meant to protect people from physical restraint and from government intervention, but they do not grant them rights to government entitlements. Justice Thomas also argued that the majority opinion impermissibly infringed on religious freedom by legislating from the bench rather than allowing the state legislature to determine how best to address the competing rights and interests at stake. Justice Scalia joined in the dissent. In his separate dissent, Justice Samuel A. Alito, Jr. wrote that the Constitution does not address the right of same-sex couples to marry, and therefore the issue is reserved to the states to decide whether to depart from the traditional definition of marriage. By allowing a majority of the Court to create a new right, the majority opinion dangerously strayed from the democratic process and greatly expanded the power of the judiciary beyond what the Constitution allows. Justice Scalia and Justice Thomas joined in the dissent.</p>\n",
-    "winner": "first",
-    "decisions": [
-      {
-        "description": "The Fourteenth Amendment requires both marriage licensing and recognition for same-sex couples.",
-        "winning_party": "Obergefell",
-        "votes": [
-          {
-            "name": "Anthony M. Kennedy",
-            "vote": "majority"
-          },
-          {
-            "name": "Ruth Bader Ginsburg",
-            "vote": "majority"
-          },
-          {
-            "name": "Stephen G. Breyer",
-            "vote": "majority"
-          },
-          {
-            "name": "Sonia Sotomayor",
-            "vote": "majority"
-          },
-          {
-            "name": "Elena Kagan",
-            "vote": "majority"
-          },
-          {
-            "name": "John G. Roberts, Jr.",
-            "vote": "minority"
-          },
-          {
-            "name": "Antonin Scalia",
-            "vote": "minority"
-          },
-          {
-            "name": "Clarence Thomas",
-            "vote": "minority"
-          },
-          {
-            "name": "Samuel A. Alito, Jr.",
-            "vote": "minority"
-          }
-        ]
-      }
-    ]
-  },
-  "19-1392": {
-    "oyez_url": "https://www.oyez.org/cases/2021/19-1392",
-    "first_party": "Thomas E. Dobbs, State Health Officer of the Mississippi Department of Health, et al.",
-    "second_party": "Jackson Women's Health Organization, et al.",
-    "first_party_label": "Petitioner",
-    "second_party_label": "Respondent",
-    "name": "Dobbs v. Jackson Women's Health Organization",
-    "docket_number": "19-1392",
-    "manner_of_jurisdiction": "Writ of certiorari",
-    "facts_of_the_case": "<p>In 2018, Mississippi passed a law called the \u201cGestational Age Act,\u201d which prohibits all abortions, with few exceptions, after 15 weeks\u2019 gestational age. Jackson Women\u2019s Health Organization, the only licensed abortion facility in Mississippi, and one of its doctors filed a lawsuit in federal district court challenging the law and requesting an emergency temporary restraining order (TRO). After a hearing, the district court granted the TRO while the litigation proceeded to discovery. After discovery, the district court granted the clinic\u2019s motion for summary judgment and enjoined Mississippi from enforcing the law, finding that the state had not provided evidence that a fetus would be viable at 15 weeks, and Supreme Court precedent prohibits states from banning abortions prior to viability. The U.S. Court of Appeals for the Fifth Circuit affirmed.</p>\n",
-    "question": "<p>Is Mississippi\u2019s law banning nearly all abortions after 15 weeks\u2019 gestational age unconstitutional?</p>\n",
-    "conclusion": "<p>The Constitution does not confer a right to abortion; Roe v. Wade, 410 U.S. 113, and Planned Parenthood of Southeastern Pa. v. Casey, 505 U.S. 833, are overruled. Justice Samuel Alito authored the majority opinion of the Court.</p>\n<p>The Constitution does not mention abortion. The right is neither deeply rooted in the nation\u2019s history nor an essential component of \u201cordered liberty.\u201d The five factors that should be considered in deciding whether a precedent should be overruled support overruling Roe v. Wade and Planned Parenthood v. Casey: (1) they \u201cshort-circuited the democratic process,\u201d (2) both lacked grounding in constitutional text, history, or precedent, (3) the tests they established were not \u201cworkable,\u201d (4) they caused distortion of law in other areas, and (5) overruling them would not upend concrete reliance interests.</p>\n<p>Justices Clarence Thomas and Brett Kavanaugh concurred.</p>\n<p>Chief Justice John Roberts concurred in the judgment.</p>\n<p>Justices Stephen Breyer, Sonia Sotomayor, and Elena Kagan dissented.</p>\n",
+    "facts_of_the_case": "<p>Oklahoma's Criminal Sterilization Act of 1935 allowed the state to sterilize a person who had been convicted three or more times of crimes \"amounting to felonies involving moral turpitude.\" After his third conviction, Skinner was determined to be a habitual offender and ordered to be sterilized. He argued that the law violated the Fourteenth Amendment.</p>\n",
+    "question": "<p>Did the Act violate the Fourteenth Amendment?</p>\n",
+    "conclusion": "<p>In an opinion written by William Orville Douglas, the unanimous Court held that the Act violated the Equal Protection Clause of the Fourteenth Amendment. The Court reasoned that certain crimes, such as embezzlement, were excluded from the Act\u2019s jurisdiction without explanation or reason. Moreover, the Court reasoned that because of the social and biological implications of reproduction and the irreversibility of sterilization operations, compulsory sterilization laws should be subject to strict scrutiny.\u00a0</p>\n<p>In his concurrence, Chief Justice Harlan F. Stone stated that he disagreed with the majority opinion\u2019s reliance on the Equal Protection Clause and instead cited the Due Process Clause to prevent Skinner from being sterilized.\u00a0</p>\n",
     "winner": "first",
     "decisions": []
   },
-  "23-939": {
-    "oyez_url": "https://www.oyez.org/cases/2023/23-939",
-    "first_party": "Donald J. Trump",
-    "second_party": "United States of America",
-    "first_party_label": "Petitioner",
-    "second_party_label": "Respondent",
-    "name": "Trump v. United States",
-    "docket_number": "23-939",
-    "manner_of_jurisdiction": "Writ of certiorari",
-    "facts_of_the_case": "<p>Former President Donald Trump was indicted in August 2023 on four counts arising from Special Counsel Jack Smith\u2019s investigation into the January 6, 2021, attacks on the U.S. Capitol. Trump claimed that he cannot be prosecuted for his official acts as president and that a former president cannot be prosecuted unless he has first been impeached by the House and convicted by the Senate.</p>\n<p>U.S. District Judge Tanya Chutkan initially set Trump\u2019s trial for March 4, 2024, but later vacated this date pending resolution of Trump\u2019s immunity claims. Judge Chutkan denied Trump\u2019s motion to dismiss on immunity grounds, and Smith asked the Supreme Court directly to expedite review and bypass a decision by the D.C. Circuit. The Court declined, deferring instead to the D.C. Circuit\u2019s judgment. On February 6, the D.C. Circuit upheld Chutkan\u2019s decision, and Trump requested a stay of the D.C. Circuit\u2019s ruling. Ultimately, the Supreme Court decided to expedite the case.</p>\n",
-    "question": "<p>Does a former president enjoy presidential immunity from criminal prosecution for conduct alleged to involve official acts during his tenure in office, and if so, to what extent?</p>\n",
-    "conclusion": "<p>A former U.S. President has absolute immunity from criminal prosecution for actions within his conclusive and preclusive constitutional authority, at least presumptive immunity from prosecution for all his official acts, and no immunity for unofficial acts.\u00a0Chief Justice Roberts, writing for the Court majority, concluded that a former President has some immunity from criminal prosecution for official acts during his tenure in office. This immunity stems primarily from constitutional separation of powers principles and precedents recognizing similar immunities in civil contexts.</p>\n<p>The President has absolute immunity from prosecution for actions taken pursuant to his exclusive constitutional powers, such as pardoning offenses or removing executive officers. This absolute immunity exists because Congress cannot criminalize, and courts cannot review, the President\u2019s exercise of these core constitutional authorities.</p>\n<p>For official actions outside the President\u2019s exclusive constitutional powers, there is at least a presumptive immunity from prosecution. This presumptive immunity is rooted in the need to ensure the President can perform his duties without undue caution or distraction, as established in cases like Nixon v. Fitzgerald. The government may attempt to rebut this presumption by demonstrating that prosecution would not unduly intrude on executive functions. However, evidence of immune official acts cannot be used to prove liability for unofficial acts, as this would undermine the purpose of the immunity.</p>\n<p>Finally, drawing on Clinton v. Jones, the Court affirmed that the President has no immunity for actions taken in an unofficial or personal capacity.</p>\n<p>To apply this framework, courts must carefully analyze alleged conduct to determine whether it qualifies as official or unofficial. The Court rejected both Trump\u2019s argument for broader immunity absent impeachment and conviction, and the government\u2019s contention that the President has no immunity from criminal prosecution whatsoever. Instead, it established a nuanced approach requiring case-by-case analysis of presidential conduct to determine the applicable level of immunity, if any.</p>\n<p>Justice Clarence Thomas wrote a separate concurrence to highlight that he believes the Special Counsel\u2019s prosecution of Trump may be unconstitutional because there are serious questions about whether the office of the Special Counsel was properly \u201cestablished by Law\u201d as required by the Constitution\u2019s Appointments Clause.</p>\n<p>Justice Amy Coney Barrett wrote a separate opinion concurring in part to argue that rather than framing the issue as \u201cimmunity,\u201d the Court should have adopted a two-step analysis for assessing the validity of criminal charges against a President for official acts: first determining if the relevant statute applies to the President's conduct, and then evaluating whether prosecuting the President under that statute would unconstitutionally intrude on executive power.</p>\n<p>Justice Sonia Sotomayor dissented because she believes the majority\u2019s decision to grant former Presidents broad immunity from criminal prosecution for official acts is unjustified by constitutional text, history, or precedent, and dangerously places the President above the law.</p>\n<p>Justice Ketanji Brown Jackson dissented because she believes the majority\u2019s creation of a new \u201cPresidential accountability model\u201d that sometimes exempts Presidents from criminal law for official acts fundamentally alters the balance of power, undermines the rule of law, and risks incentivizing presidential abuses of power.</p>\n",
+  "1968/293": {
+    "oyez_url": "https://www.oyez.org/cases/1968/293",
+    "first_party": "Stanley",
+    "second_party": "Georgia",
+    "first_party_label": "Appellant",
+    "second_party_label": "Appellee",
+    "name": "Stanley v. Georgia",
+    "docket_number": "293",
+    "manner_of_jurisdiction": "Appeal",
+    "facts_of_the_case": "<p>Law enforcement officers, under the authority of a warrant, searched Stanley's home pursuant to an investigation of his alleged bookmaking activities. During the search, the officers found three reels of eight-millimeter film. The officers viewed the films, concluded they were obscene, and seized them. Stanley was then tried and convicted under a Georgia law prohibiting the possession of obscene materials.</p>\n",
+    "question": "<p>Did the Georgia statute infringe upon the freedom of expression protected by the First Amendment?</p>\n",
+    "conclusion": "<p>The Court held that the First and Fourteenth Amendments prohibited making private possession of obscene materials a crime. In his majority opinion, Justice Marshall noted that the rights to receive information and to personal privacy were fundamental to a free society. Marshall then found that \"[i]f the First Amendment means anything, it means that a State has no business telling a man, sitting alone in his own house, what books he may read or what films he may watch. Our whole constitutional heritage rebels at the thought of giving government the power to control men's minds.\" The Court distinguished between the mere private possession of obscene materials and the production and distribution of such materials. The latter, the Court held, could be regulated by the states.</p>\n",
     "winner": "first",
     "decisions": [
       {
-        "description": "A former U.S. President has absolute immunity from criminal prosecution for actions within his conclusive and preclusive constitutional authority, at least presumptive immunity from prosecution for all his official acts, and no immunity for unofficial acts.",
-        "winning_party": "Trump",
+        "description": null,
+        "winning_party": "Stanley",
+        "votes": [
+          {
+            "name": "John M. Harlan II",
+            "vote": "majority"
+          },
+          {
+            "name": "Hugo L. Black",
+            "vote": "majority"
+          },
+          {
+            "name": "William O. Douglas",
+            "vote": "majority"
+          },
+          {
+            "name": "Potter Stewart",
+            "vote": "majority"
+          },
+          {
+            "name": "Thurgood Marshall",
+            "vote": "majority"
+          },
+          {
+            "name": "William J. Brennan, Jr.",
+            "vote": "majority"
+          },
+          {
+            "name": "Byron R. White",
+            "vote": "majority"
+          },
+          {
+            "name": "Earl Warren",
+            "vote": "majority"
+          },
+          {
+            "name": "Abe Fortas",
+            "vote": "majority"
+          }
+        ]
+      }
+    ]
+  },
+  "1970/299": {
+    "oyez_url": "https://www.oyez.org/cases/1970/299",
+    "first_party": "Cohen",
+    "second_party": "California",
+    "first_party_label": "Appellant",
+    "second_party_label": "Appellee",
+    "name": "Cohen v. California",
+    "docket_number": "299",
+    "manner_of_jurisdiction": "Appeal",
+    "facts_of_the_case": "<p>A 19-year-old department store worker expressed his opposition to the Vietnam War by wearing a jacket emblazoned with \"FUCK THE DRAFT. STOP THE WAR\" The young man, Paul Cohen, was charged under a California statute that prohibits \"maliciously and willfully disturb[ing] the peace and quiet of any neighborhood or person [by] offensive conduct.\" Cohen was found guilty and sentenced to 30 days in jail.</p>\n",
+    "question": "<p>Did California's statute, prohibiting the display of offensive messages such as \"Fuck the Draft,\" violate freedom of expression as protected by the First Amendment?</p>\n",
+    "conclusion": "<p>Yes. In an opinion by Justice John Marshall Harlan, the Court reasoned that the expletive, while provocative, was not directed toward anyone; besides, there was no evidence that people in substantial numbers would be provoked into some kind of physical action by the words on his jacket. Harlan recognized that \"one man's vulgarity is another's lyric.\" In doing so, the Court protected two elements of speech: the emotive (the expression of emotion) and the cognitive (the expression of ideas).</p>\n",
+    "winner": "first",
+    "decisions": [
+      {
+        "description": null,
+        "winning_party": "Cohen",
+        "votes": [
+          {
+            "name": "John M. Harlan II",
+            "vote": "majority"
+          },
+          {
+            "name": "Hugo L. Black",
+            "vote": "minority"
+          },
+          {
+            "name": "William O. Douglas",
+            "vote": "majority"
+          },
+          {
+            "name": "Potter Stewart",
+            "vote": "majority"
+          },
+          {
+            "name": "Thurgood Marshall",
+            "vote": "majority"
+          },
+          {
+            "name": "William J. Brennan, Jr.",
+            "vote": "majority"
+          },
+          {
+            "name": "Byron R. White",
+            "vote": "minority"
+          },
+          {
+            "name": "Warren E. Burger",
+            "vote": "minority"
+          },
+          {
+            "name": "Harry A. Blackmun",
+            "vote": "minority"
+          }
+        ]
+      }
+    ]
+  },
+  "2000/99-8508": {
+    "oyez_url": "https://www.oyez.org/cases/2000/99-8508",
+    "first_party": "Kyllo",
+    "second_party": "United States",
+    "first_party_label": "Petitioner",
+    "second_party_label": "Respondent",
+    "name": "Kyllo v. United States",
+    "docket_number": "99-8508",
+    "manner_of_jurisdiction": "Writ of certiorari",
+    "facts_of_the_case": "<p>A Department of the Interior agent, suspicious that Danny Kyllo was growing marijuana, used a thermal-imaging device to scan his triplex. The imaging was to be used to determine if the amount of heat emanating from the home was consistent with the high-intensity lamps typically used for indoor marijuana growth. Subsequently, the imaging revealed that relatively hot areas existed, compared to the rest of the home. Based on informants, utility bills, and the thermal imaging, a federal magistrate judge issued a warrant to search Kyllo's home. The search unveiled growing marijuana. After Kyllo was indicted on a federal drug charge, he unsuccessfully moved to suppress the evidence seized from his home and then entered a conditional guilty plea. Ultimately affirming, the Court of Appeals held that Kyllo had shown no subjective expectation of privacy because he had made no attempt to conceal the heat escaping from his home, and even if he had, there was no objectively reasonable expectation of privacy because the imager \"did not expose any intimate details of Kyllo's life,\" only \"amorphous 'hot spots' on the roof and exterior wall.\"</p>\n",
+    "question": "<p>Does the use of a thermal-imaging device to detect relative amounts of heat emanating from a private home constitute an unconstitutional search in violation of the Fourth Amendment?</p>\n",
+    "conclusion": "<p>Yes. In a 5-4 opinion delivered by Justice Antonin Scalia, the Court held that \"[w]here, as here, the Government uses a device that is not in general public use, to explore details of the home that would previously have been unknowable without physical intrusion, the surveillance is a 'search' and is presumptively unreasonable without a warrant.\" In dissent, Justice John Paul Stevens argued that the \"observations were made with a fairly primitive thermal imager that gathered data exposed on the outside of [Kyllo's] home but did not invade any constitutionally protected interest in privacy,\" and were, thus, \"information in the public domain.\"</p>\n",
+    "winner": "first",
+    "decisions": [
+      {
+        "description": null,
+        "winning_party": "Kyllo",
+        "votes": [
+          {
+            "name": "William H. Rehnquist",
+            "vote": "minority"
+          },
+          {
+            "name": "John Paul Stevens",
+            "vote": "minority"
+          },
+          {
+            "name": "Sandra Day O'Connor",
+            "vote": "minority"
+          },
+          {
+            "name": "Antonin Scalia",
+            "vote": "majority"
+          },
+          {
+            "name": "Anthony M. Kennedy",
+            "vote": "minority"
+          },
+          {
+            "name": "David H. Souter",
+            "vote": "majority"
+          },
+          {
+            "name": "Clarence Thomas",
+            "vote": "majority"
+          },
+          {
+            "name": "Ruth Bader Ginsburg",
+            "vote": "majority"
+          },
+          {
+            "name": "Stephen G. Breyer",
+            "vote": "majority"
+          }
+        ]
+      }
+    ]
+  },
+  "2004/04-108": {
+    "oyez_url": "https://www.oyez.org/cases/2004/04-108",
+    "first_party": "Susette Kelo, et al.",
+    "second_party": "City of New London, Connecticut, et al.",
+    "first_party_label": "Petitioner",
+    "second_party_label": "Respondent",
+    "name": "Kelo v. New London",
+    "docket_number": "04-108",
+    "manner_of_jurisdiction": "Writ of certiorari",
+    "facts_of_the_case": "<p>New London, a city in Connecticut, used its eminent domain authority to seize private property to sell to private developers. The city said developing the land would create jobs and increase tax revenues. Susette Kelo and others whose property was seized sued New London in state court. The property owners argued the city violated the Fifth Amendment's takings clause, which guaranteed the government will not take private property for public use without just compensation. Specifically, the property owners argued taking private property to sell to private developers was not public use. The Connecticut Supreme Court ruled for New London.</p>\n",
+    "question": "<p>Does a city violate the Fifth Amendment's takings clause if the city takes private property and sells it for private development, with the hopes the development will help the city's bad economy?</p>\n",
+    "conclusion": "<p>No. In a 5-4 opinion delivered by Justice John Paul Stevens, the majority held that the city's taking of private property to sell for private development qualified as a \"public use\" within the meaning of the takings clause. The city was not taking the land simply to benefit a certain group of private individuals, but was following an economic development plan. Such justifications for land takings, the majority argued, should be given deference. The takings here qualified as \"public use\" despite the fact that the land was not going to be used by the public. The Fifth Amendment did not require \"literal\" public use, the majority said, but the \"broader and more natural interpretation of public use as 'public purpose.'\"</p>\n",
+    "winner": "second",
+    "decisions": [
+      {
+        "description": null,
+        "winning_party": null,
+        "votes": [
+          {
+            "name": "William H. Rehnquist",
+            "vote": "minority"
+          },
+          {
+            "name": "John Paul Stevens",
+            "vote": "majority"
+          },
+          {
+            "name": "Sandra Day O'Connor",
+            "vote": "minority"
+          },
+          {
+            "name": "Antonin Scalia",
+            "vote": "minority"
+          },
+          {
+            "name": "Anthony M. Kennedy",
+            "vote": "majority"
+          },
+          {
+            "name": "David H. Souter",
+            "vote": "majority"
+          },
+          {
+            "name": "Clarence Thomas",
+            "vote": "minority"
+          },
+          {
+            "name": "Ruth Bader Ginsburg",
+            "vote": "majority"
+          },
+          {
+            "name": "Stephen G. Breyer",
+            "vote": "majority"
+          }
+        ]
+      }
+    ]
+  },
+  "2004/03-1454": {
+    "oyez_url": "https://www.oyez.org/cases/2004/03-1454",
+    "first_party": "Alberto R. Gonzales, Attorney General, et al.",
+    "second_party": "Angel McClary Raich, et al.",
+    "first_party_label": "Petitioner",
+    "second_party_label": "Respondent",
+    "name": "Gonzales v. Raich",
+    "docket_number": "03-1454",
+    "manner_of_jurisdiction": "Writ of certiorari",
+    "facts_of_the_case": "<p>In 1996 California voters passed the Compassionate Use Act, legalizing marijuana for medical use. California's law conflicted with the federal Controlled Substances Act (CSA), which banned possession of marijuana. After the Drug Enforcement Administration (DEA) seized doctor-prescribed marijuana from a patient's home, a group of medical marijuana users sued the DEA and U.S. Attorney General John Ashcroft in federal district court.</p>\n<p>The medical marijuana users argued the Controlled Substances Act - which Congress passed using its constitutional power to regulate interstate commerce - exceeded Congress' commerce clause power. The district court ruled against the group. The Ninth Circuit Court of Appeals reversed and ruled the CSA unconstitutional as it applied to intrastate (within a state) medical marijuana use. Relying on two U.S. Supreme Court decisions that narrowed Congress' commerce clause power - U.S. v. Lopez (1995) and U.S. v. Morrison (2000) - the Ninth Circuit ruled using medical marijuana did not \"substantially affect\" interstate commerce and therefore could not be regulated by Congress.</p>\n",
+    "question": "<p>Does the Controlled Substances Act (21 U.S.C. 801) exceed Congress' power under the commerce clause as applied to the intrastate cultivation and possession of marijuana for medical use?</p>\n",
+    "conclusion": "<p>No. In a 6-3 opinion delivered by Justice John Paul Stevens, the Court held that the commerce clause gave Congress authority to prohibit the local cultivation and use of marijuana, despite state law to the contrary. Stevens argued that the Court's precedent \"firmly established\" Congress' commerce clause power to regulate purely local activities that are part of a \"class of activities\" with a substantial effect on interstate commerce. The majority argued that Congress could ban local marijuana use because it was part of such a \"class of activities\": the national marijuana market. Local use affected supply and demand in the national marijuana market, making the regulation of intrastate use \"essential\" to regulating the drug's national market. The majority distinguished the case from Lopez and Morrison. In those cases, statutes regulated non-economic activity and fell entirely outside Congress' commerce power; in this case, the Court was asked to strike down a particular application of a valid statutory scheme.</p>\n",
+    "winner": "first",
+    "decisions": [
+      {
+        "description": null,
+        "winning_party": "Alberto R. Gonzales, Attorney General, et al.",
+        "votes": [
+          {
+            "name": "William H. Rehnquist",
+            "vote": "minority"
+          },
+          {
+            "name": "John Paul Stevens",
+            "vote": "majority"
+          },
+          {
+            "name": "Sandra Day O'Connor",
+            "vote": "minority"
+          },
+          {
+            "name": "Antonin Scalia",
+            "vote": "majority"
+          },
+          {
+            "name": "Anthony M. Kennedy",
+            "vote": "majority"
+          },
+          {
+            "name": "David H. Souter",
+            "vote": "majority"
+          },
+          {
+            "name": "Clarence Thomas",
+            "vote": "minority"
+          },
+          {
+            "name": "Ruth Bader Ginsburg",
+            "vote": "majority"
+          },
+          {
+            "name": "Stephen G. Breyer",
+            "vote": "majority"
+          }
+        ]
+      }
+    ]
+  },
+  "2006/06-278": {
+    "oyez_url": "https://www.oyez.org/cases/2006/06-278",
+    "first_party": "Deborah Morse et al.",
+    "second_party": "Joseph Frederick",
+    "first_party_label": "Petitioner",
+    "second_party_label": "Respondent",
+    "name": "Morse v. Frederick",
+    "docket_number": "06-278",
+    "manner_of_jurisdiction": "Writ of certiorari",
+    "facts_of_the_case": "<p>At a school-supervised event, Joseph Frederick held up a banner with the message \"Bong Hits 4 Jesus,\" a slang reference to marijuana smoking. Principal Deborah Morse took away the banner and suspended Frederick for ten days. She justified her actions by citing the school's policy against the display of material that promotes the use of illegal drugs. Frederick sued under 42 U.S.C. 1983, the federal civil rights statute, alleging a violation of his First Amendment right to freedom of speech. The District Court found no constitutional violation and ruled in favor of Morse. The court held that even if there were a violation, the principal had qualified immunity from lawsuit. The U.S. Court of Appeals for the Ninth Circuit reversed. The Ninth Circuit cited <em> <a href=\"/cases/1968/21/\">Tinker v. Des Moines Independent Community School District</a> </em>, which extended First Amendment protection to student speech except where the speech would cause a disturbance. Because Frederick was punished for his message rather than for any disturbance, the Circuit Court ruled, the punishment was unconstitutional. Furthermore, the principal had no qualified immunity, because any reasonable principal would have known that Morse's actions were unlawful.</p>\n",
+    "question": "<p>1) Does the First Amendment allow public schools to prohibit students from displaying messages promoting the use of illegal drugs at school-supervised events?</p>\n<p>2) Does a school official have qualified immunity from a damages lawsuit under 42 U.S.C. 1983 when, in accordance with school policy, she disciplines a student for displaying a banner with a drug reference at a school-supervised event?</p>\n",
+    "conclusion": "<p>Yes and not reached. The Court reversed the Ninth Circuit by a 5-4 vote, ruling that school officials can prohibit students from displaying messages that promote illegal drug use. Chief Justice John Roberts's majority opinion held that although students do have some right to political speech even while in school, this right does not extend to pro-drug messages that may undermine the school's important mission to discourage drug use. The majority held that Frederick's message, though \"cryptic,\" was reasonably interpreted as promoting marijuana use - equivalent to \"[Take] bong hits\" or \"bong hits [are a good thing].\" In ruling for Morse, the Court affirmed that the speech rights of public school students are not as extensive as those adults normally enjoy, and that the highly protective standard set by <em>Tinker</em> would not always be applied. In concurring opinions, Justice Thomas expressed his view that the right to free speech does not apply to students and his wish to see <em>Tinker</em> overturned altogether, while Justice Alito stressed that the decision applied only to pro-drug messages and not to broader political speech. The dissent conceded that the principal should have had immunity from the lawsuit, but argued that the majority opinion was \"[...] deaf to the constitutional imperative to permit unfettered debate, even among high-school students [...].\"</p>\n",
+    "winner": "first",
+    "decisions": [
+      {
+        "description": null,
+        "winning_party": "Deborah Morse, et al.",
+        "votes": [
+          {
+            "name": "John Paul Stevens",
+            "vote": "minority"
+          },
+          {
+            "name": "Antonin Scalia",
+            "vote": "majority"
+          },
+          {
+            "name": "Anthony M. Kennedy",
+            "vote": "majority"
+          },
+          {
+            "name": "David H. Souter",
+            "vote": "minority"
+          },
+          {
+            "name": "Clarence Thomas",
+            "vote": "majority"
+          },
+          {
+            "name": "Ruth Bader Ginsburg",
+            "vote": "minority"
+          },
+          {
+            "name": "Stephen G. Breyer",
+            "vote": "minority"
+          },
+          {
+            "name": "John G. Roberts, Jr.",
+            "vote": "majority"
+          },
+          {
+            "name": "Samuel A. Alito, Jr.",
+            "vote": "majority"
+          }
+        ]
+      }
+    ]
+  },
+  "2010/09-987": {
+    "oyez_url": "https://www.oyez.org/cases/2010/09-987",
+    "first_party": "Arizona Christian School Tuition Organization",
+    "second_party": "Kathleen M. Winn, et al.",
+    "first_party_label": "Petitioner",
+    "second_party_label": "Respondent",
+    "name": "Arizona Christian School Tuition Organization v. Winn",
+    "docket_number": "09-987",
+    "manner_of_jurisdiction": "Writ of certiorari",
+    "facts_of_the_case": "<p>Arizona taxpayers challenged the constitutionality of Arizona's tuition tax credit in an Arizona federal district court. They alleged the tax credit violated the Establishment Clause of the First Amendment because it funneled money to private religious schools. The district court dismissed the case. On appeal, the U.S. Court of Appeals for the Ninth Circuit reversed, holding that the taxpayers had standing to bring their suit and had alleged a viable Establishment Clause claim.</p>\n",
+    "question": "<p>Do the plaintiffs lack standing because they cannot allege that the Arizona tuition tax credit involves the appropriation or expenditure of state funds?</p>\n",
+    "conclusion": "<p>Yes. The Supreme Court overturned the lower court in an opinion by Justice Anthony Kennedy. The majority held that the challengers to the tax credit in Arizona lack standing under Article III. Justice Elena Kagan filed a dissenting opinion joined by Justices Ruth Bader Ginsburg, Stephen Breyer and Sonia Sotomayor. \"State sponsorship of religion sometimes harms individuals only (but this 'only' is no small matter) in their capacity as contributing members of our national community,\" Kagan wrote for the dissenters.</p>\n",
+    "winner": "first",
+    "decisions": [
+      {
+        "description": null,
+        "winning_party": "Arizona Christian School Tuition Organization",
         "votes": [
           {
             "name": "John G. Roberts, Jr.",
             "vote": "majority"
           },
           {
+            "name": "Antonin Scalia",
+            "vote": "majority"
+          },
+          {
+            "name": "Anthony M. Kennedy",
+            "vote": "majority"
+          },
+          {
             "name": "Clarence Thomas",
             "vote": "majority"
+          },
+          {
+            "name": "Ruth Bader Ginsburg",
+            "vote": "minority"
+          },
+          {
+            "name": "Stephen G. Breyer",
+            "vote": "minority"
           },
           {
             "name": "Samuel A. Alito, Jr.",
@@ -903,22 +473,296 @@
           {
             "name": "Elena Kagan",
             "vote": "minority"
+          }
+        ]
+      }
+    ]
+  },
+  "2013/12-158": {
+    "oyez_url": "https://www.oyez.org/cases/2013/12-158",
+    "first_party": "Carol Anne Bond",
+    "second_party": "United States",
+    "first_party_label": "Petitioner",
+    "second_party_label": "Respondent",
+    "name": "Bond v. United States",
+    "docket_number": "12-158",
+    "manner_of_jurisdiction": "Writ of certiorari",
+    "facts_of_the_case": "<p>Carol Anne Bond worked for the chemical manufacturer Rohm and Haas. When she learned that her friend Myrlinda Haynes was pregnant and that Bond's husband was the father, she used her connections with the chemical company to obtain the means for revenge. She stole and purchased highly toxic chemicals that she applied to Haynes' doorknobs, car door handles, and mailbox. Haynes suffered a minor burn, and after contacting a federal investigator, Bond was identified as the perpetrator. She was charged with several violations of the Chemical Weapons Convention Implementation Act of 1998 (Act).</p>\n<p>In the district court, Bond moved to dismiss the case and argued that Congress did not have the authority to enforce the Act because it subverted states' rights in violation of the Tenth Amendment. The district court denied the motion, and Bond conditionally pled guilty with the understanding that she could continue to appeal the decision regarding the validity of the Act. She was sentenced to six years in prison. Bond renewed her challenge to the Act in the U.S. Court of Appeals for the Third Circuit, which held that Bond did not have standing to appeal. The U.S. Supreme Court reversed the decision and held that the case must be considered on its merits. The case was remanded back to the U.S. Court of Appeals for the 3d Circuit. The Court of Appeals held that the Act was within Congress' power to enact and enforce.</p>\n",
+    "question": "<p>(1) Does Congress have the authority to enact legislation that enforces a treaty but goes beyond the scope of the treaty and intrudes on traditional state prerogatives?</p>\n<p>(2) Can the Chemical Weapons Convention Implementation Act be properly interpreted so that it does not apply to ordinary poisoning cases, which have been traditionally handled by state and local authorities?</p>\n",
+    "conclusion": "<p>No, yes. Chief Justice John G. Roberts, Jr. delivered the opinion for the 6-3 majority. The Court held that federal law typically does not intrude on the ability of states to regulate local matters, and the Chemical Weapons Convention Implementation Act is not an exception to that general rule. While Congress has the authority to create legislation to enforce treaties, it must do so while respecting the traditional division of sovereign responsibility between the federal government and the states. The Court also held that it is incumbent upon the courts to be sure of Congress' intent before ruling based on such a rationale; in this case, because there is no evidence that Congress intended the statute to have expansive powers, it must be read more narrowly. In fact, the language of the statute suggests that the facts of this case do not match the types of situations the statute was enacted to govern.</p>\n<p>Justice Antonin Scalia wrote an opinion concurring in the judgment in which he argued that, in determining whether the Chemical Weapons Convention Implementation Act covers Bond's actions, the majority opinion overstepped its bounds and performed Congress' duty. Justice Scalia also wrote that it was clear from the wording of the statute that Bond's actions were covered, and the majority opinion's interpretation of the statute made it so broad as to be unintelligible. However, the statute was unconstitutional because it infringed on the rights of the states. Justice Clarence Thomas and Justice Samuel A. Alito, Jr. joined in the opinion concurring in the judgment. In his separate opinion concurring in the judgment, Justice Thomas wrote that, while Congress has the power to create laws that enforce treaties, that power does not extend to the enforcement of laws that would infringe on states' rights. The historical context of this \"Treaty Power\" indicates that it was meant to be limited to international affairs and not interfere with the constitutional structure of federal and state power. Justice Scalia and Justice Alito joined in the concurrence in judgment. Justice Alito also wrote a separate opinion concurring in the judgment in which he argued that the statute went beyond Congress' power to enforce treaties and is therefore unconstitutional.</p>\n",
+    "winner": "first",
+    "decisions": [
+      {
+        "description": "Bond cannot be charged with the Act.",
+        "winning_party": "Bond",
+        "votes": [
+          {
+            "name": "John G. Roberts, Jr.",
+            "vote": "majority"
           },
           {
-            "name": "Ketanji Brown Jackson",
+            "name": "Anthony M. Kennedy",
+            "vote": "majority"
+          },
+          {
+            "name": "Ruth Bader Ginsburg",
+            "vote": "majority"
+          },
+          {
+            "name": "Stephen G. Breyer",
+            "vote": "majority"
+          },
+          {
+            "name": "Sonia Sotomayor",
+            "vote": "majority"
+          },
+          {
+            "name": "Elena Kagan",
+            "vote": "majority"
+          },
+          {
+            "name": "Antonin Scalia",
+            "vote": "majority"
+          },
+          {
+            "name": "Samuel A. Alito, Jr.",
+            "vote": "majority"
+          },
+          {
+            "name": "Clarence Thomas",
+            "vote": "majority"
+          }
+        ]
+      }
+    ]
+  },
+  "2013/12-1281": {
+    "oyez_url": "https://www.oyez.org/cases/2013/12-1281",
+    "first_party": "National Labor Relations Board",
+    "second_party": "Noel Canning",
+    "first_party_label": "Petitioner",
+    "second_party_label": "Respondent",
+    "name": "National Labor Relations Board v. Noel Canning",
+    "docket_number": "12-1281",
+    "manner_of_jurisdiction": "Writ of certiorari",
+    "facts_of_the_case": "<p>The National Labor Relations Act (NLRA) established the National Labor Relations Board (Board) to decide labor disputes among employers, unions, and employees. Parties first file unfair labor practice allegations to a Regional Office, which then conducts an investigation and, if necessary, files a complaint. An Administrative Law Judge (ALJ) presides over the hearing on the complaint and issues a recommendation to the Board. Unless a party to the dispute files a timely appeal, the ALJ's recommendation becomes the final order of the Board. To hear a case and issue a ruling, the Board must have at least three of its five members present. The NLRA allows parties to appeal a Board ruling to the U.S. Court of Appeals for the area where the alleged unfair labor practice occurred or to the U.S. Court of Appeals for the District of Columbia Circuit. Board members are appointed by the president and serve five-year terms.</p>\n<p>In 2010, Noel Canning, a bottler and distributor of Pepsi-Cola products, was engaged in negotiations with its employee union, the International Brotherhood of Teamsters Local 760 (Union). During the final bargaining session that December, Noel Canning agreed to submit two wage and pension plans to a vote by the Union membership. The membership approved the union's preferred proposal. However, Noel Canning argued that the discussions did not amount to a binding agreement and refused to incorporate the changes into a new collective bargaining agreement. The Union filed a complaint with the Board alleging that Noel Canning's actions constituted an unfair labor practice in violation of the NLRA. An ALJ determined that the agreement was binding and ordered Noel Canning to sign the collective bargaining agreement. The Board affirmed the ruling against Noel Canning.</p>\n<p>Noel Canning appealed to the U.S. Court of Appeals for the District of Columbia Circuit, which held that the Board's ruling was invalid because not enough members of the Board were present. The panel that heard the Noel Canning case consisted of one member who was appointed by President Barack Obama and confirmed by the Senate in 2010 and two members whom President Obama appointed without Senate confirmation in January 2012. Although the Recess Appointments Clause allows the president to fill vacancies that occur while Congress is in recess, between December 2011 and the end of January 2012, the Senate met in pro forma meetings every three business days. Therefore, the Court of Appeals determined that the Senate was not in recess on the days the Senate did not meet because, for the purpose of the Recess Appointments Clause, recess is defined as the time in between sessions of Congress.</p>\n",
+    "question": "<p>1. Was the Senate \" in recess\" under the Recess Appointments Clause when President Obama appointed three people to the Board on January 4, 2012?</p>\n<p>2. Does the Recess Appointments Clause grant the President the power to fill only vacancies that occur during the official recess of the Senate?</p>\n",
+    "conclusion": "<p>No, no. Justice Stephen G. Breyer delivered the opinion for the 9-0 majority. The Court held that a pro forma session does not create a recess long enough to trigger the Recess Appointments Clause. While the term \"recess\" in the Clause refers both to inter-and intra-session recesses, its legislative history and historical context indicate that the term should be presumed to mean a recess of substantial length. The Court held that the three-day break that occurs during pro forma sessions does not represent a significant interruption of legislative business and therefore cannot justify the exercise of the Clause. Additionally, a pro forma session cannot be viewed as a single, long recess because the Senate retains its capacity to conduct business during such sessions. Because recess appointments made during a recess that was shorter than ten days have been so historically rare, the Court held that ten days was the appropriate presumptive lower limit to place on the exercise of the Clause. The Court also held that the Clause applies to vacancies that occur during a recess as well as those that originally occur before a recess but continue to exist at the time of the recess. Although a plain reading of the Clause does not require such an interpretation, the historical context of the wording favors the more broad reading because a vacancy can be considered a continuing state.</p>\n<p>Justice Antonin Scalia wrote a concurrence in judgment in which he argued that the Recess Appointments Clause was only meant to cover breaks between congressional sessions rather than breaks within them. Therefore, the appointments in question are invalid because they were made during the session. Justice Scalia argued that a plain reading of the text as well as the historical meaning of the term \"recess\" clearly places it in opposition to the term \"session,\" and it is therefore illogical to interpret the Clause as allowing appointments while Congress is in session. In offering a broader reading of the Clause, the majority opinion disregards the Clause's purpose: to preserve the balance of power between the President and the Senate regarding appointments. Justice Scalia also argued that the majority's ten-day rule cannot stand because it is based purely on judicial interpretation of historical practices without any textual basis. For these same reasons, the Clause should be read as only granting the President the power to fill vacancies that originally occurred during a recess. Chief Justice John G. Roberts, Jr., Justice Clarence Thomas, and Justice Samuel A. Alito, Jr. joined in the concurrence in judgment.</p>\n",
+    "winner": "second",
+    "decisions": [
+      {
+        "description": "The President has the power to fill vacancies that occur in recesses greater than ten days under the Recess Appointments Clause. ",
+        "winning_party": "Noel Canning ",
+        "votes": [
+          {
+            "name": "Stephen G. Breyer",
+            "vote": "majority"
+          },
+          {
+            "name": "Elena Kagan",
+            "vote": "majority"
+          },
+          {
+            "name": "Anthony M. Kennedy",
+            "vote": "majority"
+          },
+          {
+            "name": "Ruth Bader Ginsburg",
+            "vote": "majority"
+          },
+          {
+            "name": "Sonia Sotomayor",
+            "vote": "majority"
+          },
+          {
+            "name": "Antonin Scalia",
+            "vote": "majority"
+          },
+          {
+            "name": "John G. Roberts, Jr.",
+            "vote": "majority"
+          },
+          {
+            "name": "Clarence Thomas",
+            "vote": "majority"
+          },
+          {
+            "name": "Samuel A. Alito, Jr.",
+            "vote": "majority"
+          }
+        ]
+      }
+    ]
+  },
+  "2014/13-604": {
+    "oyez_url": "https://www.oyez.org/cases/2014/13-604",
+    "first_party": "Nicholas B. Heien",
+    "second_party": "State of North Carolina",
+    "first_party_label": "Petitioner",
+    "second_party_label": "Respondent",
+    "name": "Heien v. North Carolina",
+    "docket_number": "13-604",
+    "manner_of_jurisdiction": "Writ of certiorari",
+    "facts_of_the_case": "<p>On April 29, 2010, Sergeant Darisse of the Surry County Sheriff's Department observed Maynor Javier Vasquez driving north on I-77 with a broken brake light. When Darisse pulled over the vehicle, he noticed another man, Nicholas Heien, lying under a blanket in the backseat. Darisse spoke with the two men, felt that their stories did not match up, and was concerned that Heien had not gotten up from the back seat. Darisse asked for permission to search the vehicle. Heien agreed, and Darisse found a bag containing 54.2 grams of cocaine in the car.</p>\n<p>A grand jury indicted Heien for two counts of trafficking cocaine. Heien filed a motion to suppress the evidence discovered during the search of his vehicle, and the trial court denied the motion. The North Carolina Court of Appeals reversed the trial court and held that the traffic stop was not objectively reasonable because North Carolina law only required one working brake light. The North Carolina Supreme Court reversed and held that when an officer's mistake of the law is reasonable, it may give rise to the \"reasonable suspicion\" required for a traffic stop of a vehicle under the Fourth Amendment. That North Carolina Supreme Court sent the case back to the state Court of Appeals.</p>\n<p>The North Carolina Court of Appeals found no error in the trial court's judgment. A dissenting judge, however, stated that the North Carolina Supreme Court's ruling created \"fundamental unfairness\" because it held citizens to the traditional rule that \"ignorance of the law is no excuse\" while allowing police to be ignorant of the law. Based on this dissent, Heien again appealed to the North Carolina Supreme Court which rejected Heien's appeal.</p>\n",
+    "question": "<p>Does a police officer's mistake of law provide the individualized reasonable suspicion that the Fourth Amendment requires to justify a traffic stop?</p>\n",
+    "conclusion": "<p>Yes. Chief Justice John G. Roberts, Jr., delivered the opinion for the 8-1 majority. The Court held that a search or seizure is reasonable under the Fourth Amendment when an officer has made a reasonable factual or legal mistake. Because Fourth Amendment jurisprudence turns on the question of reasonableness, governing officials have traditionally been allowed leeway to enforce the law for the community's protection. As long as the mistake of fact or law in question was reasonable, the Fourth Amendment does not hold such mistakes to be incompatible with the concept of reasonable suspicion. However, the Court also held that those mistakes must be objectively reasonable; an officer cannot gain the benefits of Fourth Amendment reasonableness through a sloppy or incomplete knowledge of the law.</p>\n<p>In her concurring opinion, Justice Elena Kagan emphasized that the majority opinion's analysis was limited to when the mistake of law in question is an objectively reasonable one. Justice Kagan also wrote that the test to determine whether an officer made an objectively reasonable mistake is much more stringent than the one to determine whether a government official is entitled to qualified immunity. Justice Ruth Bader Ginsburg joined in the concurring opinion.</p>\n<p>Justice Sonia Sotomayor wrote a dissenting opinion in which she argued that Fourth Amendment jurisprudence has traditionally focused on the officer's factual conclusions rather than understanding of the law. Expanding leeway allowed to police officers with respect to their factual assessment to the meaning of the laws they are meant to enforce runs the risk of eroding the Fourth Amendment's protections. In the absence of any evidence that holding police officers to this standard would prevent effective enforcement of the law, mistakes of law should not be considered reasonable under the Fourth Amendment.</p>\n",
+    "winner": "second",
+    "decisions": [
+      {
+        "description": "A search or seizure is reasonable under the Fourth Amendment when an officer has made a reasonable factual or legal mistake.",
+        "winning_party": "North Carolina",
+        "votes": [
+          {
+            "name": "John G. Roberts, Jr.",
+            "vote": "majority"
+          },
+          {
+            "name": "Antonin Scalia",
+            "vote": "majority"
+          },
+          {
+            "name": "Anthony M. Kennedy",
+            "vote": "majority"
+          },
+          {
+            "name": "Clarence Thomas",
+            "vote": "majority"
+          },
+          {
+            "name": "Ruth Bader Ginsburg",
+            "vote": "majority"
+          },
+          {
+            "name": "Stephen G. Breyer",
+            "vote": "majority"
+          },
+          {
+            "name": "Samuel A. Alito, Jr.",
+            "vote": "majority"
+          },
+          {
+            "name": "Elena Kagan",
+            "vote": "majority"
+          },
+          {
+            "name": "Sonia Sotomayor",
+            "vote": "minority"
+          }
+        ]
+      }
+    ]
+  },
+  "2014/13-7451": {
+    "oyez_url": "https://www.oyez.org/cases/2014/13-7451",
+    "first_party": "John L. Yates",
+    "second_party": "United States",
+    "first_party_label": "Petitioner",
+    "second_party_label": "Respondent",
+    "name": "Yates v. United States",
+    "docket_number": "13-7451",
+    "manner_of_jurisdiction": "Writ of certiorari",
+    "facts_of_the_case": "<p>On August 17, 2007, John L. Yates and his crew prepared his fishing vessel for a commercial fishing trip into federal waters in the Gulf of Mexico. On August 23, 2007, Officer John Jones, a field officer with the Florida Fish and Wildlife Conservation Commission who was empowered to enforce federal fisheries laws, boarded the vessel and noticed red grouper fish that appeared to be smaller than the requisite 20 inches. Officer Jones measured the grouper that appeared smaller and found a total of 72 fish that measured under 20 inches. Officer Jones placed these fish in wooden crates, issued Yates a citation, and informed Yates that the National Marine Fisheries Service would seize these fish upon the vessel's return to port. Contrary to Officer Jones' directions, Yates instructed his crew to throw the fish in question overboard and replace them with larger fish. When the vessel returned to port and the fish were measured on August 27, Officer Jones suspected that Yates had disposed of the fish he had measured.</p>\n<p>Yates was charged with destruction and falsification of evidence. At trial he argued that the fish thrown overboard were not actually undersized because Officer Jones had measured the fish with their mouths closed, which shortens the length of fish. The district court found Yates guilty of disposing of undersized fish and therefore in violation of a statute that makes it a crime to destroy or conceal \"a tangible object with the intent to impede, obstruct, or influence\" a governmental investigation. The U.S. Court of Appeals for the Eleventh Circuit affirmed.</p>\n",
+    "question": "<p>Are fish considered \"tangible objects\" for the purpose of the statute that makes it a crime to destroy or conceal tangible objects to impede a governmental investigation, even though the term is undefined and exists in a statute that largely refers to record-keeping documents?</p>\n",
+    "conclusion": "<p>No. Justice Ruth Bader Ginsburg wrote the opinion for the four-justice plurality. The Court noted that the broad dictionary definition of \"tangible objects\" would cover fish, but held that the term must be read in the financial context of the Sarbanes-Oxley Act of 2002 (SOX), which was enacted as a reaction to the Enron scandal and contained the specific provision Yates was charged with violating. In this context, the Court held that the term was ambiguous because the caption of the section in question, \"Destruction, alteration, or falsification of records in Federal investigations and bankruptcy,\" and the title of the section in which it was originally placed, \"Criminal penalties for altering documents,\" indicated that Congress was referring only to financial records. Additionally, the section's placement amongst other sections that prohibited specific actions cuts in favor of narrow construction. The Court argued that reading the section to apply to all physical objects would create significant overlap with another section. The words immediately surrounding \"tangible object\" \u2014 \"falsifies, or makes a false entry in any record [or] document\" \u2014indicated that Congress intended to restrict the term to related objects. Finally, the Court held that any statutory ambiguity in criminal proceedings should be resolved in favor of the defendant.</p>\n<p>Justice Samuel A. Alito, Jr. wrote an opinion concurring in the judgment in which he argued that the plurality's holding should be narrowly construed. He contended that the statute's list of nouns, its list of verbs, and its title, all working in conjunction, indicated that \"tangible object\" should be limited to something similar to records or documents.</p>\n<p>Justice Elena Kagan wrote a dissenting opinion in which she argued that the term \"tangible object\" should be given its ordinary meaning and therefore subsumes all things that possess physical form, including fish. She noted that the use of the word \"any\" before \"tangible object\" demonstrated a congressional intent for broad application. Justice Kagan also pointed out that the section's language tracked the language in other statutes that had been interpreted to include all physical objects. This section's legislative history showed that it was enacted to close a loophole created by another section and therefore did not create any unnecessary overlap. Justice Antonin Scalia, Justice Anthony M. Kennedy, and Justice Clarence Thomas joined the dissent.</p>\n",
+    "winner": "first",
+    "decisions": [
+      {
+        "description": "A \"tangible object\" as defined by Section 1519 is one used to record or preserve information.",
+        "winning_party": "Yates",
+        "votes": [
+          {
+            "name": "Ruth Bader Ginsburg",
+            "vote": "majority"
+          },
+          {
+            "name": "John G. Roberts, Jr.",
+            "vote": "majority"
+          },
+          {
+            "name": "Stephen G. Breyer",
+            "vote": "majority"
+          },
+          {
+            "name": "Sonia Sotomayor",
+            "vote": "majority"
+          },
+          {
+            "name": "Samuel A. Alito, Jr.",
+            "vote": "majority"
+          },
+          {
+            "name": "Elena Kagan",
             "vote": "minority"
           },
           {
+            "name": "Antonin Scalia",
+            "vote": "minority"
+          },
+          {
+            "name": "Anthony M. Kennedy",
+            "vote": "minority"
+          },
+          {
+            "name": "Clarence Thomas",
+            "vote": "minority"
+          }
+        ]
+      }
+    ]
+  },
+  "2016/15-1293": {
+    "oyez_url": "https://www.oyez.org/cases/2016/15-1293",
+    "first_party": "Joseph Matal, Interim Director, USPTO",
+    "second_party": "Simon Shiao Tam",
+    "first_party_label": "Petitioner",
+    "second_party_label": "Respondent",
+    "name": "Matal v. Tam",
+    "docket_number": "15-1293",
+    "manner_of_jurisdiction": "Writ of certiorari",
+    "facts_of_the_case": "<p>Simon Tam and his band, The Slants, sought to register the band\u2019s name with the U.S. Trademark Office. The Office denied the application because it found that the name \u00a0would likely be disparaging towards \u201cpersons of Asian descent.\u201d The office cited the Disparagement Clause of the Lanham Act of 1946, which prohibits trademarks that \u201c[consist] of or [comprise] immoral, deceptive, or scandalous matter; or matter which may disparage or falsely suggest a connection with persons, living or dead, institutions, beliefs, or national symbols, or bring them into contempt, or disrepute.\u201d Tam appealed the trademark officer\u2019s decision, and the name was refused a second time by a board comprised of members of the office. Tam appealed to a panel of judges on the U.S. Court of Appeals for the Federal Circuit, which found that the trademark officials were within their rights to refuse the trademark application under the Disparagement Clause. The appellate court then reviewed the case en banc and found that the trademark office was incorrect in refusing the trademark application and that the Disparagement Clause violated the First Amendment.</p>\n",
+    "question": "<p>Is the Disparagement Clause invalid under the First Amendment?</p>\n",
+    "conclusion": "<p dir=\"ltr\">The Disparagement Clause prohibits trademarks that disparage the members of a racial or ethnic group and violates the Free Speech Clause of the First Amendment. Justice Samuel A. Alito, Jr. delivered the opinion for the 8-0 majority. The Court held that, the plain meaning of the text clearly indicated that the Disparagement Clause applied to racial and ethnic groups, and therefore the Clause applied to the mark at issue in this case. The Clause also facially discriminated based on viewpoint, as giving offense constitutes a viewpoint. Because the PTO simply approved trademarks, they were not government speech--to which the First Amendment prohibitions on viewpoint regulation did not apply--and holding otherwise would constitute a massive and unwise expansion of the government speech doctrine. Similarly, PTO approval of a trademark did not constitute government-provided subsidy, an area of cases in which viewpoint discrimination was sometimes determined to be constitutional. The Disparagement Clause was also not a permissible regulation of commercial speech because it was not narrowly drawn to serve a substantial interest. Any asserted interest of avoiding offense clearly contravened the purpose of the First Amendment\u2019s protection of free speech, and the Clause was too broad to serve the government\u2019s other stated interest of protecting the orderly flow of commerce. </p>\n<p dir=\"ltr\">Justice Anthony M. Kennedy wrote an opinion concurring in part and concurring in the judgment in which he argued that the First Amendment\u2019s protections against viewpoint discrimination clearly applied in this case. There are very narrow and specific categories in which the government may regulate speech--such as fraud, defamation, and incitement--and the trademark at issue here did not fall within these categories. Instead, the Disparagement Clause specifically singled out a subset of messages that the government determined to be offensive and prohibits them, which was plainly unconstitutional viewpoint discrimination. Justice Kennedy also wrote that the majority opinion does not govern how any other provisions of the Lanham Act should be interpreted under the First Amendment, nor was the government speech doctrine at issue in this case. Justice Ruth Bader Ginsburg, Justice Sonia Sotomayor, and Justice Elena Kagan joined in the opinion concurring in part and concurring in the judgment. In his separate opinion concurring in part and concurring in the judgment, Justice Clarence Thomas wrote that all government regulation of commercial speech should be analyzed under the strict scrutiny standard. </p>\n<p>\u00a0</p>\n<p dir=\"ltr\">Justice Neil Gorsuch did not participate in the discussion or decision of this case.</p>\n",
+    "winner": "second",
+    "decisions": [
+      {
+        "description": "The Disparagement Clause prohibits trademarks that disparage the members of a racial or ethnic group and violates the Free Speech Clause of the First Amendment",
+        "winning_party": "Tam",
+        "votes": [
+          {
+            "name": "Samuel A. Alito, Jr.",
+            "vote": "majority"
+          },
+          {
+            "name": "John G. Roberts, Jr.",
+            "vote": "majority"
+          },
+          {
+            "name": "Stephen G. Breyer",
+            "vote": "majority"
+          },
+          {
+            "name": "Anthony M. Kennedy",
+            "vote": "majority"
+          },
+          {
+            "name": "Ruth Bader Ginsburg",
+            "vote": "majority"
+          },
+          {
+            "name": "Sonia Sotomayor",
+            "vote": "majority"
+          },
+          {
+            "name": "Elena Kagan",
+            "vote": "majority"
+          },
+          {
+            "name": "Clarence Thomas",
+            "vote": "majority"
+          },
+          {
             "name": "Neil Gorsuch",
-            "vote": "majority"
-          },
-          {
-            "name": "Brett M. Kavanaugh",
-            "vote": "majority"
-          },
-          {
-            "name": "Amy Coney Barrett",
-            "vote": "majority"
+            "vote": "none"
           }
         ]
       }

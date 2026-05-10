@@ -1,4 +1,3 @@
-import csv
 import json
 import os
 import re
@@ -7,14 +6,17 @@ from typing import Optional
 import requests
 
 OYEZ_API_BASE = "https://api.oyez.org/cases"
-CSV_PATH = "oyez_ids.csv"
+SCHEDULE_PATH = "public/schedule.json"
 OUTPUT_PATH = "public/cases.json"
 IMAGES_DIR = "public/assets/images"
 
-# Manual overrides for cases where the Oyez API doesn't provide winning_party
+# Manual overrides for cases where the Oyez API doesn't provide winning_party.
+# Keys are the full Oyez path (year/id) as they appear in schedule.json.
 WINNER_OVERRIDES: dict = {
-    "73-1766": "first",   # United States v. Nixon — US (first party) won
-    "19-1392": "first",   # Dobbs v. JWHO — Dobbs/Mississippi (first party) won
+    "1973/73-1766":      "first",   # United States v. Nixon — US (first party) won
+    "2021/19-1392":      "first",   # Dobbs v. JWHO — Dobbs/Mississippi (first party) won
+    "1940-1955/316us535": "first",  # Skinner v. Oklahoma — Skinner (first party) won
+    "2004/04-108":        "second", # Kelo v. New London — New London (second party) won
 }
 
 
@@ -24,7 +26,14 @@ def fetch_case(year: str, case_id: str) -> Optional[dict]:
     if response.status_code != 200:
         print(f"  ERROR {response.status_code} for {url}")
         return None
-    return response.json()
+    data = response.json()
+    # Some old cases return a list; take the first element
+    if isinstance(data, list):
+        if not data:
+            print(f"  ERROR empty list for {url}")
+            return None
+        data = data[0]
+    return data
 
 
 def justice_filename(name: str, mime: Optional[str]) -> str:
@@ -117,7 +126,6 @@ def parse_case(data: dict) -> dict:
     second_party = data.get("second_party")
     decisions = extract_decisions(data.get("decisions"))
 
-    # Determine winner from the first decision that names a winning party
     winner = None
     for d in decisions:
         wp = d.get("winning_party")
@@ -145,35 +153,40 @@ def parse_case(data: dict) -> dict:
     }
 
 
-def load_ids(csv_path: str) -> list:
+def load_schedule(schedule_path: str) -> list:
+    """Returns list of (year, case_id, full_path) from schedule.json values."""
+    with open(schedule_path) as f:
+        schedule = json.load(f)
+    seen = set()
     entries = []
-    with open(csv_path, newline="") as f:
-        reader = csv.DictReader(f)
-        for row in reader:
-            year = row["year"].strip()
-            case_id = row["id"].strip()
-            if year and case_id:
-                entries.append((year, case_id))
+    for path in schedule.values():
+        if path in seen:
+            continue
+        seen.add(path)
+        if "/" not in path:
+            print(f"  SKIP malformed path (missing year): {path!r}")
+            continue
+        year, case_id = path.split("/", 1)
+        entries.append((year, case_id, path))
     return entries
 
 
 def main():
     os.makedirs("public", exist_ok=True)
-    entries = load_ids(CSV_PATH)
-    print(f"Loaded {len(entries)} cases from {CSV_PATH}")
+    entries = load_schedule(SCHEDULE_PATH)
+    print(f"Loaded {len(entries)} unique cases from {SCHEDULE_PATH}")
 
     results = {}
-    for year, case_id in entries:
-        print(f"Fetching {year}/{case_id} ...")
+    for year, case_id, path in entries:
+        print(f"Fetching {path} ...")
         data = fetch_case(year, case_id)
         if data is None:
             continue
         parsed = parse_case(data)
-        docket = parsed.get("docket_number") or f"{year}/{case_id}"
-        if parsed.get("winner") is None and docket in WINNER_OVERRIDES:
-            parsed["winner"] = WINNER_OVERRIDES[docket]
-        results[docket] = parsed
-        print(f"  Saved: {parsed.get('name')} (docket: {docket}, winner: {parsed.get('winner')})")
+        if parsed.get("winner") is None and path in WINNER_OVERRIDES:
+            parsed["winner"] = WINNER_OVERRIDES[path]
+        results[path] = parsed
+        print(f"  Saved: {parsed.get('name')} (winner: {parsed.get('winner')})")
         time.sleep(0.3)
 
     with open(OUTPUT_PATH, "w") as f:
