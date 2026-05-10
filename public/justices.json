@@ -1,0 +1,2008 @@
+{
+  "John Jay": {
+    "term": "October 19, 1789 to June 29, 1795",
+    "appointed_by": [
+      "George Washington"
+    ],
+    "description": "Fallback description: John Jay served on the Supreme Court of the United States as Chief Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/john_jay",
+    "terms": [
+      {
+        "role": "Chief Justice",
+        "start": "October 19, 1789",
+        "end": "June 29, 1795",
+        "appointed_by": "George Washington"
+      }
+    ]
+  },
+  "John Rutledge": {
+    "term": "August 12, 1795 to December 15, 1795; February 15, 1790 to March 5, 1791",
+    "appointed_by": [
+      "George Washington"
+    ],
+    "description": "Fallback description: John Rutledge served on the Supreme Court of the United States as Chief Justice, then Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/john_rutledge",
+    "terms": [
+      {
+        "role": "Chief Justice",
+        "start": "August 12, 1795",
+        "end": "December 15, 1795",
+        "appointed_by": "George Washington"
+      },
+      {
+        "role": "Associate Justice",
+        "start": "February 15, 1790",
+        "end": "March 5, 1791",
+        "appointed_by": "George Washington"
+      }
+    ]
+  },
+  "Oliver Ellsworth": {
+    "term": "March 8, 1796 to December 15, 1800",
+    "appointed_by": [
+      "George Washington"
+    ],
+    "description": "Fallback description: Oliver Ellsworth served on the Supreme Court of the United States as Chief Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/oliver_ellsworth",
+    "terms": [
+      {
+        "role": "Chief Justice",
+        "start": "March 8, 1796",
+        "end": "December 15, 1800",
+        "appointed_by": "George Washington"
+      }
+    ]
+  },
+  "John Marshall": {
+    "term": "February 4, 1801 to July 6, 1835",
+    "appointed_by": [
+      "John Adams"
+    ],
+    "description": "Fallback description: John Marshall served on the Supreme Court of the United States as Chief Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/john_marshall",
+    "terms": [
+      {
+        "role": "Chief Justice",
+        "start": "February 4, 1801",
+        "end": "July 6, 1835",
+        "appointed_by": "John Adams"
+      }
+    ]
+  },
+  "Roger Brooke Taney": {
+    "term": "March 28, 1836 to October 12, 1864",
+    "appointed_by": [
+      "Andrew Jackson"
+    ],
+    "description": "Fallback description: Roger Brooke Taney served on the Supreme Court of the United States as Chief Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/roger_brooke_taney",
+    "terms": [
+      {
+        "role": "Chief Justice",
+        "start": "March 28, 1836",
+        "end": "October 12, 1864",
+        "appointed_by": "Andrew Jackson"
+      }
+    ]
+  },
+  "Salmon Portland Chase": {
+    "term": "December 15, 1864 to May 7, 1873",
+    "appointed_by": [
+      "Abraham Lincoln"
+    ],
+    "description": "Fallback description: Salmon Portland Chase served on the Supreme Court of the United States as Chief Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/salmon_portland_chase",
+    "terms": [
+      {
+        "role": "Chief Justice",
+        "start": "December 15, 1864",
+        "end": "May 7, 1873",
+        "appointed_by": "Abraham Lincoln"
+      }
+    ]
+  },
+  "Morrison Remick Waite": {
+    "term": "March 4, 1874 to March 23, 1888",
+    "appointed_by": [
+      "Ulysses S. Grant"
+    ],
+    "description": "Fallback description: Morrison Remick Waite served on the Supreme Court of the United States as Chief Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/morrison_remick_waite",
+    "terms": [
+      {
+        "role": "Chief Justice",
+        "start": "March 4, 1874",
+        "end": "March 23, 1888",
+        "appointed_by": "Ulysses S. Grant"
+      }
+    ]
+  },
+  "Melville Weston Fuller": {
+    "term": "October 8, 1888 to July 4, 1910",
+    "appointed_by": [
+      "Grover Cleveland"
+    ],
+    "description": "Fallback description: Melville Weston Fuller served on the Supreme Court of the United States as Chief Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/melville_weston_fuller",
+    "terms": [
+      {
+        "role": "Chief Justice",
+        "start": "October 8, 1888",
+        "end": "July 4, 1910",
+        "appointed_by": "Grover Cleveland"
+      }
+    ]
+  },
+  "Edward Douglass White": {
+    "term": "December 19, 1910 to May 19, 1921; March 12, 1894 to December 18, 1910",
+    "appointed_by": [
+      "William Howard Taft",
+      "Grover Cleveland"
+    ],
+    "description": "Fallback description: Edward Douglass White served on the Supreme Court of the United States as Chief Justice, then Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/edward_douglass_white",
+    "terms": [
+      {
+        "role": "Chief Justice",
+        "start": "December 19, 1910",
+        "end": "May 19, 1921",
+        "appointed_by": "William Howard Taft"
+      },
+      {
+        "role": "Associate Justice",
+        "start": "March 12, 1894",
+        "end": "December 18, 1910",
+        "appointed_by": "Grover Cleveland"
+      }
+    ]
+  },
+  "William Howard Taft": {
+    "term": "July 11, 1921 to February 3, 1930",
+    "appointed_by": [
+      "Warren G. Harding"
+    ],
+    "description": "Fallback description: William Howard Taft served on the Supreme Court of the United States as Chief Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/william_howard_taft",
+    "terms": [
+      {
+        "role": "Chief Justice",
+        "start": "July 11, 1921",
+        "end": "February 3, 1930",
+        "appointed_by": "Warren G. Harding"
+      }
+    ]
+  },
+  "Charles Evans Hughes": {
+    "term": "February 24, 1930 to June 30, 1941; October 10, 1910 to June 10, 1916",
+    "appointed_by": [
+      "Herbert Hoover",
+      "William Howard Taft"
+    ],
+    "description": "Fallback description: Charles Evans Hughes served on the Supreme Court of the United States as Chief Justice, then Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/charles_evans_hughes",
+    "terms": [
+      {
+        "role": "Chief Justice",
+        "start": "February 24, 1930",
+        "end": "June 30, 1941",
+        "appointed_by": "Herbert Hoover"
+      },
+      {
+        "role": "Associate Justice",
+        "start": "October 10, 1910",
+        "end": "June 10, 1916",
+        "appointed_by": "William Howard Taft"
+      }
+    ]
+  },
+  "Harlan Fiske Stone": {
+    "term": "July 3, 1941 to April 22, 1946; March 2, 1925 to July 2, 1941",
+    "appointed_by": [
+      "Franklin D. Roosevelt",
+      "Calvin Coolidge"
+    ],
+    "description": "Fallback description: Harlan Fiske Stone served on the Supreme Court of the United States as Chief Justice, then Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/harlan_fiske_stone",
+    "terms": [
+      {
+        "role": "Chief Justice",
+        "start": "July 3, 1941",
+        "end": "April 22, 1946",
+        "appointed_by": "Franklin D. Roosevelt"
+      },
+      {
+        "role": "Associate Justice",
+        "start": "March 2, 1925",
+        "end": "July 2, 1941",
+        "appointed_by": "Calvin Coolidge"
+      }
+    ]
+  },
+  "Fred Moore Vinson": {
+    "term": "June 24, 1946 to September 8, 1953",
+    "appointed_by": [
+      "Harry S. Truman"
+    ],
+    "description": "Fallback description: Fred Moore Vinson served on the Supreme Court of the United States as Chief Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/fred_moore_vinson",
+    "terms": [
+      {
+        "role": "Chief Justice",
+        "start": "June 24, 1946",
+        "end": "September 8, 1953",
+        "appointed_by": "Harry S. Truman"
+      }
+    ]
+  },
+  "Earl Warren": {
+    "term": "October 5, 1953 to June 23, 1969",
+    "appointed_by": [
+      "Dwight D. Eisenhower"
+    ],
+    "description": "Fallback description: Earl Warren served on the Supreme Court of the United States as Chief Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/earl_warren",
+    "terms": [
+      {
+        "role": "Chief Justice",
+        "start": "October 5, 1953",
+        "end": "June 23, 1969",
+        "appointed_by": "Dwight D. Eisenhower"
+      }
+    ]
+  },
+  "Warren Earl Burger": {
+    "term": "June 23, 1969 to September 26, 1986",
+    "appointed_by": [
+      "Richard Nixon"
+    ],
+    "description": "Fallback description: Warren Earl Burger served on the Supreme Court of the United States as Chief Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/warren_earl_burger",
+    "terms": [
+      {
+        "role": "Chief Justice",
+        "start": "June 23, 1969",
+        "end": "September 26, 1986",
+        "appointed_by": "Richard Nixon"
+      }
+    ]
+  },
+  "William H. Rehnquist": {
+    "term": "September 26, 1986 to September 3, 2005; January 7, 1972 to September 26, 1986",
+    "appointed_by": [
+      "Ronald Reagan",
+      "Richard Nixon"
+    ],
+    "description": "Fallback description: William H. Rehnquist served on the Supreme Court of the United States as Chief Justice, then Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/william_h_rehnquist",
+    "terms": [
+      {
+        "role": "Chief Justice",
+        "start": "September 26, 1986",
+        "end": "September 3, 2005",
+        "appointed_by": "Ronald Reagan"
+      },
+      {
+        "role": "Associate Justice",
+        "start": "January 7, 1972",
+        "end": "September 26, 1986",
+        "appointed_by": "Richard Nixon"
+      }
+    ]
+  },
+  "John G. Roberts, Jr.": {
+    "term": "September 29, 2005 to present",
+    "appointed_by": [
+      "George W. Bush"
+    ],
+    "description": "Fallback description: John G. Roberts, Jr. served on the Supreme Court of the United States as Chief Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/john_g_roberts",
+    "terms": [
+      {
+        "role": "Chief Justice",
+        "start": "September 29, 2005",
+        "end": "present",
+        "appointed_by": "George W. Bush"
+      }
+    ]
+  },
+  "William Cushing": {
+    "term": "February 2, 1790 to September 13, 1810",
+    "appointed_by": [
+      "George Washington"
+    ],
+    "description": "Fallback description: William Cushing served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/william_cushing",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "February 2, 1790",
+        "end": "September 13, 1810",
+        "appointed_by": "George Washington"
+      }
+    ]
+  },
+  "James Wilson": {
+    "term": "October 5, 1789 to August 21, 1798",
+    "appointed_by": [
+      "George Washington"
+    ],
+    "description": "Fallback description: James Wilson served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/james_wilson",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "October 5, 1789",
+        "end": "August 21, 1798",
+        "appointed_by": "George Washington"
+      }
+    ]
+  },
+  "John Blair": {
+    "term": "February 2, 1790 to October 25, 1795",
+    "appointed_by": [
+      "George Washington"
+    ],
+    "description": "Fallback description: John Blair served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/john_blair",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "February 2, 1790",
+        "end": "October 25, 1795",
+        "appointed_by": "George Washington"
+      }
+    ]
+  },
+  "James Iredell": {
+    "term": "May 12, 1790 to October 20, 1799",
+    "appointed_by": [
+      "George Washington"
+    ],
+    "description": "Fallback description: James Iredell served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/james_iredell",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "May 12, 1790",
+        "end": "October 20, 1799",
+        "appointed_by": "George Washington"
+      }
+    ]
+  },
+  "Thomas Johnson": {
+    "term": "September 19, 1791 to January 16, 1793",
+    "appointed_by": [
+      "George Washington"
+    ],
+    "description": "Fallback description: Thomas Johnson served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/thomas_johnson",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "September 19, 1791",
+        "end": "January 16, 1793",
+        "appointed_by": "George Washington"
+      }
+    ]
+  },
+  "William Paterson": {
+    "term": "March 11, 1793 to September 9, 1806",
+    "appointed_by": [
+      "George Washington"
+    ],
+    "description": "Fallback description: William Paterson served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/william_paterson",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "March 11, 1793",
+        "end": "September 9, 1806",
+        "appointed_by": "George Washington"
+      }
+    ]
+  },
+  "Samuel Chase": {
+    "term": "February 4, 1796 to June 19, 1811",
+    "appointed_by": [
+      "George Washington"
+    ],
+    "description": "Fallback description: Samuel Chase served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/samuel_chase",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "February 4, 1796",
+        "end": "June 19, 1811",
+        "appointed_by": "George Washington"
+      }
+    ]
+  },
+  "Bushrod Washington": {
+    "term": "November 9, 1798 to November 26, 1829",
+    "appointed_by": [
+      "John Adams"
+    ],
+    "description": "Fallback description: Bushrod Washington served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/bushrod_washington",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "November 9, 1798",
+        "end": "November 26, 1829",
+        "appointed_by": "John Adams"
+      }
+    ]
+  },
+  "Alfred Moore": {
+    "term": "April 21, 1800 to January 26, 1804",
+    "appointed_by": [
+      "John Adams"
+    ],
+    "description": "Fallback description: Alfred Moore served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/alfred_moore",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "April 21, 1800",
+        "end": "January 26, 1804",
+        "appointed_by": "John Adams"
+      }
+    ]
+  },
+  "William Johnson": {
+    "term": "May 7, 1804 to August 4, 1834",
+    "appointed_by": [
+      "Thomas Jefferson"
+    ],
+    "description": "Fallback description: William Johnson served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/william_johnson",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "May 7, 1804",
+        "end": "August 4, 1834",
+        "appointed_by": "Thomas Jefferson"
+      }
+    ]
+  },
+  "Brockholst Livingston": {
+    "term": "January 20, 1807 to March 18, 1823",
+    "appointed_by": [
+      "Thomas Jefferson"
+    ],
+    "description": "Fallback description: Brockholst Livingston served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/brockholst_livingston",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "January 20, 1807",
+        "end": "March 18, 1823",
+        "appointed_by": "Thomas Jefferson"
+      }
+    ]
+  },
+  "Thomas Todd": {
+    "term": "May 4, 1807 to February 7, 1826",
+    "appointed_by": [
+      "Thomas Jefferson"
+    ],
+    "description": "Fallback description: Thomas Todd served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/thomas_todd",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "May 4, 1807",
+        "end": "February 7, 1826",
+        "appointed_by": "Thomas Jefferson"
+      }
+    ]
+  },
+  "Gabriel Duvall": {
+    "term": "November 23, 1811 to January 14, 1835",
+    "appointed_by": [
+      "James Madison"
+    ],
+    "description": "Fallback description: Gabriel Duvall served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/gabriel_duvall",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "November 23, 1811",
+        "end": "January 14, 1835",
+        "appointed_by": "James Madison"
+      }
+    ]
+  },
+  "Joseph Story": {
+    "term": "February 3, 1812 to September 10, 1845",
+    "appointed_by": [
+      "James Madison"
+    ],
+    "description": "Fallback description: Joseph Story served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/joseph_story",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "February 3, 1812",
+        "end": "September 10, 1845",
+        "appointed_by": "James Madison"
+      }
+    ]
+  },
+  "Smith Thompson": {
+    "term": "September 1, 1823 to December 18, 1843",
+    "appointed_by": [
+      "James Monroe"
+    ],
+    "description": "Fallback description: Smith Thompson served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/smith_thompson",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "September 1, 1823",
+        "end": "December 18, 1843",
+        "appointed_by": "James Monroe"
+      }
+    ]
+  },
+  "Robert Trimble": {
+    "term": "June 16, 1826 to August 25, 1828",
+    "appointed_by": [
+      "John Quincy Adams"
+    ],
+    "description": "Fallback description: Robert Trimble served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/robert_trimble",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "June 16, 1826",
+        "end": "August 25, 1828",
+        "appointed_by": "John Quincy Adams"
+      }
+    ]
+  },
+  "John McLean": {
+    "term": "March 12, 1829 to April 4, 1861",
+    "appointed_by": [
+      "Andrew Jackson"
+    ],
+    "description": "Fallback description: John McLean served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/john_mclean",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "March 12, 1829",
+        "end": "April 4, 1861",
+        "appointed_by": "Andrew Jackson"
+      }
+    ]
+  },
+  "Henry Baldwin": {
+    "term": "January 18, 1830 to April 21, 1844",
+    "appointed_by": [
+      "Andrew Jackson"
+    ],
+    "description": "Fallback description: Henry Baldwin served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/henry_baldwin",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "January 18, 1830",
+        "end": "April 21, 1844",
+        "appointed_by": "Andrew Jackson"
+      }
+    ]
+  },
+  "James Moore Wayne": {
+    "term": "January 14, 1835 to July 5, 1867",
+    "appointed_by": [
+      "Andrew Jackson"
+    ],
+    "description": "Fallback description: James Moore Wayne served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/james_moore_wayne",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "January 14, 1835",
+        "end": "July 5, 1867",
+        "appointed_by": "Andrew Jackson"
+      }
+    ]
+  },
+  "Philip Pendleton Barbour": {
+    "term": "May 12, 1836 to February 25, 1841",
+    "appointed_by": [
+      "Andrew Jackson"
+    ],
+    "description": "Fallback description: Philip Pendleton Barbour served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/philip_pendleton_barbour",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "May 12, 1836",
+        "end": "February 25, 1841",
+        "appointed_by": "Andrew Jackson"
+      }
+    ]
+  },
+  "John Catron": {
+    "term": "May 1, 1837 to May 30, 1865",
+    "appointed_by": [
+      "Andrew Jackson"
+    ],
+    "description": "Fallback description: John Catron served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/john_catron",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "May 1, 1837",
+        "end": "May 30, 1865",
+        "appointed_by": "Andrew Jackson"
+      }
+    ]
+  },
+  "John McKinley": {
+    "term": "January 9, 1838 to July 19, 1852",
+    "appointed_by": [
+      "Martin Van Buren"
+    ],
+    "description": "Fallback description: John McKinley served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/john_mckinley",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "January 9, 1838",
+        "end": "July 19, 1852",
+        "appointed_by": "Martin Van Buren"
+      }
+    ]
+  },
+  "Peter Vivian Daniel": {
+    "term": "January 10, 1842 to May 31, 1860",
+    "appointed_by": [
+      "Martin Van Buren"
+    ],
+    "description": "Fallback description: Peter Vivian Daniel served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/peter_vivian_daniel",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "January 10, 1842",
+        "end": "May 31, 1860",
+        "appointed_by": "Martin Van Buren"
+      }
+    ]
+  },
+  "Samuel Nelson": {
+    "term": "February 27, 1845 to November 28, 1872",
+    "appointed_by": [
+      "John Tyler"
+    ],
+    "description": "Fallback description: Samuel Nelson served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/samuel_nelson",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "February 27, 1845",
+        "end": "November 28, 1872",
+        "appointed_by": "John Tyler"
+      }
+    ]
+  },
+  "Levi Woodbury": {
+    "term": "September 23, 1845 to September 4, 1851",
+    "appointed_by": [
+      "James K. Polk"
+    ],
+    "description": "Fallback description: Levi Woodbury served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/levi_woodbury",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "September 23, 1845",
+        "end": "September 4, 1851",
+        "appointed_by": "James K. Polk"
+      }
+    ]
+  },
+  "Robert Cooper Grier": {
+    "term": "August 10, 1846 to January 31, 1870",
+    "appointed_by": [
+      "James K. Polk"
+    ],
+    "description": "Fallback description: Robert Cooper Grier served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/robert_cooper_grier",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "August 10, 1846",
+        "end": "January 31, 1870",
+        "appointed_by": "James K. Polk"
+      }
+    ]
+  },
+  "Benjamin Robbins Curtis": {
+    "term": "October 10, 1851 to September 30, 1857",
+    "appointed_by": [
+      "Millard Fillmore"
+    ],
+    "description": "Fallback description: Benjamin Robbins Curtis served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/benjamin_robbins_curtis",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "October 10, 1851",
+        "end": "September 30, 1857",
+        "appointed_by": "Millard Fillmore"
+      }
+    ]
+  },
+  "John Archibald Campbell": {
+    "term": "April 11, 1853 to April 30, 1861",
+    "appointed_by": [
+      "Franklin Pierce"
+    ],
+    "description": "Fallback description: John Archibald Campbell served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/john_archibald_campbell",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "April 11, 1853",
+        "end": "April 30, 1861",
+        "appointed_by": "Franklin Pierce"
+      }
+    ]
+  },
+  "Nathan Clifford": {
+    "term": "January 21, 1858 to July 25, 1881",
+    "appointed_by": [
+      "James Buchanan"
+    ],
+    "description": "Fallback description: Nathan Clifford served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/nathan_clifford",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "January 21, 1858",
+        "end": "July 25, 1881",
+        "appointed_by": "James Buchanan"
+      }
+    ]
+  },
+  "Noah Haynes Swayne": {
+    "term": "January 27, 1862 to January 24, 1881",
+    "appointed_by": [
+      "Abraham Lincoln"
+    ],
+    "description": "Fallback description: Noah Haynes Swayne served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/noah_haynes_swayne",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "January 27, 1862",
+        "end": "January 24, 1881",
+        "appointed_by": "Abraham Lincoln"
+      }
+    ]
+  },
+  "Samuel Freeman Miller": {
+    "term": "July 21, 1862 to October 13, 1890",
+    "appointed_by": [
+      "Abraham Lincoln"
+    ],
+    "description": "Fallback description: Samuel Freeman Miller served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/samuel_freeman_miller",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "July 21, 1862",
+        "end": "October 13, 1890",
+        "appointed_by": "Abraham Lincoln"
+      }
+    ]
+  },
+  "David Davis": {
+    "term": "December 10, 1862 to March 4, 1877",
+    "appointed_by": [
+      "Abraham Lincoln"
+    ],
+    "description": "Fallback description: David Davis served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/david_davis",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "December 10, 1862",
+        "end": "March 4, 1877",
+        "appointed_by": "Abraham Lincoln"
+      }
+    ]
+  },
+  "Stephen Johnson Field": {
+    "term": "May 20, 1863 to December 1, 1897",
+    "appointed_by": [
+      "Abraham Lincoln"
+    ],
+    "description": "Fallback description: Stephen Johnson Field served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/stephen_johnson_field",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "May 20, 1863",
+        "end": "December 1, 1897",
+        "appointed_by": "Abraham Lincoln"
+      }
+    ]
+  },
+  "William Strong": {
+    "term": "March 14, 1870 to December 14, 1880",
+    "appointed_by": [
+      "Ulysses S. Grant"
+    ],
+    "description": "Fallback description: William Strong served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/william_strong",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "March 14, 1870",
+        "end": "December 14, 1880",
+        "appointed_by": "Ulysses S. Grant"
+      }
+    ]
+  },
+  "Joseph P. Bradley": {
+    "term": "March 23, 1870 to January 22, 1892",
+    "appointed_by": [
+      "Ulysses S. Grant"
+    ],
+    "description": "Fallback description: Joseph P. Bradley served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/joseph_p_bradley",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "March 23, 1870",
+        "end": "January 22, 1892",
+        "appointed_by": "Ulysses S. Grant"
+      }
+    ]
+  },
+  "Ward Hunt": {
+    "term": "January 9, 1873 to January 27, 1882",
+    "appointed_by": [
+      "Ulysses S. Grant"
+    ],
+    "description": "Fallback description: Ward Hunt served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/ward_hunt",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "January 9, 1873",
+        "end": "January 27, 1882",
+        "appointed_by": "Ulysses S. Grant"
+      }
+    ]
+  },
+  "John Marshall Harlan": {
+    "term": "December 10, 1877 to October 14, 1911",
+    "appointed_by": [
+      "Rutherford B. Hayes"
+    ],
+    "description": "Fallback description: John Marshall Harlan served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/john_marshall_harlan",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "December 10, 1877",
+        "end": "October 14, 1911",
+        "appointed_by": "Rutherford B. Hayes"
+      }
+    ]
+  },
+  "William Burnham Woods": {
+    "term": "January 5, 1881 to May 14, 1887",
+    "appointed_by": [
+      "Rutherford B. Hayes"
+    ],
+    "description": "Fallback description: William Burnham Woods served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/william_burnham_woods",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "January 5, 1881",
+        "end": "May 14, 1887",
+        "appointed_by": "Rutherford B. Hayes"
+      }
+    ]
+  },
+  "Stanley Matthews": {
+    "term": "May 17, 1881 to March 22, 1889",
+    "appointed_by": [
+      "James A. Garfield"
+    ],
+    "description": "Fallback description: Stanley Matthews served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/stanley_matthews",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "May 17, 1881",
+        "end": "March 22, 1889",
+        "appointed_by": "James A. Garfield"
+      }
+    ]
+  },
+  "Horace Gray": {
+    "term": "January 9, 1882 to September 15, 1902",
+    "appointed_by": [
+      "Chester A. Arthur"
+    ],
+    "description": "Fallback description: Horace Gray served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/horace_gray",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "January 9, 1882",
+        "end": "September 15, 1902",
+        "appointed_by": "Chester A. Arthur"
+      }
+    ]
+  },
+  "Samuel Blatchford": {
+    "term": "April 3, 1882 to July 7, 1893",
+    "appointed_by": [
+      "Chester A. Arthur"
+    ],
+    "description": "Fallback description: Samuel Blatchford served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/samuel_blatchford",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "April 3, 1882",
+        "end": "July 7, 1893",
+        "appointed_by": "Chester A. Arthur"
+      }
+    ]
+  },
+  "Lucius Quintus Cincinnatus Lamar": {
+    "term": "January 18, 1888 to January 23, 1893",
+    "appointed_by": [
+      "Grover Cleveland"
+    ],
+    "description": "Fallback description: Lucius Quintus Cincinnatus Lamar served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/lucius_quintus_cincinnatus_lamar",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "January 18, 1888",
+        "end": "January 23, 1893",
+        "appointed_by": "Grover Cleveland"
+      }
+    ]
+  },
+  "David Josiah Brewer": {
+    "term": "January 6, 1890 to March 28, 1910",
+    "appointed_by": [
+      "Benjamin Harrison"
+    ],
+    "description": "Fallback description: David Josiah Brewer served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/david_josiah_brewer",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "January 6, 1890",
+        "end": "March 28, 1910",
+        "appointed_by": "Benjamin Harrison"
+      }
+    ]
+  },
+  "Henry Billings Brown": {
+    "term": "January 5, 1891 to May 28, 1906",
+    "appointed_by": [
+      "Benjamin Harrison"
+    ],
+    "description": "Fallback description: Henry Billings Brown served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/henry_billings_brown",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "January 5, 1891",
+        "end": "May 28, 1906",
+        "appointed_by": "Benjamin Harrison"
+      }
+    ]
+  },
+  "George Shiras, Jr.": {
+    "term": "October 10, 1892 to February 23, 1903",
+    "appointed_by": [
+      "Benjamin Harrison"
+    ],
+    "description": "Fallback description: George Shiras, Jr. served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/george_shiras",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "October 10, 1892",
+        "end": "February 23, 1903",
+        "appointed_by": "Benjamin Harrison"
+      }
+    ]
+  },
+  "Howell Edmunds Jackson": {
+    "term": "March 4, 1893 to August 8, 1895",
+    "appointed_by": [
+      "Benjamin Harrison"
+    ],
+    "description": "Fallback description: Howell Edmunds Jackson served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/howell_edmunds_jackson",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "March 4, 1893",
+        "end": "August 8, 1895",
+        "appointed_by": "Benjamin Harrison"
+      }
+    ]
+  },
+  "Rufus Wheeler Peckham": {
+    "term": "January 6, 1896 to October 24, 1909",
+    "appointed_by": [
+      "Grover Cleveland"
+    ],
+    "description": "Fallback description: Rufus Wheeler Peckham served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/rufus_wheeler_peckham",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "January 6, 1896",
+        "end": "October 24, 1909",
+        "appointed_by": "Grover Cleveland"
+      }
+    ]
+  },
+  "Joseph McKenna": {
+    "term": "January 26, 1898 to January 5, 1925",
+    "appointed_by": [
+      "William McKinley"
+    ],
+    "description": "Fallback description: Joseph McKenna served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/joseph_mckenna",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "January 26, 1898",
+        "end": "January 5, 1925",
+        "appointed_by": "William McKinley"
+      }
+    ]
+  },
+  "Oliver Wendell Holmes, Jr.": {
+    "term": "December 8, 1902 to January 12, 1932",
+    "appointed_by": [
+      "Theodore Roosevelt"
+    ],
+    "description": "Fallback description: Oliver Wendell Holmes, Jr. served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/oliver_wendell_holmes",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "December 8, 1902",
+        "end": "January 12, 1932",
+        "appointed_by": "Theodore Roosevelt"
+      }
+    ]
+  },
+  "William Rufus Day": {
+    "term": "March 2, 1903 to November 13, 1922",
+    "appointed_by": [
+      "Theodore Roosevelt"
+    ],
+    "description": "Fallback description: William Rufus Day served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/william_rufus_day",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "March 2, 1903",
+        "end": "November 13, 1922",
+        "appointed_by": "Theodore Roosevelt"
+      }
+    ]
+  },
+  "William Henry Moody": {
+    "term": "December 17, 1906 to November 20, 1910",
+    "appointed_by": [
+      "Theodore Roosevelt"
+    ],
+    "description": "Fallback description: William Henry Moody served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/william_henry_moody",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "December 17, 1906",
+        "end": "November 20, 1910",
+        "appointed_by": "Theodore Roosevelt"
+      }
+    ]
+  },
+  "Horace Harmon Lurton": {
+    "term": "January 3, 1910 to July 12, 1914",
+    "appointed_by": [
+      "William Howard Taft"
+    ],
+    "description": "Fallback description: Horace Harmon Lurton served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/horace_harmon_lurton",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "January 3, 1910",
+        "end": "July 12, 1914",
+        "appointed_by": "William Howard Taft"
+      }
+    ]
+  },
+  "Willis Van Devanter": {
+    "term": "January 3, 1911 to June 2, 1937",
+    "appointed_by": [
+      "William Howard Taft"
+    ],
+    "description": "Fallback description: Willis Van Devanter served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/willis_van_devanter",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "January 3, 1911",
+        "end": "June 2, 1937",
+        "appointed_by": "William Howard Taft"
+      }
+    ]
+  },
+  "Joseph Rucker Lamar": {
+    "term": "January 3, 1911 to January 2, 1916",
+    "appointed_by": [
+      "William Howard Taft"
+    ],
+    "description": "Fallback description: Joseph Rucker Lamar served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/joseph_rucker_lamar",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "January 3, 1911",
+        "end": "January 2, 1916",
+        "appointed_by": "William Howard Taft"
+      }
+    ]
+  },
+  "Mahlon Pitney": {
+    "term": "March 18, 1912 to December 31, 1922",
+    "appointed_by": [
+      "William Howard Taft"
+    ],
+    "description": "Fallback description: Mahlon Pitney served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/mahlon_pitney",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "March 18, 1912",
+        "end": "December 31, 1922",
+        "appointed_by": "William Howard Taft"
+      }
+    ]
+  },
+  "James Clark McReynolds": {
+    "term": "October 12, 1914 to January 31, 1941",
+    "appointed_by": [
+      "Woodrow Wilson"
+    ],
+    "description": "Fallback description: James Clark McReynolds served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/james_clark_mcreynolds",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "October 12, 1914",
+        "end": "January 31, 1941",
+        "appointed_by": "Woodrow Wilson"
+      }
+    ]
+  },
+  "Louis Dembitz Brandeis": {
+    "term": "June 5, 1916 to February 13, 1939",
+    "appointed_by": [
+      "Woodrow Wilson"
+    ],
+    "description": "Fallback description: Louis Dembitz Brandeis served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/louis_dembitz_brandeis",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "June 5, 1916",
+        "end": "February 13, 1939",
+        "appointed_by": "Woodrow Wilson"
+      }
+    ]
+  },
+  "John Hessin Clarke": {
+    "term": "October 9, 1916 to September 18, 1922",
+    "appointed_by": [
+      "Woodrow Wilson"
+    ],
+    "description": "Fallback description: John Hessin Clarke served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/john_hessin_clarke",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "October 9, 1916",
+        "end": "September 18, 1922",
+        "appointed_by": "Woodrow Wilson"
+      }
+    ]
+  },
+  "George Sutherland": {
+    "term": "October 2, 1922 to January 17, 1938",
+    "appointed_by": [
+      "Warren G. Harding"
+    ],
+    "description": "Fallback description: George Sutherland served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/george_sutherland",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "October 2, 1922",
+        "end": "January 17, 1938",
+        "appointed_by": "Warren G. Harding"
+      }
+    ]
+  },
+  "Pierce Butler": {
+    "term": "January 2, 1923 to November 16, 1939",
+    "appointed_by": [
+      "Warren G. Harding"
+    ],
+    "description": "Fallback description: Pierce Butler served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/pierce_butler",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "January 2, 1923",
+        "end": "November 16, 1939",
+        "appointed_by": "Warren G. Harding"
+      }
+    ]
+  },
+  "Edward Terry Sanford": {
+    "term": "February 19, 1923 to March 8, 1930",
+    "appointed_by": [
+      "Warren G. Harding"
+    ],
+    "description": "Fallback description: Edward Terry Sanford served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/edward_terry_sanford",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "February 19, 1923",
+        "end": "March 8, 1930",
+        "appointed_by": "Warren G. Harding"
+      }
+    ]
+  },
+  "Owen Josephus Roberts": {
+    "term": "June 2, 1930 to July 31, 1945",
+    "appointed_by": [
+      "Herbert Hoover"
+    ],
+    "description": "Fallback description: Owen Josephus Roberts served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/owen_josephus_roberts",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "June 2, 1930",
+        "end": "July 31, 1945",
+        "appointed_by": "Herbert Hoover"
+      }
+    ]
+  },
+  "Benjamin Nathan Cardozo": {
+    "term": "March 14, 1932 to July 9, 1938",
+    "appointed_by": [
+      "Herbert Hoover"
+    ],
+    "description": "Fallback description: Benjamin Nathan Cardozo served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/benjamin_nathan_cardozo",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "March 14, 1932",
+        "end": "July 9, 1938",
+        "appointed_by": "Herbert Hoover"
+      }
+    ]
+  },
+  "Hugo Lafayette Black": {
+    "term": "August 19, 1937 to September 17, 1971",
+    "appointed_by": [
+      "Franklin D. Roosevelt"
+    ],
+    "description": "Fallback description: Hugo Lafayette Black served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/hugo_lafayette_black",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "August 19, 1937",
+        "end": "September 17, 1971",
+        "appointed_by": "Franklin D. Roosevelt"
+      }
+    ]
+  },
+  "Stanley Forman Reed": {
+    "term": "January 31, 1938 to February 25, 1957",
+    "appointed_by": [
+      "Franklin D. Roosevelt"
+    ],
+    "description": "Fallback description: Stanley Forman Reed served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/stanley_forman_reed",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "January 31, 1938",
+        "end": "February 25, 1957",
+        "appointed_by": "Franklin D. Roosevelt"
+      }
+    ]
+  },
+  "Felix Frankfurter": {
+    "term": "January 30, 1939 to August 28, 1962",
+    "appointed_by": [
+      "Franklin D. Roosevelt"
+    ],
+    "description": "Fallback description: Felix Frankfurter served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/felix_frankfurter",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "January 30, 1939",
+        "end": "August 28, 1962",
+        "appointed_by": "Franklin D. Roosevelt"
+      }
+    ]
+  },
+  "William Orville Douglas": {
+    "term": "April 17, 1939 to November 12, 1975",
+    "appointed_by": [
+      "Franklin D. Roosevelt"
+    ],
+    "description": "Fallback description: William Orville Douglas served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/william_orville_douglas",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "April 17, 1939",
+        "end": "November 12, 1975",
+        "appointed_by": "Franklin D. Roosevelt"
+      }
+    ]
+  },
+  "Frank Murphy": {
+    "term": "February 5, 1940 to July 19, 1949",
+    "appointed_by": [
+      "Franklin D. Roosevelt"
+    ],
+    "description": "Fallback description: Frank Murphy served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/frank_murphy",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "February 5, 1940",
+        "end": "July 19, 1949",
+        "appointed_by": "Franklin D. Roosevelt"
+      }
+    ]
+  },
+  "James Francis Byrnes": {
+    "term": "July 8, 1941 to October 3, 1942",
+    "appointed_by": [
+      "Franklin D. Roosevelt"
+    ],
+    "description": "Fallback description: James Francis Byrnes served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/james_francis_byrnes",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "July 8, 1941",
+        "end": "October 3, 1942",
+        "appointed_by": "Franklin D. Roosevelt"
+      }
+    ]
+  },
+  "Robert Houghwout Jackson": {
+    "term": "July 11, 1941 to October 9, 1954",
+    "appointed_by": [
+      "Franklin D. Roosevelt"
+    ],
+    "description": "Fallback description: Robert Houghwout Jackson served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/robert_houghwout_jackson",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "July 11, 1941",
+        "end": "October 9, 1954",
+        "appointed_by": "Franklin D. Roosevelt"
+      }
+    ]
+  },
+  "Wiley Blount Rutledge": {
+    "term": "February 15, 1943 to September 10, 1949",
+    "appointed_by": [
+      "Franklin D. Roosevelt"
+    ],
+    "description": "Fallback description: Wiley Blount Rutledge served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/wiley_blount_rutledge",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "February 15, 1943",
+        "end": "September 10, 1949",
+        "appointed_by": "Franklin D. Roosevelt"
+      }
+    ]
+  },
+  "Harold Hitz Burton": {
+    "term": "October 1, 1945 to October 13, 1958",
+    "appointed_by": [
+      "Harry S. Truman"
+    ],
+    "description": "Fallback description: Harold Hitz Burton served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/harold_hitz_burton",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "October 1, 1945",
+        "end": "October 13, 1958",
+        "appointed_by": "Harry S. Truman"
+      }
+    ]
+  },
+  "Tom Campbell Clark": {
+    "term": "August 24, 1949 to June 12, 1967",
+    "appointed_by": [
+      "Harry S. Truman"
+    ],
+    "description": "Fallback description: Tom Campbell Clark served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/tom_campbell_clark",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "August 24, 1949",
+        "end": "June 12, 1967",
+        "appointed_by": "Harry S. Truman"
+      }
+    ]
+  },
+  "Sherman Minton": {
+    "term": "October 12, 1949 to October 15, 1956",
+    "appointed_by": [
+      "Harry S. Truman"
+    ],
+    "description": "Fallback description: Sherman Minton served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/sherman_minton",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "October 12, 1949",
+        "end": "October 15, 1956",
+        "appointed_by": "Harry S. Truman"
+      }
+    ]
+  },
+  "John Marshall Harlan II": {
+    "term": "March 28, 1955 to September 23, 1971",
+    "appointed_by": [
+      "Dwight D. Eisenhower"
+    ],
+    "description": "Fallback description: John Marshall Harlan II served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/john_marshall_harlan",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "March 28, 1955",
+        "end": "September 23, 1971",
+        "appointed_by": "Dwight D. Eisenhower"
+      }
+    ]
+  },
+  "William J. Brennan, Jr.": {
+    "term": "October 16, 1956 to July 20, 1990",
+    "appointed_by": [
+      "Dwight D. Eisenhower"
+    ],
+    "description": "Fallback description: William J. Brennan, Jr. served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/william_j_brennan",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "October 16, 1956",
+        "end": "July 20, 1990",
+        "appointed_by": "Dwight D. Eisenhower"
+      }
+    ]
+  },
+  "Charles Evans Whittaker": {
+    "term": "March 25, 1957 to March 31, 1962",
+    "appointed_by": [
+      "Dwight D. Eisenhower"
+    ],
+    "description": "Fallback description: Charles Evans Whittaker served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/charles_evans_whittaker",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "March 25, 1957",
+        "end": "March 31, 1962",
+        "appointed_by": "Dwight D. Eisenhower"
+      }
+    ]
+  },
+  "Potter Stewart": {
+    "term": "October 14, 1958 to July 3, 1981",
+    "appointed_by": [
+      "Dwight D. Eisenhower"
+    ],
+    "description": "Fallback description: Potter Stewart served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/potter_stewart",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "October 14, 1958",
+        "end": "July 3, 1981",
+        "appointed_by": "Dwight D. Eisenhower"
+      }
+    ]
+  },
+  "Byron Raymond White": {
+    "term": "April 16, 1962 to June 28, 1993",
+    "appointed_by": [
+      "John F. Kennedy"
+    ],
+    "description": "Fallback description: Byron Raymond White served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/byron_raymond_white",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "April 16, 1962",
+        "end": "June 28, 1993",
+        "appointed_by": "John F. Kennedy"
+      }
+    ]
+  },
+  "Arthur Joseph Goldberg": {
+    "term": "October 1, 1962 to July 25, 1965",
+    "appointed_by": [
+      "John F. Kennedy"
+    ],
+    "description": "Fallback description: Arthur Joseph Goldberg served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/arthur_joseph_goldberg",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "October 1, 1962",
+        "end": "July 25, 1965",
+        "appointed_by": "John F. Kennedy"
+      }
+    ]
+  },
+  "Abe Fortas": {
+    "term": "October 4, 1965 to May 14, 1969",
+    "appointed_by": [
+      "Lyndon B. Johnson"
+    ],
+    "description": "Fallback description: Abe Fortas served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/abe_fortas",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "October 4, 1965",
+        "end": "May 14, 1969",
+        "appointed_by": "Lyndon B. Johnson"
+      }
+    ]
+  },
+  "Thurgood Marshall": {
+    "term": "October 2, 1967 to October 1, 1991",
+    "appointed_by": [
+      "Lyndon B. Johnson"
+    ],
+    "description": "Fallback description: Thurgood Marshall served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/thurgood_marshall",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "October 2, 1967",
+        "end": "October 1, 1991",
+        "appointed_by": "Lyndon B. Johnson"
+      }
+    ]
+  },
+  "Harry A. Blackmun": {
+    "term": "June 9, 1970 to August 3, 1994",
+    "appointed_by": [
+      "Richard Nixon"
+    ],
+    "description": "Fallback description: Harry A. Blackmun served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/harry_a_blackmun",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "June 9, 1970",
+        "end": "August 3, 1994",
+        "appointed_by": "Richard Nixon"
+      }
+    ]
+  },
+  "Lewis F. Powell, Jr.": {
+    "term": "January 7, 1972 to June 26, 1987",
+    "appointed_by": [
+      "Richard Nixon"
+    ],
+    "description": "Fallback description: Lewis F. Powell, Jr. served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/lewis_f_powell",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "January 7, 1972",
+        "end": "June 26, 1987",
+        "appointed_by": "Richard Nixon"
+      }
+    ]
+  },
+  "John Paul Stevens": {
+    "term": "December 19, 1975 to June 29, 2010",
+    "appointed_by": [
+      "Gerald Ford"
+    ],
+    "description": "Fallback description: John Paul Stevens served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/john_paul_stevens",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "December 19, 1975",
+        "end": "June 29, 2010",
+        "appointed_by": "Gerald Ford"
+      }
+    ]
+  },
+  "Sandra Day O'Connor": {
+    "term": "September 25, 1981 to January 31, 2006",
+    "appointed_by": [
+      "Ronald Reagan"
+    ],
+    "description": "Fallback description: Sandra Day O'Connor served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/sandra_day_oconnor",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "September 25, 1981",
+        "end": "January 31, 2006",
+        "appointed_by": "Ronald Reagan"
+      }
+    ]
+  },
+  "Antonin Scalia": {
+    "term": "September 26, 1986 to February 13, 2016",
+    "appointed_by": [
+      "Ronald Reagan"
+    ],
+    "description": "Fallback description: Antonin Scalia served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/antonin_scalia",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "September 26, 1986",
+        "end": "February 13, 2016",
+        "appointed_by": "Ronald Reagan"
+      }
+    ]
+  },
+  "Anthony M. Kennedy": {
+    "term": "February 18, 1988 to July 31, 2018",
+    "appointed_by": [
+      "Ronald Reagan"
+    ],
+    "description": "Fallback description: Anthony M. Kennedy served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/anthony_m_kennedy",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "February 18, 1988",
+        "end": "July 31, 2018",
+        "appointed_by": "Ronald Reagan"
+      }
+    ]
+  },
+  "David H. Souter": {
+    "term": "October 9, 1990 to June 29, 2009",
+    "appointed_by": [
+      "George H. W. Bush"
+    ],
+    "description": "Fallback description: David H. Souter served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/david_h_souter",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "October 9, 1990",
+        "end": "June 29, 2009",
+        "appointed_by": "George H. W. Bush"
+      }
+    ]
+  },
+  "Clarence Thomas": {
+    "term": "October 23, 1991 to present",
+    "appointed_by": [
+      "George H. W. Bush"
+    ],
+    "description": "Fallback description: Clarence Thomas served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/clarence_thomas",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "October 23, 1991",
+        "end": "present",
+        "appointed_by": "George H. W. Bush"
+      }
+    ]
+  },
+  "Ruth Bader Ginsburg": {
+    "term": "August 10, 1993 to September 18, 2020",
+    "appointed_by": [
+      "Bill Clinton"
+    ],
+    "description": "Fallback description: Ruth Bader Ginsburg served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/ruth_bader_ginsburg",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "August 10, 1993",
+        "end": "September 18, 2020",
+        "appointed_by": "Bill Clinton"
+      }
+    ]
+  },
+  "Stephen G. Breyer": {
+    "term": "August 3, 1994 to June 30, 2022",
+    "appointed_by": [
+      "Bill Clinton"
+    ],
+    "description": "Fallback description: Stephen G. Breyer served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/stephen_g_breyer",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "August 3, 1994",
+        "end": "June 30, 2022",
+        "appointed_by": "Bill Clinton"
+      }
+    ]
+  },
+  "Samuel A. Alito, Jr.": {
+    "term": "January 31, 2006 to present",
+    "appointed_by": [
+      "George W. Bush"
+    ],
+    "description": "Fallback description: Samuel A. Alito, Jr. served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/samuel_a_alito",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "January 31, 2006",
+        "end": "present",
+        "appointed_by": "George W. Bush"
+      }
+    ]
+  },
+  "Sonia Sotomayor": {
+    "term": "August 8, 2009 to present",
+    "appointed_by": [
+      "Barack Obama"
+    ],
+    "description": "Fallback description: Sonia Sotomayor served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/sonia_sotomayor",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "August 8, 2009",
+        "end": "present",
+        "appointed_by": "Barack Obama"
+      }
+    ]
+  },
+  "Elena Kagan": {
+    "term": "August 7, 2010 to present",
+    "appointed_by": [
+      "Barack Obama"
+    ],
+    "description": "Fallback description: Elena Kagan served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/elena_kagan",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "August 7, 2010",
+        "end": "present",
+        "appointed_by": "Barack Obama"
+      }
+    ]
+  },
+  "Neil M. Gorsuch": {
+    "term": "April 10, 2017 to present",
+    "appointed_by": [
+      "Donald Trump"
+    ],
+    "description": "Fallback description: Neil M. Gorsuch served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/neil_m_gorsuch",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "April 10, 2017",
+        "end": "present",
+        "appointed_by": "Donald Trump"
+      }
+    ]
+  },
+  "Brett M. Kavanaugh": {
+    "term": "October 6, 2018 to present",
+    "appointed_by": [
+      "Donald Trump"
+    ],
+    "description": "Fallback description: Brett M. Kavanaugh served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/brett_m_kavanaugh",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "October 6, 2018",
+        "end": "present",
+        "appointed_by": "Donald Trump"
+      }
+    ]
+  },
+  "Amy Coney Barrett": {
+    "term": "October 27, 2020 to present",
+    "appointed_by": [
+      "Donald Trump"
+    ],
+    "description": "Fallback description: Amy Coney Barrett served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/amy_coney_barrett",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "October 27, 2020",
+        "end": "present",
+        "appointed_by": "Donald Trump"
+      }
+    ]
+  },
+  "Ketanji Brown Jackson": {
+    "term": "June 30, 2022 to present",
+    "appointed_by": [
+      "Joe Biden"
+    ],
+    "description": "Fallback description: Ketanji Brown Jackson served on the Supreme Court of the United States as Associate Justice. This field should be replaced with the biography text from the linked Oyez justice page before publication.",
+    "description_source": "Oyez justice page",
+    "oyez_url": "https://www.oyez.org/justices/ketanji_brown_jackson",
+    "terms": [
+      {
+        "role": "Associate Justice",
+        "start": "June 30, 2022",
+        "end": "present",
+        "appointed_by": "Joe Biden"
+      }
+    ]
+  }
+}

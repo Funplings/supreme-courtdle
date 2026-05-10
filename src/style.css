@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #F5F0E8;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+}
+
+/* Animate in newly rendered game sections */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.fade-up {
+  animation: fadeUp 0.25s ease-out both;
+}
+
+/* Prose content from Oyez (HTML strings) */
+.case-content p          { margin-bottom: 0.75rem; }
+.case-content p:last-child { margin-bottom: 0; }
+
+/* Legal term tooltips */
+.term-tip {
+  border-bottom: 1px dotted #C9A84C;
+  cursor: help;
+  position: relative;
+  color: inherit;
+  font-weight: 600;
+}
+
+.term-tip::after {
+  content: attr(data-def);
+  position: absolute;
+  bottom: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1B2A4A;
+  color: #fff;
+  font-size: 11px;
+  line-height: 1.5;
+  padding: 7px 10px;
+  border-radius: 6px;
+  width: 240px;
+  white-space: normal;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease;
+  z-index: 50;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.term-tip:hover::after {
+  opacity: 1;
+}
+
+/* Result flash colours */
+.result-correct { background-color: #ECFDF5; border-color: #6EE7B7; color: #065F46; }
+.result-wrong   { background-color: #FFF1F2; border-color: #FDA4AF; color: #9F1239; }
+
+/* Justice hover tooltips */
+.justice-wrap {
+  position: relative;
+}
+
+.justice-tooltip {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1B2A4A;
+  color: #fff;
+  font-size: 13px;
+  line-height: 1.5;
+  padding: 8px 10px;
+  border-radius: 6px;
+  width: 220px;
+  white-space: normal;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease;
+  z-index: 50;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 400;
+  text-align: left;
+}
+
+.justice-wrap:hover .justice-tooltip {
+  opacity: 1;
+}
+
