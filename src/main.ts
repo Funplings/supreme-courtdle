@@ -42,6 +42,36 @@ function findJustice(apiName: string): JusticeInfo | null {
 // ─── Legal term tooltips ─────────────────────────────────────────────────────
 
 const LEGAL_TERMS: Record<string, string> = {
+  // Constitutional Amendments
+  'first amendment':         'Protects freedom of speech, religion, press, peaceful assembly, and the right to petition the government.',
+  'second amendment':        'Protects the right of the people to keep and bear arms.',
+  'third amendment':         'Prohibits the government from forcing citizens to house soldiers in peacetime without consent.',
+  'fourth amendment':        'Protects against unreasonable searches and seizures; requires warrants to be supported by probable cause.',
+  'fifth amendment':         'Protects against self-incrimination and double jeopardy; guarantees due process; prohibits taking private property without just compensation.',
+  'sixth amendment':         'Guarantees the right to a speedy and public trial, an impartial jury, to confront witnesses, and to have the assistance of counsel.',
+  'seventh amendment':       'Preserves the right to a jury trial in federal civil cases involving more than $20.',
+  'eighth amendment':        'Prohibits excessive bail, excessive fines, and cruel and unusual punishment.',
+  'ninth amendment':         'Clarifies that rights listed in the Constitution are not the only rights retained by the people.',
+  'tenth amendment':         'Reserves powers not delegated to the federal government to the states or to the people.',
+  'eleventh amendment':      'Limits the ability of individuals to sue states in federal court; establishes state sovereign immunity.',
+  'twelfth amendment':       'Revised the electoral college procedure, requiring separate ballots for President and Vice President.',
+  'thirteenth amendment':    'Abolished slavery and involuntary servitude, except as punishment for a crime.',
+  'fourteenth amendment':    'Grants citizenship to all persons born or naturalized in the U.S.; guarantees due process and equal protection against state action.',
+  'fifteenth amendment':     'Prohibits denying the right to vote based on race, color, or previous condition of servitude.',
+  'sixteenth amendment':     'Grants Congress the power to levy a federal income tax.',
+  'seventeenth amendment':   'Established direct election of U.S. Senators by popular vote.',
+  'eighteenth amendment':    'Prohibited the manufacture, sale, and transportation of alcohol (Prohibition). Later repealed by the Twenty-First Amendment.',
+  'nineteenth amendment':    'Prohibits denying the right to vote on the basis of sex, effectively granting women\'s suffrage.',
+  'twentieth amendment':     'Moved the start of presidential and congressional terms, reducing the "lame duck" period after elections.',
+  'twenty-first amendment':  'Repealed the Eighteenth Amendment, ending Prohibition.',
+  'twenty-second amendment': 'Limits the President to two terms in office.',
+  'twenty-third amendment':  'Grants residents of Washington, D.C. the right to vote in presidential elections.',
+  'twenty-fourth amendment': 'Prohibits poll taxes as a condition of voting in federal elections.',
+  'twenty-fifth amendment':  'Establishes the order of presidential succession and procedures for addressing presidential disability.',
+  'twenty-sixth amendment':  'Lowered the voting age to 18 for all elections.',
+  'twenty-seventh amendment':'Prevents laws changing congressional pay from taking effect until after the next election.',
+
+  // Legal terms
   'habeas corpus':      'Latin for "you shall have the body." A court order requiring a detained person to be brought before a judge.',
   'amicus curiae':      'Latin for "friend of the court." A party not involved in the case who files a brief to offer relevant information.',
   'per curiam':         'Latin for "by the court." An opinion issued in the name of the court collectively, without a named author.',
@@ -299,7 +329,7 @@ function renderVoteBar(state: AppState): string {
   const sp = c.second_party ?? 'Second Party';
   return `
     <div class="mt-4 fade-up">
-      <p class="text-xs uppercase tracking-widest text-stone-400 mb-2">How others voted</p>
+      <p class="text-xs uppercase tracking-widest text-stone-400 mb-2">How others voted <span class="normal-case">(${total.toLocaleString()} ${total === 1 ? 'player' : 'players'})</span></p>
       <div class="flex rounded-full overflow-hidden h-5 text-[11px] font-semibold">
         <div class="flex items-center justify-center bg-navy text-white transition-all"
              style="width:${firstPct}%">${firstPct > 12 ? firstPct + '%' : ''}</div>
@@ -346,6 +376,7 @@ function renderRevealed(state: AppState): string {
          class="flex items-center justify-center gap-1.5 text-xs text-stone-400 hover:text-navy transition-colors mt-2 fade-up">
         View full case on Oyez ↗
       </a>` : ''}
+    <h2 class="text-center text-lg font-serif font-bold text-navy mt-6 fade-up">Come back tomorrow for a new Supreme Court case!</h2>
   `;
 }
 
@@ -359,7 +390,7 @@ function render(state: AppState): void {
 
   app.innerHTML = `
     <div class="max-w-3xl mx-auto px-4 py-8 pb-4">
-      <div class="text-right text-base text-navy mb-2">
+      <div class="text-right text-base text-navy mb-5">
         created by <a href="https://funplings.github.io/" target="_blank" rel="noopener noreferrer"
            class="font-bold underline">funplings ↗</a>
       </div>
@@ -410,6 +441,8 @@ async function handleGuess(state: AppState, side: Guess): Promise<AppState> {
   guesses[state.currentIndex] = side;
   updateStreak(state.date);
 
+  if (correct) spawnConfetti();
+
   const docket = state.caseKeys[state.currentIndex];
   const elapsed_ms = Date.now() - loadTime;
   const voteCounts = await postGuess(state.date, docket, side, correct, elapsed_ms);
@@ -421,6 +454,54 @@ async function handleGuess(state: AppState, side: Guess): Promise<AppState> {
     phase: 'revealed',
     voteCounts,
   };
+}
+
+// ─── Confetti ─────────────────────────────────────────────────────────────────
+
+function spawnConfetti(): void {
+  const EMOJIS = ['🎉', '🎊', '✨', '🏛️', '⚖️', '🎈', '🥳'];
+  const COUNT = 200;
+  for (let i = 0; i < COUNT; i++) {
+    const el = document.createElement('span');
+    el.className = 'confetti-piece';
+    el.textContent = EMOJIS[Math.floor(Math.random() * EMOJIS.length)];
+    el.style.left = `${Math.random() * 100}vw`;
+    el.style.top = `-${60 + Math.random() * 60}px`;
+    el.style.animationDuration = `${0.8 + Math.random() * 0.8}s`;
+    el.style.animationDelay = `${Math.random() * 0.3}s`;
+    el.style.fontSize = `${1 + Math.random() * 1.2}rem`;
+    document.body.appendChild(el);
+    el.addEventListener('animationend', () => el.remove());
+  }
+}
+
+// ─── Tooltip viewport correction ─────────────────────────────────────────────
+
+function adjustTooltip(el: HTMLElement, tooltipWidth: number): void {
+  const rect = el.getBoundingClientRect();
+  const pad = 8;
+  const centerX = rect.left + rect.width / 2;
+  const leftEdge = centerX - tooltipWidth / 2;
+  const rightEdge = centerX + tooltipWidth / 2;
+
+  let correction = 0;
+  if (rightEdge > window.innerWidth - pad) correction = -(rightEdge - (window.innerWidth - pad));
+  else if (leftEdge < pad) correction = pad - leftEdge;
+
+  if (correction !== 0) el.style.setProperty('--tip-x', `${Math.round(correction)}px`);
+  else el.style.removeProperty('--tip-x');
+}
+
+function setupTooltipListeners(): void {
+  const handler = (e: Event) => {
+    const target = e.target as Element;
+    const tip = target.closest<HTMLElement>('.term-tip');
+    if (tip) adjustTooltip(tip, 240);
+    const wrap = target.closest<HTMLElement>('.justice-wrap');
+    if (wrap) adjustTooltip(wrap, 220);
+  };
+  document.addEventListener('mouseover', handler);
+  document.addEventListener('touchstart', handler, { passive: true });
 }
 
 // ─── Init ─────────────────────────────────────────────────────────────────────
@@ -461,6 +542,7 @@ async function init(): Promise<void> {
   }
 
   render(state);
+  setupTooltipListeners();
 
   // Event delegation on document
   document.addEventListener('click', async (e) => {
