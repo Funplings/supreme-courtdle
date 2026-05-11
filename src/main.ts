@@ -434,7 +434,7 @@ async function postGuess(
 
 // ─── Events ──────────────────────────────────────────────────────────────────
 
-async function handleGuess(state: AppState, side: Guess): Promise<AppState> {
+function handleGuess(state: AppState, side: Guess): AppState {
   const c = state.cases[state.currentIndex];
   const correct = side === c.winner;
   const guesses = [...state.guesses];
@@ -443,16 +443,12 @@ async function handleGuess(state: AppState, side: Guess): Promise<AppState> {
 
   if (correct) spawnConfetti();
 
-  const docket = state.caseKeys[state.currentIndex];
-  const elapsed_ms = Date.now() - loadTime;
-  const voteCounts = await postGuess(state.date, docket, side, correct, elapsed_ms);
-
   return {
     ...state,
     guesses,
     score: correct ? state.score + 1 : state.score,
     phase: 'revealed',
-    voteCounts,
+    voteCounts: null,
   };
 }
 
@@ -545,16 +541,27 @@ async function init(): Promise<void> {
   setupTooltipListeners();
 
   // Event delegation on document
-  document.addEventListener('click', async (e) => {
+  document.addEventListener('click', (e) => {
     const btn = (e.target as Element).closest<HTMLElement>('[data-action]');
     if (!btn) return;
 
     if (btn.dataset.action === 'guess') {
-      state = await handleGuess(state, btn.dataset.side as Guess);
-    }
+      const side = btn.dataset.side as Guess;
+      state = handleGuess(state, side);
+      saveState(state);
+      render(state);
 
-    saveState(state);
-    render(state);
+      // Fire API in background; update vote counts when it resolves
+      const docket = state.caseKeys[state.currentIndex];
+      const elapsed_ms = Date.now() - loadTime;
+      const guess = state.guesses[state.currentIndex]!;
+      const correct = guess === state.cases[state.currentIndex].winner;
+      postGuess(state.date, docket, side, correct, elapsed_ms).then(voteCounts => {
+        state = { ...state, voteCounts };
+        saveState(state);
+        render(state);
+      });
+    }
   });
 }
 
