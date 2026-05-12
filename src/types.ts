@@ -26,6 +26,7 @@ export interface CaseData {
 }
 
 export type Guess = 'first' | 'second';
+export type JusticeGuesses = Record<string, Guess>;
 
 export interface JusticeTerm {
   role: string;
@@ -52,8 +53,9 @@ export interface AppState {
   caseKeys: string[];
   cases: CaseData[];
   currentIndex: number;
-  guesses: (Guess | null)[];
+  justiceGuesses: JusticeGuesses[];
+  playerVote: (Guess | null)[];
+  phase: 'playing' | 'revealed';
   score: number;
-  phase: 'playing' | 'revealed' | 'finished';
   voteCounts: VoteCounts | null;
 }

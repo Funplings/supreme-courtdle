@@ -7,14 +7,14 @@ export interface VoteCounts {
   second: number;
 }
 
-// GET /api/guess?docket=155  → current vote counts for a case
-// POST /api/guess             → record a guess, return updated counts
+// GET /api/guess?docket=1962/155  → current player-vote counts for a case
+// POST /api/guess                  → record a submission, return updated counts
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   if (req.method === 'GET') {
     const docket = req.query.docket as string;
     if (!docket) return res.status(400).json({ error: 'docket required' });
 
-    const counts = await kv.hgetall<Record<string, string>>(`votes:${docket}`);
+    const counts = await kv.hgetall<Record<string, string>>(`player_votes:${docket}`);
     return res.status(200).json({
       first:  Number(counts?.first  ?? 0),
       second: Number(counts?.second ?? 0),
@@ -22,18 +22,20 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   }
 
   if (req.method === 'POST') {
-    const { date, docket, guess, correct, elapsed_ms } = req.body ?? {};
-    if (!docket || !guess) return res.status(400).json({ error: 'docket and guess required' });
+    const { date, docket, playerVote, justiceCorrect, justiceTotal, elapsed_ms } = req.body ?? {};
+    if (!docket) return res.status(400).json({ error: 'docket required' });
 
-    // Increment vote counter
-    await kv.hincrby(`votes:${docket}`, guess as string, 1);
-    const counts = await kv.hgetall<Record<string, string>>(`votes:${docket}`);
+    // Increment player-vote counter (only if player cast a personal vote)
+    if (playerVote === 'first' || playerVote === 'second') {
+      await kv.hincrby(`player_votes:${docket}`, playerVote, 1);
+    }
+    const counts = await kv.hgetall<Record<string, string>>(`player_votes:${docket}`);
 
-    // Record timing row (best-effort — don't fail the request if Postgres is unavailable)
+    // Record timing + score row (best-effort)
     try {
       await sql`
-        INSERT INTO guesses (date, docket, guess, correct, elapsed_ms)
-        VALUES (${date}, ${docket}, ${guess}, ${correct}, ${elapsed_ms})
+        INSERT INTO guesses (date, docket, player_vote, justice_correct, justice_total, elapsed_ms)
+        VALUES (${date}, ${docket}, ${playerVote ?? null}, ${justiceCorrect ?? null}, ${justiceTotal ?? null}, ${elapsed_ms ?? null})
       `;
     } catch (err) {
       console.error('Postgres insert failed:', err);

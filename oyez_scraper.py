@@ -17,7 +17,40 @@ WINNER_OVERRIDES: dict = {
     "2021/19-1392":      "first",   # Dobbs v. JWHO — Dobbs/Mississippi (first party) won
     "1940-1955/316us535": "first",  # Skinner v. Oklahoma — Skinner (first party) won
     "2004/04-108":        "second", # Kelo v. New London — New London (second party) won
+    # Bare-docket overrides (keyed by docket number as it appears in schedule.json)
+    "07-290":  "second", # D.C. v. Heller — Heller (second/respondent) won
+    "08-205":  "first",  # Citizens United v. FEC — Citizens United (first/petitioner) won
+    "12-307":  "second", # United States v. Windsor — Windsor (second/respondent) won
+    "19-1392": "first",  # Dobbs v. Jackson Women's Health — Dobbs/Mississippi (first) won
+    "20-843":  "first",  # NYSRPA v. Bruen — NYSRPA (first/petitioner) won
+    "20-1199": "first",  # SFFA v. Harvard — SFFA (first/petitioner) won
 }
+
+
+def resolve_docket(docket: str) -> Optional[tuple[str, str]]:
+    """Resolve a bare docket number (e.g. '00-949') to (year, case_id) by probing
+    the Oyez API. The two-digit prefix indicates the filing term; cases can be heard
+    up to ~4 terms later, so we try a range of years. We verify the returned
+    docket_number matches to avoid the API returning a wrong default case."""
+    prefix_match = re.match(r"^(\d{2})-", docket)
+    if not prefix_match:
+        print(f"  ERROR unexpected docket format: {docket!r}")
+        return None
+    yy = int(prefix_match.group(1))
+    base_year = 2000 + yy
+    for year in range(base_year, base_year + 5):
+        url = f"{OYEZ_API_BASE}/{year}/{docket}"
+        resp = requests.get(url, headers={"Accept": "application/json"})
+        if resp.status_code == 200:
+            data = resp.json()
+            if isinstance(data, list):
+                data = data[0] if data else None
+            # Verify the docket number matches to avoid false positives
+            if data and data.get("docket_number") == docket:
+                return str(year), docket
+        time.sleep(0.2)
+    print(f"  ERROR could not resolve docket {docket!r} (tried {base_year}–{base_year+4})")
+    return None
 
 
 def fetch_case(year: str, case_id: str) -> Optional[dict]:
@@ -154,20 +187,22 @@ def parse_case(data: dict) -> dict:
 
 
 def load_schedule(schedule_path: str) -> list:
-    """Returns list of (year, case_id, full_path) from schedule.json values."""
+    """Returns list of (schedule_key, year_or_None, case_id_or_None) from schedule.json values.
+    Bare docket numbers (no '/') are flagged for resolution at fetch time."""
     with open(schedule_path) as f:
         schedule = json.load(f)
     seen = set()
     entries = []
-    for path in schedule.values():
-        if path in seen:
+    for key in schedule.values():
+        if key in seen:
             continue
-        seen.add(path)
-        if "/" not in path:
-            print(f"  SKIP malformed path (missing year): {path!r}")
-            continue
-        year, case_id = path.split("/", 1)
-        entries.append((year, case_id, path))
+        seen.add(key)
+        if "/" in key:
+            year, case_id = key.split("/", 1)
+            entries.append((key, year, case_id))
+        else:
+            # Bare docket number — will be resolved via Oyez search
+            entries.append((key, None, None))
     return entries
 
 
@@ -177,15 +212,25 @@ def main():
     print(f"Loaded {len(entries)} unique cases from {SCHEDULE_PATH}")
 
     results = {}
-    for year, case_id, path in entries:
-        print(f"Fetching {path} ...")
+    for schedule_key, year, case_id in entries:
+        if year is None:
+            # Bare docket number — resolve to year/case_id first
+            print(f"Resolving docket {schedule_key} ...")
+            resolved = resolve_docket(schedule_key)
+            if resolved is None:
+                continue
+            year, case_id = resolved
+            print(f"  Resolved to {year}/{case_id}")
+            time.sleep(0.3)
+
+        print(f"Fetching {year}/{case_id} ...")
         data = fetch_case(year, case_id)
         if data is None:
             continue
         parsed = parse_case(data)
-        if parsed.get("winner") is None and path in WINNER_OVERRIDES:
-            parsed["winner"] = WINNER_OVERRIDES[path]
-        results[path] = parsed
+        if schedule_key in WINNER_OVERRIDES:
+            parsed["winner"] = WINNER_OVERRIDES[schedule_key]
+        results[schedule_key] = parsed
         print(f"  Saved: {parsed.get('name')} (winner: {parsed.get('winner')})")
         time.sleep(0.3)
 

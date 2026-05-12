@@ -1,11 +1,15 @@
-CREATE TABLE IF NOT EXISTS guesses (
-  id         SERIAL PRIMARY KEY,
-  date       TEXT        NOT NULL,
-  docket     TEXT        NOT NULL,
-  guess      TEXT        NOT NULL,
-  correct    BOOLEAN     NOT NULL,
-  elapsed_ms INTEGER,
-  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+-- Drop and recreate to match new schema
+DROP TABLE IF EXISTS guesses;
+
+CREATE TABLE guesses (
+  id               SERIAL PRIMARY KEY,
+  date             TEXT,
+  docket           TEXT        NOT NULL,
+  player_vote      TEXT,
+  justice_correct  INTEGER,
+  justice_total    INTEGER,
+  elapsed_ms       INTEGER,
+  created_at       TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );
 
 CREATE INDEX IF NOT EXISTS guesses_docket_idx ON guesses (docket);

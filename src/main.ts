@@ -1,5 +1,5 @@
 import './style.css';
-import type { AppState, CaseData, Guess, JusticeInfo, VoteCounts } from './types';
+import type { AppState, CaseData, Guess, JusticeGuesses, JusticeInfo, VoteCounts } from './types';
 import { getDailyCase, updateStreak } from './game';
 
 const loadTime = Date.now();
@@ -7,21 +7,17 @@ const loadTime = Date.now();
 // ─── Justice data & name matching ────────────────────────────────────────────
 
 let justiceData: Record<string, JusticeInfo> = {};
-// Maps a normalized "lastname[+suffix]" key → justice name in justiceData
 const justiceIndex = new Map<string, string>();
-
 const SUFFIXES = new Set(['jr', 'sr', 'ii', 'iii', 'iv']);
 
 function nameKey(name: string): string {
   const words = name.replace(/[.,]/g, '').split(/\s+/).filter(Boolean);
-  // Collect any trailing roman-numeral/generational suffixes
   const suffixParts: string[] = [];
   let i = words.length - 1;
   while (i >= 0 && SUFFIXES.has(words[i].toLowerCase())) {
     suffixParts.unshift(words[i].toLowerCase());
     i--;
   }
-  // Last remaining word is the last name
   const lastName = i >= 0 ? words[i].toLowerCase() : '';
   return suffixParts.length ? `${lastName}_${suffixParts.join('_')}` : lastName;
 }
@@ -37,6 +33,14 @@ function findJustice(apiName: string): JusticeInfo | null {
   const key = nameKey(apiName);
   const fullName = justiceIndex.get(key);
   return fullName ? (justiceData[fullName] ?? null) : null;
+}
+
+// ─── Constants ───────────────────────────────────────────────────────────────
+
+const PLACEHOLDER = `data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%23e7e5e4'/><circle cx='50' cy='38' r='18' fill='%23a8a29e'/><ellipse cx='50' cy='84' rx='30' ry='22' fill='%23a8a29e'/></svg>`;
+
+function escAttr(s: string): string {
+  return s.replace(/&/g, '&amp;').replace(/"/g, '&quot;');
 }
 
 // ─── Legal term tooltips ─────────────────────────────────────────────────────
@@ -106,10 +110,10 @@ const LEGAL_TERMS: Record<string, string> = {
   'plurality':          'An opinion that receives more votes than any other but not an outright majority of the court.',
   'unconstitutional':   'In violation of or not authorized by the Constitution.',
   'dissent':            'A written opinion by one or more justices who disagree with the majority\'s decision or reasoning.',
+  'dissenting':         'Disagreeing with the majority\'s ruling. A dissenting justice voted on the losing side and may write a dissenting opinion explaining their disagreement.',
   'concurrence':        'An opinion agreeing with the majority\'s outcome but offering different or additional reasoning.',
 };
 
-// Build a single regex sorted longest-first so multi-word phrases take priority
 const _termPattern = new RegExp(
   `\\b(${Object.keys(LEGAL_TERMS)
     .sort((a, b) => b.length - a.length)
@@ -119,7 +123,6 @@ const _termPattern = new RegExp(
 );
 
 function highlightTerms(html: string): string {
-  // Split into HTML tags vs text nodes; only replace inside text nodes
   return html.replace(/(<[^>]*>|[^<]+)/g, (chunk) => {
     if (chunk.startsWith('<')) return chunk;
     return chunk.replace(_termPattern, (match) => {
@@ -134,7 +137,6 @@ function highlightTerms(html: string): string {
 // ─── Storage ─────────────────────────────────────────────────────────────────
 
 const STORAGE_KEY = 'supreme_courtdle_daily';
-
 type StoredState = Omit<AppState, 'cases'>;
 
 function saveState(state: AppState): void {
@@ -145,7 +147,11 @@ function saveState(state: AppState): void {
 function loadStoredState(): StoredState | null {
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
-    return raw ? (JSON.parse(raw) as StoredState) : null;
+    if (!raw) return null;
+    const parsed = JSON.parse(raw) as StoredState;
+    // Reject old format (had 'guesses' array instead of 'justiceGuesses')
+    if (!('justiceGuesses' in parsed)) return null;
+    return parsed;
   } catch {
     return null;
   }
@@ -153,6 +159,12 @@ function loadStoredState(): StoredState | null {
 
 // ─── Helpers ─────────────────────────────────────────────────────────────────
 
+function justiceVoteSide(vote: string, winner: 'first' | 'second'): Guess | null {
+  const v = vote.toLowerCase();
+  if (['majority', 'concurrence', 'special concurrence', 'plurality'].includes(v)) return winner;
+  if (['dissent', 'minority'].includes(v)) return winner === 'first' ? 'second' : 'first';
+  return null;
+}
 
 // ─── Rendering ───────────────────────────────────────────────────────────────
 
@@ -165,103 +177,202 @@ function renderHeader(): string {
   `;
 }
 
-
 // ─── Justices ────────────────────────────────────────────────────────────────
 
 function justiceImagePath(name: string): string {
-  const safe = name
-    .replace(/[^\w\s-]/g, '')
-    .trim()
-    .toLowerCase()
-    .replace(/\s+/g, '_');
+  const safe = name.replace(/[^\w\s-]/g, '').trim().toLowerCase().replace(/\s+/g, '_');
   return `/assets/images/${safe}.png`;
 }
 
-function shortName(name: string): string {
-  const suffixes = new Set(['jr', 'sr', 'ii', 'iii', 'iv']);
-  const words = name.replace(/[.,]/g, '').split(/\s+/);
-  for (let i = words.length - 1; i >= 0; i--) {
-    if (!suffixes.has(words[i].toLowerCase()) && words[i].length > 1) {
-      return words[i];
-    }
-  }
-  return words[words.length - 1];
-}
-
 const VOTE_STYLE: Record<string, { label: string; ring: string; badge: string }> = {
-  'majority':            { label: 'Majority', ring: 'border-emerald-400', badge: 'bg-emerald-500' },
-  'dissent':             { label: 'Dissent',  ring: 'border-rose-400',    badge: 'bg-rose-500'   },
-  'concurrence':         { label: 'Concur',   ring: 'border-amber-400',   badge: 'bg-amber-400'  },
-  'special concurrence': { label: 'Concur',   ring: 'border-amber-400',   badge: 'bg-amber-400'  },
-  'plurality':           { label: 'Plurality',ring: 'border-sky-400',     badge: 'bg-sky-500'    },
+  'majority':            { label: 'Majority',  ring: 'border-emerald-400', badge: 'bg-emerald-500' },
+  'dissent':             { label: 'Dissent',   ring: 'border-rose-400',    badge: 'bg-rose-500'   },
+  'minority':            { label: 'Dissent',   ring: 'border-rose-400',    badge: 'bg-rose-500'   },
+  'concurrence':         { label: 'Concur',    ring: 'border-amber-400',   badge: 'bg-amber-400'  },
+  'special concurrence': { label: 'Concur',    ring: 'border-amber-400',   badge: 'bg-amber-400'  },
+  'plurality':           { label: 'Plurality', ring: 'border-sky-400',     badge: 'bg-sky-500'    },
 };
 
-function renderJustices(c: CaseData, showVotes: boolean): string {
-  const votes = c.decisions[0]?.votes ?? [];
+function buildJusticeTooltip(name: string): string {
+  const info = findJustice(name);
+  if (!info) return '';
+  const t = info.terms[0];
+  const role   = t?.role ?? 'Justice';
+  const apptBy = t?.appointed_by ?? (info.appointed_by[0] ?? '');
+  const start  = t?.start ?? '';
+  const end    = t?.end ?? 'present';
+  return `<div class="justice-tooltip">
+    <div style="font-weight:600;margin-bottom:3px">${role}</div>
+    <div>Appointed by ${apptBy}</div>
+    <div style="opacity:0.75;font-size:12px;margin-top:2px">${start}–${end}</div>
+  </div>`;
+}
+
+// Playing state: one row per justice with full party name buttons
+function renderJusticeVoting(c: CaseData, justiceGuesses: JusticeGuesses): string {
+  const votes = (c.decisions[0]?.votes ?? []).filter(v => v.vote?.toLowerCase() !== 'none');
   if (!votes.length) return '';
 
-  const PLACEHOLDER = `data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%23e7e5e4'/><circle cx='50' cy='38' r='18' fill='%23a8a29e'/><ellipse cx='50' cy='84' rx='30' ry='22' fill='%23a8a29e'/></svg>`;
+  const fp = c.first_party  ?? 'First Party';
+  const sp = c.second_party ?? 'Second Party';
 
-  const items = votes.map(v => {
-    const name = v.name ?? 'Unknown';
-    const src  = justiceImagePath(name);
-    const voteKey = (v.vote ?? '').toLowerCase();
-    const style   = VOTE_STYLE[voteKey];
+  const rows = votes.map(v => {
+    const name    = v.name ?? 'Unknown';
+    const src     = justiceImagePath(name);
+    const guess   = justiceGuesses[name];
+    const ring    = guess === 'first' ? 'border-navy' : guess === 'second' ? 'border-gold' : 'border-stone-200';
+    const tooltip = buildJusticeTooltip(name);
+    const safe    = escAttr(name);
 
-    const ring = showVotes && style ? style.ring : 'border-stone-200';
-
-    const badge = showVotes && style
-      ? `<span class="absolute -bottom-1 left-1/2 -translate-x-1/2
-                      text-[7px] font-semibold text-white px-1.5 py-px rounded-lg whitespace-nowrap
-                      ${style.badge}">${style.label}</span>`
-      : '';
-
-    const info = findJustice(name);
-    let tooltip = '';
-    if (info) {
-      const latestTerm = info.terms[0];
-      const role = latestTerm?.role ?? 'Justice';
-      const apptBy = latestTerm?.appointed_by ?? (info.appointed_by[0] ?? '');
-      const start = latestTerm?.start ?? '';
-      const end   = latestTerm?.end ?? 'present';
-      tooltip = `<div class="justice-tooltip">
-        <div style="font-weight:600;margin-bottom:3px">${role}</div>
-        <div>Appointed by ${apptBy}</div>
-        <div style="opacity:0.75;font-size:12px;margin-top:2px">${start}–${end}</div>
-      </div>`;
-    }
+    const btnCls = (side: 'first' | 'second') => {
+      const active = guess === side;
+      if (side === 'first') return active ? 'bg-navy text-white' : 'bg-stone-100 text-stone-600 hover:bg-stone-200';
+      return active ? 'bg-gold text-white' : 'bg-stone-100 text-stone-600 hover:bg-stone-200';
+    };
 
     return `
-      <div class="flex flex-col items-center gap-1" style="width:5.5rem">
-        <div class="relative justice-wrap cursor-help">
-          ${tooltip}
-          <img src="${src}" alt="${name}"
-               class="w-16 h-16 rounded-lg object-cover border-2 ${ring} bg-stone-100"
-               onerror="this.src='${PLACEHOLDER}'" />
-          ${badge}
+      <div>
+        <div class="mb-1">
+          <span class="text-base font-serif font-semibold text-stone-600 leading-tight">${name}</span>
         </div>
-        <span class="text-[10px] text-stone-500 text-center leading-tight">${name}</span>
+        <div style="display:grid;grid-template-columns:1fr 5fr;gap:0.75rem">
+          <div class="relative justice-wrap cursor-help">
+            ${tooltip}
+            <img src="${src}" alt="${safe}"
+                 class="w-full aspect-square rounded-lg object-cover border-2 ${ring} bg-stone-100 transition-colors"
+                 onerror="this.src='${PLACEHOLDER}'" />
+          </div>
+          <div class="flex gap-1.5">
+            <button data-action="justice-guess" data-justice="${safe}" data-side="first"
+              class="flex-1 h-full text-base font-serif font-semibold px-2 rounded transition-colors text-center leading-tight ${btnCls('first')}">${fp}</button>
+            <button data-action="justice-guess" data-justice="${safe}" data-side="second"
+              class="flex-1 h-full text-base font-serif font-semibold px-2 rounded transition-colors text-center leading-tight ${btnCls('second')}">${sp}</button>
+          </div>
+        </div>
       </div>`;
   }).join('');
 
-  const label = showVotes ? 'The Vote' : 'The Court';
   return `
-    <div class="mt-5 pt-4 border-t border-stone-100">
-      <p class="text-xs uppercase tracking-widest text-stone-400 mb-3">${label}</p>
-      <div class="flex flex-wrap justify-center gap-x-2 gap-y-3">${items}</div>
+    <div>
+      <p class="text-xs uppercase tracking-widest text-stone-400 mb-3">How did each justice vote?</p>
+      <div class="flex flex-col gap-5">${rows}</div>
     </div>`;
 }
 
+// Revealed state: actual votes + correct/wrong overlays
+function renderJustices(c: CaseData, justiceGuesses: JusticeGuesses): string {
+  const votes = (c.decisions[0]?.votes ?? []).filter(v => v.vote?.toLowerCase() !== 'none');
+  if (!votes.length) return '';
+  const winner = c.winner as 'first' | 'second' | null;
+  const fp = c.first_party  ?? 'First Party';
+  const sp = c.second_party ?? 'Second Party';
+
+  const rows = votes.map(v => {
+    const name    = v.name ?? 'Unknown';
+    const src     = justiceImagePath(name);
+    const voteKey = (v.vote ?? '').toLowerCase();
+    const style   = VOTE_STYLE[voteKey];
+    const actual  = winner ? justiceVoteSide(v.vote ?? '', winner) : null;
+    const guess   = justiceGuesses[name];
+    const safe    = escAttr(name);
+
+    const correct = !!(guess && actual && guess === actual);
+    const wrong   = !!(guess && actual && guess !== actual);
+
+    const ring = correct ? 'border-emerald-400' : wrong ? 'border-rose-400' : 'border-stone-200';
+
+    const overlay = correct
+      ? `<span class="absolute top-0.5 right-0.5 text-sm leading-none text-emerald-500 font-bold drop-shadow">✓</span>`
+      : wrong
+      ? `<span class="absolute top-0.5 right-0.5 text-sm leading-none text-rose-500 font-bold drop-shadow">✗</span>`
+      : '';
+
+    const tooltip = buildJusticeTooltip(name);
+
+    const sideCls = (side: 'first' | 'second') => {
+      const isActual = actual === side;
+      const isGuess  = guess  === side;
+      const baseLayout = 'flex-1 h-full text-base font-serif font-semibold px-2 rounded text-center leading-tight flex flex-col items-center justify-center gap-0.5';
+      if (isActual && isGuess)  return `${baseLayout} ${side === 'first' ? 'bg-navy text-white' : 'bg-gold text-white'}`;
+      if (isActual && !isGuess) return `${baseLayout} ${side === 'first' ? 'bg-navy/20 text-navy' : 'bg-gold/20 text-amber-800'}`;
+      if (!isActual && isGuess) return `${baseLayout} bg-rose-100 text-rose-700`;
+      return `${baseLayout} bg-stone-100 text-stone-400`;
+    };
+
+    const voteLabel = style
+      ? `<span class="text-[10px] font-sans font-semibold opacity-70 uppercase tracking-wide">${style.label}</span>`
+      : '';
+
+    return `
+      <div>
+        <div class="mb-1">
+          <span class="text-base font-serif font-semibold text-stone-600 leading-tight">${name}</span>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 5fr;gap:0.75rem">
+          <div class="relative justice-wrap cursor-help">
+            ${tooltip}
+            <img src="${src}" alt="${safe}"
+                 class="w-full aspect-square rounded-lg object-cover border-2 ${ring} bg-stone-100"
+                 onerror="this.src='${PLACEHOLDER}'" />
+            ${overlay}
+          </div>
+          <div class="flex gap-1.5">
+            <div class="${sideCls('first')}">${fp}${actual === 'first' ? voteLabel : ''}</div>
+            <div class="${sideCls('second')}">${sp}${actual === 'second' ? voteLabel : ''}</div>
+          </div>
+        </div>
+      </div>`;
+  }).join('');
+
+  return `
+    <div class="bg-white rounded-lg shadow-sm border border-stone-100 p-6 mb-4 fade-up">
+      <p class="text-xs uppercase tracking-widest text-stone-400 mb-3">The Vote</p>
+      <div class="flex flex-col gap-5">${rows}</div>
+    </div>`;
+}
+
+// Player's own side pick
+function renderPlayerVoteSection(c: CaseData, playerVote: Guess | null): string {
+  const fp  = c.first_party  ?? 'First Party';
+  const sp  = c.second_party ?? 'Second Party';
+  const fpl = c.first_party_label  ?? 'Petitioner';
+  const spl = c.second_party_label ?? 'Respondent';
+
+  const btnCls = (side: 'first' | 'second') => {
+    if (playerVote !== side) return 'bg-white text-navy border-stone-200 hover:border-navy/50';
+    return side === 'first' ? 'bg-navy text-white border-navy' : 'bg-gold text-white border-gold';
+  };
+
+  return `
+    <div class="mt-5 pt-4 border-t border-stone-100">
+      <p class="text-xs uppercase tracking-widest text-stone-400 mb-3">How would YOU have voted?</p>
+      <div class="grid grid-cols-2 gap-3">
+        <button data-action="player-vote" data-side="first"
+          class="rounded-lg p-3 text-center border transition-all duration-150 cursor-pointer ${btnCls('first')}">
+          <div class="text-xs uppercase tracking-wide opacity-60 mb-1">${fpl}</div>
+          <div class="font-serif font-bold text-sm leading-tight">${fp}</div>
+        </button>
+        <button data-action="player-vote" data-side="second"
+          class="rounded-lg p-3 text-center border transition-all duration-150 cursor-pointer ${btnCls('second')}">
+          <div class="text-xs uppercase tracking-wide opacity-60 mb-1">${spl}</div>
+          <div class="font-serif font-bold text-sm leading-tight">${sp}</div>
+        </button>
+      </div>
+    </div>`;
+}
+
+// ─── Case card ───────────────────────────────────────────────────────────────
+
 const JURISDICTION_TOOLTIPS: Record<string, string> = {
-  'Writ of certiorari':  'The Supreme Court chose to hear this case at its own discretion. At least four justices must agree to grant the petition.',
-  'Appeal':              'A lower court\'s decision was challenged and the Supreme Court was obligated to hear it.',
+  'Writ of certiorari':    'The Supreme Court chose to hear this case at its own discretion. At least four justices must agree to grant the petition.',
+  'Appeal':                'A lower court\'s decision was challenged and the Supreme Court was obligated to hear it.',
   'Original jurisdiction': 'The case was filed directly in the Supreme Court without going through lower courts, typically for disputes between states.',
-  'Other':               'The case reached the Supreme Court through an alternative procedural route.',
+  'Other':                 'The case reached the Supreme Court through an alternative procedural route.',
 };
 
-function renderCaseCard(c: CaseData, showVotes = false): string {
+function renderCaseCard(c: CaseData): string {
   const jurisdiction = c.manner_of_jurisdiction ?? '';
-  const facts = highlightTerms(c.facts_of_the_case ?? '<em>No background available.</em>');
+  const facts    = highlightTerms(c.facts_of_the_case ?? '<em>No background available.</em>');
   const question = highlightTerms(c.question ?? '<em>No question available.</em>');
 
   const jTooltip = JURISDICTION_TOOLTIPS[jurisdiction];
@@ -269,53 +380,30 @@ function renderCaseCard(c: CaseData, showVotes = false): string {
     ? `<span class="term-tip" data-def="${jTooltip.replace(/"/g, '&quot;')}">${jurisdiction}</span>`
     : jurisdiction;
 
+  const year = c.oyez_url ? c.oyez_url.replace(/\/$/, '').split('/').slice(-2, -1)[0] : null;
+
   return `
-    <div class="bg-white rounded-lg shadow-sm border border-stone-100 p-6 mb-4 fade-up">
+    <div class="bg-white rounded-lg shadow-sm border border-stone-100 p-6 mb-4">
+      ${year ? `<p class="text-base uppercase tracking-widest text-stone-400 mb-2">${year}</p>` : ''}
       <h2 class="text-3xl font-serif font-bold text-navy mb-5 leading-snug">${c.name ?? 'Unknown Case'}</h2>
       ${jurisdiction ? `
       <div class="mb-5">
         <p class="text-xs uppercase tracking-widest text-stone-400 mb-1">Jurisdiction</p>
         <p class="text-sm text-stone-600">${jurisdictionValue}</p>
       </div>` : ''}
-
       <div class="mb-5">
         <p class="text-xs uppercase tracking-widest text-stone-400 mb-2">Background</p>
         <div class="text-stone-600 text-sm leading-relaxed case-content">${facts}</div>
       </div>
-
       <div>
         <p class="text-xs uppercase tracking-widest text-stone-400 mb-2">The Question</p>
         <div class="text-stone-600 text-sm leading-relaxed case-content">${question}</div>
       </div>
-      ${renderJustices(c, showVotes)}
     </div>
   `;
 }
 
-function renderPartyButtons(c: CaseData): string {
-  const fp  = c.first_party  ?? 'First Party';
-  const sp  = c.second_party ?? 'Second Party';
-  const fpl = c.first_party_label  ?? 'Petitioner';
-  const spl = c.second_party_label ?? 'Respondent';
-
-  return `
-    <p class="text-center text-xs uppercase tracking-widest text-stone-400 mb-3">Who prevailed?</p>
-    <div class="grid grid-cols-2 gap-3 fade-up">
-      <button data-action="guess" data-side="first"
-        class="bg-navy text-white rounded-lg p-4 text-center
-               hover:bg-navy/90 active:scale-[0.97] transition-all duration-150 cursor-pointer">
-        <div class="text-xs uppercase tracking-wide opacity-60 mb-1">${fpl}</div>
-        <div class="font-serif font-bold text-base leading-tight">${fp}</div>
-      </button>
-      <button data-action="guess" data-side="second"
-        class="bg-navy text-white rounded-lg p-4 text-center
-               hover:bg-navy/90 active:scale-[0.97] transition-all duration-150 cursor-pointer">
-        <div class="text-xs uppercase tracking-wide opacity-60 mb-1">${spl}</div>
-        <div class="font-serif font-bold text-base leading-tight">${sp}</div>
-      </button>
-    </div>
-  `;
-}
+// ─── Vote bar ─────────────────────────────────────────────────────────────────
 
 function renderVoteBar(state: AppState): string {
   const vc = state.voteCounts;
@@ -323,54 +411,76 @@ function renderVoteBar(state: AppState): string {
   const c = state.cases[state.currentIndex];
   const total = vc.first + vc.second;
   if (total === 0) return '';
-  const firstPct  = Math.round((vc.first  / total) * 100);
+  const firstPct  = Math.round((vc.first / total) * 100);
   const secondPct = 100 - firstPct;
   const fp = c.first_party  ?? 'First Party';
   const sp = c.second_party ?? 'Second Party';
   return `
-    <div class="mt-4 fade-up">
-      <p class="text-xs uppercase tracking-widest text-stone-400 mb-2">How others voted <span class="normal-case">(${total.toLocaleString()} ${total === 1 ? 'player' : 'players'})</span></p>
-      <div class="flex rounded-full overflow-hidden h-5 text-[11px] font-semibold">
+    <div class="bg-white rounded-lg shadow-sm border border-stone-100 p-6 mb-4 fade-up">
+      <p class="text-xs uppercase tracking-widest text-stone-400 mb-3">How others would've voted <span class="normal-case font-medium text-stone-500">(${total.toLocaleString()} ${total === 1 ? 'player' : 'players'})</span></p>
+      <div class="flex rounded-full overflow-hidden h-7 text-sm font-semibold mb-2">
         <div class="flex items-center justify-center bg-navy text-white transition-all"
              style="width:${firstPct}%">${firstPct > 12 ? firstPct + '%' : ''}</div>
-        <div class="flex items-center justify-center bg-stone-200 text-stone-600 transition-all"
+        <div class="flex items-center justify-center bg-gold text-white transition-all"
              style="width:${secondPct}%">${secondPct > 12 ? secondPct + '%' : ''}</div>
       </div>
-      <div class="flex justify-between text-[11px] text-stone-400 mt-1">
+      <div class="flex justify-between text-xs text-stone-500 font-serif font-semibold">
         <span>${fp} — ${firstPct}%</span>
         <span>${secondPct}% — ${sp}</span>
       </div>
     </div>`;
 }
 
-function renderRevealed(state: AppState): string {
-  const c = state.cases[state.currentIndex];
-  const guess = state.guesses[state.currentIndex];
-  const correct = guess === c.winner;
-  const winnerName = c.winner === 'first' ? c.first_party : c.second_party;
-  const loserName  = c.winner === 'first' ? c.second_party : c.first_party;
+// ─── Revealed ────────────────────────────────────────────────────────────────
 
-  const resultClass = correct ? 'result-correct' : 'result-wrong';
-  const icon     = correct ? '✓' : '✗';
-  const headline = correct ? 'Correct!' : 'Not quite.';
+function renderRevealed(state: AppState): string {
+  const c      = state.cases[state.currentIndex];
+  const jg     = state.justiceGuesses[state.currentIndex] ?? {};
+  const pv     = state.playerVote[state.currentIndex];
+  const winner = c.winner as 'first' | 'second' | null;
+
+  // Compute justice score
+  const votes = c.decisions[0]?.votes ?? [];
+  let correct = 0;
+  let total   = 0;
+  for (const v of votes) {
+    const name   = v.name ?? '';
+    const guess  = jg[name];
+    const actual = winner ? justiceVoteSide(v.vote ?? '', winner) : null;
+    if (guess && actual) { total++; if (guess === actual) correct++; }
+  }
+
+  const allCorrect = total > 0 && correct === total;
+  const mostCorrect = correct > total / 2;
+  const icon     = allCorrect ? '🎯' : mostCorrect ? '⚖️' : '📚';
+  const headline = allCorrect ? 'Perfect score!' : `${correct} of ${total} justices correct`;
+  const resultClass = mostCorrect ? 'result-correct' : 'result-wrong';
+
+  const winnerName = winner === 'first' ? c.first_party : c.second_party;
+
+  const playerParty = pv === 'first' ? c.first_party : pv === 'second' ? c.second_party : null;
+  const playerCorrect = pv && winner && pv === winner;
+  const playerLine = pv && playerParty
+    ? `<p class="text-sm mt-2">You would've voted for <strong>${playerParty}</strong> — ${playerCorrect ? 'the winning side.' : 'the dissenting side.'}</p>`
+    : '';
 
   const conclusionHtml = c.conclusion
     ? `<div class="text-sm leading-relaxed case-content mt-3 pt-3 border-t border-current/20 opacity-80">${highlightTerms(c.conclusion)}</div>`
     : '';
 
   return `
-    ${renderCaseCard(c, true)}
+    ${renderCaseCard(c)}
+    ${renderJustices(c, jg)}
     <div class="rounded-lg border p-4 mb-4 fade-up ${resultClass}">
       <div class="flex items-center gap-2 mb-1">
-        <span class="font-bold text-lg">${icon}</span>
+        <span class="text-lg">${icon}</span>
         <span class="font-serif font-bold text-lg">${headline}</span>
       </div>
-      <p class="text-sm">
-        <strong>${winnerName}</strong> prevailed over <strong>${loserName}</strong>.
-      </p>
+      <p class="text-sm"><strong>${winnerName}</strong> prevailed.</p>
+      ${playerLine}
       ${conclusionHtml}
-      ${renderVoteBar(state)}
     </div>
+    ${renderVoteBar(state)}
     ${c.oyez_url ? `
       <a href="${c.oyez_url}" target="_blank" rel="noopener noreferrer"
          class="flex items-center justify-center gap-1.5 text-xs text-stone-400 hover:text-navy transition-colors mt-2 fade-up">
@@ -380,13 +490,43 @@ function renderRevealed(state: AppState): string {
   `;
 }
 
+// ─── Main render ─────────────────────────────────────────────────────────────
 
 function render(state: AppState): void {
+  const scrollY = window.scrollY;
   const app = document.getElementById('app')!;
-  const body =
-    state.phase === 'revealed' ? renderRevealed(state) :
-                                 renderCaseCard(state.cases[state.currentIndex]) +
-                                 renderPartyButtons(state.cases[state.currentIndex]);
+  const c   = state.cases[state.currentIndex];
+  const jg  = state.justiceGuesses[state.currentIndex] ?? {};
+  const pv  = state.playerVote[state.currentIndex];
+
+  let body: string;
+  if (state.phase === 'revealed') {
+    body = renderRevealed(state);
+  } else {
+    const votes = (c.decisions[0]?.votes ?? []).filter(v => v.vote?.toLowerCase() !== 'none');
+    const allJusticesGuessed = votes.length > 0 && votes.every(v => v.name && jg[v.name] !== undefined);
+    const allGuessed = allJusticesGuessed && pv !== null;
+
+    const submitBtn = allGuessed
+      ? `<button data-action="submit"
+           class="w-full bg-navy text-white rounded-lg py-3 font-serif font-bold text-base mt-5
+                  hover:bg-navy/90 active:scale-[0.97] transition-all cursor-pointer">
+           Submit Predictions
+         </button>`
+      : `<button disabled
+           class="w-full bg-stone-100 text-stone-400 rounded-lg py-3 font-serif font-bold text-base mt-5 cursor-not-allowed">
+           ${!allJusticesGuessed ? 'Predict all justices to submit' : 'Choose your own vote to submit'}
+         </button>`;
+
+    body = `
+      ${renderCaseCard(c)}
+      <div class="bg-white rounded-lg shadow-sm border border-stone-100 p-6 mb-4">
+        ${renderJusticeVoting(c, jg)}
+        ${renderPlayerVoteSection(c, pv)}
+        ${submitBtn}
+      </div>
+    `;
+  }
 
   app.innerHTML = `
     <div class="max-w-3xl mx-auto px-4 py-8 pb-4">
@@ -402,6 +542,7 @@ function render(state: AppState): void {
       <p class="mt-1">© 2026 Funplings</p>
     </footer>
   `;
+  window.scrollTo(0, scrollY);
 }
 
 // ─── API ─────────────────────────────────────────────────────────────────────
@@ -417,13 +558,14 @@ async function fetchVoteCounts(docket: string): Promise<VoteCounts> {
 }
 
 async function postGuess(
-  date: string, docket: string, guess: Guess, correct: boolean, elapsed_ms: number,
+  date: string, docket: string, playerVote: Guess | null,
+  justiceCorrect: number, justiceTotal: number, elapsed_ms: number,
 ): Promise<VoteCounts> {
   try {
     const res = await fetch('/api/guess', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ date, docket, guess, correct, elapsed_ms }),
+      body: JSON.stringify({ date, docket, playerVote, justiceCorrect, justiceTotal, elapsed_ms }),
     });
     if (!res.ok) return { first: 0, second: 0 };
     return await res.json() as VoteCounts;
@@ -434,22 +576,19 @@ async function postGuess(
 
 // ─── Events ──────────────────────────────────────────────────────────────────
 
-function handleGuess(state: AppState, side: Guess): AppState {
-  const c = state.cases[state.currentIndex];
-  const correct = side === c.winner;
-  const guesses = [...state.guesses];
-  guesses[state.currentIndex] = side;
-  updateStreak(state.date);
+function handleJusticeGuess(state: AppState, justiceName: string, side: Guess): AppState {
+  const idx = state.currentIndex;
+  const jg  = { ...state.justiceGuesses[idx], [justiceName]: side };
+  const justiceGuesses = [...state.justiceGuesses];
+  justiceGuesses[idx] = jg;
+  return { ...state, justiceGuesses };
+}
 
-  if (correct) spawnConfetti();
-
-  return {
-    ...state,
-    guesses,
-    score: correct ? state.score + 1 : state.score,
-    phase: 'revealed',
-    voteCounts: null,
-  };
+function handlePlayerVote(state: AppState, side: Guess): AppState {
+  const playerVote = [...state.playerVote];
+  // Toggle off if same side tapped again
+  playerVote[state.currentIndex] = playerVote[state.currentIndex] === side ? null : side;
+  return { ...state, playerVote };
 }
 
 // ─── Confetti ─────────────────────────────────────────────────────────────────
@@ -462,9 +601,9 @@ function spawnConfetti(): void {
     el.className = 'confetti-piece';
     el.textContent = EMOJIS[Math.floor(Math.random() * EMOJIS.length)];
     el.style.left = `${Math.random() * 100}vw`;
-    el.style.top = `-${60 + Math.random() * 60}px`;
+    el.style.top  = `-${60 + Math.random() * 60}px`;
     el.style.animationDuration = `${0.8 + Math.random() * 0.8}s`;
-    el.style.animationDelay = `${Math.random() * 0.3}s`;
+    el.style.animationDelay    = `${Math.random() * 0.3}s`;
     el.style.fontSize = `${1 + Math.random() * 1.2}rem`;
     document.body.appendChild(el);
     el.addEventListener('animationend', () => el.remove());
@@ -475,24 +614,24 @@ function spawnConfetti(): void {
 
 function adjustTooltip(el: HTMLElement, tooltipWidth: number): void {
   const rect = el.getBoundingClientRect();
-  const pad = 8;
-  const centerX = rect.left + rect.width / 2;
-  const leftEdge = centerX - tooltipWidth / 2;
+  const pad  = 8;
+  const centerX   = rect.left + rect.width / 2;
+  const leftEdge  = centerX - tooltipWidth / 2;
   const rightEdge = centerX + tooltipWidth / 2;
 
   let correction = 0;
   if (rightEdge > window.innerWidth - pad) correction = -(rightEdge - (window.innerWidth - pad));
-  else if (leftEdge < pad) correction = pad - leftEdge;
+  else if (leftEdge < pad)                 correction = pad - leftEdge;
 
   if (correction !== 0) el.style.setProperty('--tip-x', `${Math.round(correction)}px`);
-  else el.style.removeProperty('--tip-x');
+  else                  el.style.removeProperty('--tip-x');
 }
 
 function setupTooltipListeners(): void {
   const handler = (e: Event) => {
     const target = e.target as Element;
-    const tip = target.closest<HTMLElement>('.term-tip');
-    if (tip) adjustTooltip(tip, 240);
+    const tip  = target.closest<HTMLElement>('.term-tip');
+    if (tip)  adjustTooltip(tip, 240);
     const wrap = target.closest<HTMLElement>('.justice-wrap');
     if (wrap) adjustTooltip(wrap, 220);
   };
@@ -511,7 +650,7 @@ async function init(): Promise<void> {
   justiceData = justices;
   buildJusticeIndex();
 
-  const today = new Date().toISOString().slice(0, 10);
+  const today    = new Date().toISOString().slice(0, 10);
   const dailyKey = getDailyCase(allCases, schedule, today);
   const dailyCases = [allCases[dailyKey]].filter(Boolean);
 
@@ -520,43 +659,74 @@ async function init(): Promise<void> {
 
   if (stored && stored.date === today) {
     state = { ...stored, cases: dailyCases };
-    // Fetch current vote counts for returning visitors already in revealed state
-    if (state.phase === 'revealed' && !state.voteCounts) {
+    if (state.phase === 'revealed') {
+      // Always re-fetch so returning players see live vote counts
       state = { ...state, voteCounts: await fetchVoteCounts(dailyKey) };
+      saveState(state);
     }
   } else {
     state = {
-      date: today,
-      caseKeys: [dailyKey],
-      cases: dailyCases,
-      currentIndex: 0,
-      guesses: new Array<Guess | null>(dailyCases.length).fill(null),
-      score: 0,
-      phase: 'playing',
-      voteCounts: null,
+      date:           today,
+      caseKeys:       [dailyKey],
+      cases:          dailyCases,
+      currentIndex:   0,
+      justiceGuesses: [{}],
+      playerVote:     [null],
+      phase:          'playing',
+      score:          0,
+      voteCounts:     null,
     };
   }
 
   render(state);
   setupTooltipListeners();
 
-  // Event delegation on document
   document.addEventListener('click', (e) => {
     const btn = (e.target as Element).closest<HTMLElement>('[data-action]');
     if (!btn) return;
+    const action = btn.dataset.action;
 
-    if (btn.dataset.action === 'guess') {
-      const side = btn.dataset.side as Guess;
-      state = handleGuess(state, side);
+    if (action === 'justice-guess') {
+      state = handleJusticeGuess(state, btn.dataset.justice ?? '', btn.dataset.side as Guess);
+      saveState(state);
+      render(state);
+      return;
+    }
+
+    if (action === 'player-vote') {
+      state = handlePlayerVote(state, btn.dataset.side as Guess);
+      saveState(state);
+      render(state);
+      return;
+    }
+
+    if (action === 'submit') {
+      const c      = state.cases[state.currentIndex];
+      const jg     = state.justiceGuesses[state.currentIndex] ?? {};
+      const winner = c.winner as 'first' | 'second' | null;
+      const votes  = (c.decisions[0]?.votes ?? []).filter(v => v.vote?.toLowerCase() !== 'none');
+
+      let correct = 0;
+      let total   = 0;
+      for (const v of votes) {
+        const name   = v.name ?? '';
+        const guess  = jg[name];
+        const actual = winner ? justiceVoteSide(v.vote ?? '', winner) : null;
+        if (guess && actual) { total++; if (guess === actual) correct++; }
+      }
+
+      if (total > 0 && correct > total / 2) spawnConfetti();
+      updateStreak(state.date);
+
+      state = { ...state, phase: 'revealed', score: correct, voteCounts: null };
       saveState(state);
       render(state);
 
-      // Fire API in background; update vote counts when it resolves
-      const docket = state.caseKeys[state.currentIndex];
+      // Post to API in background
+      const docket     = state.caseKeys[state.currentIndex];
+      const playerVote = state.playerVote[state.currentIndex];
       const elapsed_ms = Date.now() - loadTime;
-      const guess = state.guesses[state.currentIndex]!;
-      const correct = guess === state.cases[state.currentIndex].winner;
-      postGuess(state.date, docket, side, correct, elapsed_ms).then(voteCounts => {
+      postGuess(state.date, docket, playerVote, correct, total, elapsed_ms).then(voteCounts => {
         state = { ...state, voteCounts };
         saveState(state);
         render(state);
