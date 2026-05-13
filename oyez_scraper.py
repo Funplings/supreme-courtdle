@@ -124,27 +124,70 @@ def determine_winner(winning_party: Optional[str], first_party: Optional[str],
     return None
 
 
-def extract_decisions(raw_decisions: Optional[list]) -> list:
+def parse_votes(raw_decision: dict) -> list:
+    votes = []
+    for v in raw_decision.get("votes") or []:
+        member = v.get("member") or {}
+        thumbnail = member.get("thumbnail") or {}
+        href = thumbnail.get("href")
+        mime = thumbnail.get("mime")
+        name = member.get("name")
+        if name and href:
+            download_image(name, href, mime)
+        votes.append({"name": name, "vote": v.get("vote")})
+    return votes
+
+
+def extract_decisions(raw_decisions: Optional[list],
+                      first_party: Optional[str],
+                      second_party: Optional[str],
+                      winner_hint: Optional[str] = None) -> list:
+    """Parse all Oyez decision objects and return a single-element list containing
+    the most relevant one (the main substantive holding).
+
+    Oyez stores each legal question as a separate decision with its own vote tally.
+    We pick the decision that:
+      1. Has a winning_party matching winner_hint (if provided), else any known winner
+      2. Has the most contested vote split (5-4 beats 9-0)
+    """
     if not raw_decisions:
         return []
-    decisions = []
+
+    candidates = []
     for d in raw_decisions:
-        votes = []
-        for v in d.get("votes") or []:
-            member = v.get("member") or {}
-            thumbnail = member.get("thumbnail") or {}
-            href = thumbnail.get("href")
-            mime = thumbnail.get("mime")
-            name = member.get("name")
-            if name and href:
-                download_image(name, href, mime)
-            votes.append({"name": name, "vote": v.get("vote")})
-        decisions.append({
+        votes = parse_votes(d)
+        wp = d.get("winning_party")
+        winner = determine_winner(wp, first_party, second_party) if wp else None
+        majority_count = sum(
+            1 for v in votes
+            if (v.get("vote") or "").lower()
+            in ("majority", "plurality", "concurrence", "special concurrence")
+        )
+        participating = len([v for v in votes if v.get("vote") and v["vote"].lower() != "none"])
+        split = min(majority_count, participating - majority_count)
+        candidates.append({
             "description": d.get("description"),
-            "winning_party": d.get("winning_party"),
+            "winning_party": wp,
             "votes": votes,
+            "_winner": winner,
+            "_split": split,
         })
-    return decisions
+
+    def rank_key(c: dict) -> tuple:
+        winner_score = 0
+        if c["_winner"] and winner_hint and c["_winner"] == winner_hint:
+            winner_score = 2  # best: matches the known override
+        elif c["_winner"]:
+            winner_score = 1  # good: resolves to some winner
+        return (winner_score, c["_split"])
+
+    ranked = sorted(candidates, key=rank_key, reverse=True)
+    best = ranked[0]
+    return [{
+        "description": best["description"],
+        "winning_party": best["winning_party"],
+        "votes": best["votes"],
+    }]
 
 
 def clean(s: Optional[str]) -> Optional[str]:
@@ -154,10 +197,10 @@ def clean(s: Optional[str]) -> Optional[str]:
     return s.replace("<i>certiorari</i>", "certiorari")
 
 
-def parse_case(data: dict) -> dict:
+def parse_case(data: dict, winner_hint: Optional[str] = None) -> dict:
     first_party = data.get("first_party")
     second_party = data.get("second_party")
-    decisions = extract_decisions(data.get("decisions"))
+    decisions = extract_decisions(data.get("decisions"), first_party, second_party, winner_hint)
 
     winner = None
     for d in decisions:
@@ -227,9 +270,10 @@ def main():
         data = fetch_case(year, case_id)
         if data is None:
             continue
-        parsed = parse_case(data)
-        if schedule_key in WINNER_OVERRIDES:
-            parsed["winner"] = WINNER_OVERRIDES[schedule_key]
+        winner_hint = WINNER_OVERRIDES.get(schedule_key)
+        parsed = parse_case(data, winner_hint)
+        if winner_hint:
+            parsed["winner"] = winner_hint
         results[schedule_key] = parsed
         print(f"  Saved: {parsed.get('name')} (winner: {parsed.get('winner')})")
         time.sleep(0.3)
