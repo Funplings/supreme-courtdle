@@ -168,12 +168,60 @@ function justiceVoteSide(vote: string, winner: 'first' | 'second'): Guess | null
 
 // ─── Rendering ───────────────────────────────────────────────────────────────
 
+let helpOpen = false;
+
 function renderHeader(): string {
   return `
-    <header class="mb-6">
-      <h1 class="text-2xl font-serif font-bold text-navy leading-none">⚖️ supreme-courtdle</h1>
-      <p class="text-xs text-stone-400 tracking-widest uppercase mt-4">Daily Supreme Court Case Quiz</p>
+    <header class="mb-6 flex items-start justify-between">
+      <div>
+        <h1 class="text-2xl font-serif font-bold text-navy leading-none">⚖️ supreme-courtdle</h1>
+        <p class="text-xs text-stone-400 tracking-widest uppercase mt-4">Daily Supreme Court Case Quiz</p>
+      </div>
+      <button data-action="open-help"
+        class="w-8 h-8 rounded-full border-2 border-navy text-navy font-serif font-bold text-base flex items-center justify-center hover:bg-navy hover:text-white transition-colors cursor-pointer flex-shrink-0 mt-1">
+        ?
+      </button>
     </header>
+  `;
+}
+
+function renderHelpModal(): string {
+  if (!helpOpen) return '';
+  return `
+    <div class="fixed inset-0 z-50 flex items-center justify-center p-4">
+      <div data-action="close-help" class="absolute inset-0 bg-black/40"></div>
+      <div class="relative bg-white rounded-xl shadow-xl max-w-md w-full p-6 z-10 max-h-[85vh] overflow-y-auto">
+        <div class="flex items-center justify-between mb-4">
+          <h2 class="text-xl font-serif font-bold text-navy">How to Play</h2>
+          <button data-action="close-help"
+            class="w-8 h-8 rounded-full border border-stone-200 text-stone-400 hover:text-navy hover:border-navy transition-colors text-lg leading-none flex items-center justify-center cursor-pointer">
+            ✕
+          </button>
+        </div>
+        <div class="text-sm text-stone-600 leading-relaxed space-y-4">
+          <p>Each day a landmark <strong>U.S. Supreme Court case</strong> is presented. Your goal is to predict how the case played out.</p>
+          <div>
+            <p class="font-semibold text-navy mb-1">1. Read the case</p>
+            <p>Read the background facts and the legal question the Court had to answer.</p>
+          </div>
+          <div>
+            <p class="font-semibold text-navy mb-1">2. Predict each justice's vote</p>
+            <p>For every justice on the Court, choose which party you think they sided with. All justices must be predicted before you can submit.</p>
+          </div>
+          <div>
+            <p class="font-semibold text-navy mb-1">3. Cast your own vote</p>
+            <p>Choose which side <em>you</em> would have voted for. This is required to submit but doesn't affect your score.</p>
+          </div>
+          <div>
+            <p class="font-semibold text-navy mb-1">4. See the results</p>
+            <p>Your score is how many justices you predicted correctly. Get more than half right and you'll be rewarded with confetti 🎉!</p>
+          </div>
+          <div class="pt-2 border-t border-stone-100">
+            <p class="text-xs text-stone-400">A new case is revealed every day at midnight Eastern time. Hover over highlighted legal terms for definitions.</p>
+          </div>
+        </div>
+      </div>
+    </div>
   `;
 }
 
@@ -193,6 +241,10 @@ const VOTE_STYLE: Record<string, { label: string; ring: string; badge: string }>
   'plurality':           { label: 'Plurality', ring: 'border-sky-400',     badge: 'bg-sky-500'    },
 };
 
+function justiceWikipediaUrl(fullName: string): string {
+  return 'https://en.wikipedia.org/wiki/' + fullName.replace(/,/g, '').replace(/\s+/g, '_');
+}
+
 function buildJusticeTooltip(name: string): string {
   const info = findJustice(name);
   if (!info) return '';
@@ -201,10 +253,17 @@ function buildJusticeTooltip(name: string): string {
   const apptBy = t?.appointed_by ?? (info.appointed_by[0] ?? '');
   const start  = t?.start ?? '';
   const end    = t?.end ?? 'present';
+  const wikiUrl = justiceWikipediaUrl(Object.keys(justiceData).find(k => nameKey(k) === nameKey(name)) ?? name);
   return `<div class="justice-tooltip">
-    <div style="font-weight:600;margin-bottom:3px">${role}</div>
-    <div>Appointed by ${apptBy}</div>
-    <div style="opacity:0.75;font-size:12px;margin-top:2px">${start}–${end}</div>
+    <div class="justice-tooltip-inner">
+      <div style="font-weight:600;margin-bottom:3px">${role}</div>
+      <div>Appointed by ${apptBy}</div>
+      <div style="opacity:0.75;font-size:12px;margin-top:2px">${start}–${end}</div>
+      <a href="${wikiUrl}" target="_blank" rel="noopener noreferrer"
+         style="display:inline-block;margin-top:6px;font-size:11px;color:#C9A84C;text-decoration:underline;">
+        Wikipedia ↗
+      </a>
+    </div>
   </div>`;
 }
 
@@ -244,9 +303,9 @@ function renderJusticeVoting(c: CaseData, justiceGuesses: JusticeGuesses): strin
           </div>
           <div class="flex gap-1.5">
             <button data-action="justice-guess" data-justice="${safe}" data-side="first"
-              class="flex-1 h-full text-base font-serif font-semibold px-2 rounded transition-colors text-center leading-tight ${btnCls('first')}">${fp}</button>
+              class="flex-1 h-full min-h-[3.5rem] text-base font-serif font-semibold px-2 rounded transition-colors text-center leading-tight ${btnCls('first')}">${fp}</button>
             <button data-action="justice-guess" data-justice="${safe}" data-side="second"
-              class="flex-1 h-full text-base font-serif font-semibold px-2 rounded transition-colors text-center leading-tight ${btnCls('second')}">${sp}</button>
+              class="flex-1 h-full min-h-[3.5rem] text-base font-serif font-semibold px-2 rounded transition-colors text-center leading-tight ${btnCls('second')}">${sp}</button>
           </div>
         </div>
       </div>`;
@@ -348,12 +407,12 @@ function renderPlayerVoteSection(c: CaseData, playerVote: Guess | null): string 
       <p class="text-xs uppercase tracking-widest text-stone-400 mb-3">How would YOU have voted?</p>
       <div class="grid grid-cols-2 gap-3">
         <button data-action="player-vote" data-side="first"
-          class="rounded-lg p-3 text-center border transition-all duration-150 cursor-pointer ${btnCls('first')}">
+          class="rounded-lg py-4 px-3 text-center border transition-all duration-150 cursor-pointer ${btnCls('first')}">
           <div class="text-xs uppercase tracking-wide opacity-60 mb-1">${fpl}</div>
           <div class="font-serif font-bold text-sm leading-tight">${fp}</div>
         </button>
         <button data-action="player-vote" data-side="second"
-          class="rounded-lg p-3 text-center border transition-all duration-150 cursor-pointer ${btnCls('second')}">
+          class="rounded-lg py-4 px-3 text-center border transition-all duration-150 cursor-pointer ${btnCls('second')}">
           <div class="text-xs uppercase tracking-wide opacity-60 mb-1">${spl}</div>
           <div class="font-serif font-bold text-sm leading-tight">${sp}</div>
         </button>
@@ -486,7 +545,10 @@ function renderRevealed(state: AppState): string {
          class="flex items-center justify-center gap-1.5 text-xs text-stone-400 hover:text-navy transition-colors mt-2 fade-up">
         View full case on Oyez ↗
       </a>` : ''}
-    <h2 class="text-center text-lg font-serif font-bold text-navy mt-6 fade-up">Come back tomorrow for a new Supreme Court case!</h2>
+    <div class="text-center mt-6 fade-up">
+      <h2 class="text-lg font-serif font-bold text-navy">Come back tomorrow for a new Supreme Court case!</h2>
+      <p class="text-stone-400 text-sm mt-2">Next case in <span id="countdown-timer" class="font-mono font-semibold text-navy"></span></p>
+    </div>
   `;
 }
 
@@ -541,8 +603,10 @@ function render(state: AppState): void {
       <p>Case information sourced from <a href="https://www.oyez.org" target="_blank" rel="noopener noreferrer" class="underline hover:text-navy transition-colors">Oyez</a>, a free law project.</p>
       <p class="mt-1">© 2026 Funplings</p>
     </footer>
+    ${renderHelpModal()}
   `;
   window.scrollTo(0, scrollY);
+  if (state.phase === 'revealed') startCountdown();
 }
 
 // ─── API ─────────────────────────────────────────────────────────────────────
@@ -572,6 +636,39 @@ async function postGuess(
   } catch {
     return { first: 0, second: 0 };
   }
+}
+
+// ─── Countdown ───────────────────────────────────────────────────────────────
+
+let countdownInterval: ReturnType<typeof setInterval> | null = null;
+
+function formatCountdown(): string {
+  const now = new Date();
+  // Find next midnight Eastern by treating Eastern local time as a fake Date,
+  // advancing to the next midnight, then correcting for the timezone offset.
+  const easternNow = new Date(now.toLocaleString('en-US', { timeZone: 'America/New_York' }));
+  const easternMidnight = new Date(easternNow);
+  easternMidnight.setHours(24, 0, 0, 0);
+  // offset = how much Eastern fake-Date differs from real UTC
+  const offsetMs = now.getTime() - easternNow.getTime();
+  const midnight = new Date(easternMidnight.getTime() + offsetMs);
+  const diff = midnight.getTime() - now.getTime();
+  if (diff <= 0) return '00:00:00';
+  const h = Math.floor(diff / 3_600_000);
+  const m = Math.floor((diff % 3_600_000) / 60_000);
+  const s = Math.floor((diff % 60_000) / 1_000);
+  return `${String(h).padStart(2, '0')}:${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+}
+
+function startCountdown(): void {
+  if (countdownInterval) clearInterval(countdownInterval);
+  const tick = () => {
+    const el = document.getElementById('countdown-timer');
+    if (!el) { clearInterval(countdownInterval!); countdownInterval = null; return; }
+    el.textContent = formatCountdown();
+  };
+  tick();
+  countdownInterval = setInterval(tick, 1000);
 }
 
 // ─── Events ──────────────────────────────────────────────────────────────────
@@ -650,7 +747,7 @@ async function init(): Promise<void> {
   justiceData = justices;
   buildJusticeIndex();
 
-  const today    = new Date().toISOString().slice(0, 10);
+  const today    = new Date().toLocaleDateString('en-CA', { timeZone: 'America/New_York' }); // YYYY-MM-DD Eastern
   const dailyKey = getDailyCase(allCases, schedule, today);
   const dailyCases = [allCases[dailyKey]].filter(Boolean);
 
@@ -685,6 +782,18 @@ async function init(): Promise<void> {
     const btn = (e.target as Element).closest<HTMLElement>('[data-action]');
     if (!btn) return;
     const action = btn.dataset.action;
+
+    if (action === 'open-help') {
+      helpOpen = true;
+      render(state);
+      return;
+    }
+
+    if (action === 'close-help') {
+      helpOpen = false;
+      render(state);
+      return;
+    }
 
     if (action === 'justice-guess') {
       state = handleJusticeGuess(state, btn.dataset.justice ?? '', btn.dataset.side as Guess);

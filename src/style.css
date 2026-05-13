@@ -90,27 +90,32 @@
 
 .justice-tooltip {
   position: absolute;
-  bottom: calc(100% + 8px);
+  bottom: 100%;
+  padding-bottom: 8px;
   left: 50%;
   transform: translateX(calc(-50% + var(--tip-x, 0px)));
-  background: #1B2A4A;
   color: #fff;
   font-size: 13px;
   line-height: 1.5;
-  padding: 8px 10px;
-  border-radius: 6px;
-  width: 220px;
-  white-space: normal;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.15s ease;
   z-index: 50;
   font-family: 'Inter', system-ui, sans-serif;
   font-weight: 400;
   text-align: left;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease;
+  width: 220px;
+  white-space: normal;
+}
+
+.justice-tooltip-inner {
+  background: #1B2A4A;
+  padding: 8px 10px;
+  border-radius: 6px;
 }
 
 .justice-wrap:hover .justice-tooltip {
   opacity: 1;
+  pointer-events: auto;
 }
 
