@@ -159,11 +159,13 @@ function loadStoredState(): StoredState | null {
 
 // ─── Helpers ─────────────────────────────────────────────────────────────────
 
-function justiceVoteSide(vote: string, winner: 'first' | 'second'): Guess | null {
+function justiceVoteSide(vote: string, winner: 'first' | 'second', flipped = false): Guess | null {
   const v = vote.toLowerCase();
-  if (['majority', 'concurrence', 'special concurrence', 'plurality'].includes(v)) return winner;
-  if (['dissent', 'minority'].includes(v)) return winner === 'first' ? 'second' : 'first';
-  return null;
+  let side: Guess | null = null;
+  if (['majority', 'concurrence', 'special concurrence', 'plurality'].includes(v)) side = winner;
+  else if (['dissent', 'minority'].includes(v)) side = winner === 'first' ? 'second' : 'first';
+  if (side && flipped) side = side === 'first' ? 'second' : 'first';
+  return side;
 }
 
 // ─── Rendering ───────────────────────────────────────────────────────────────
@@ -331,7 +333,7 @@ function renderJustices(c: CaseData, justiceGuesses: JusticeGuesses): string {
     const src     = justiceImagePath(name);
     const voteKey = (v.vote ?? '').toLowerCase();
     const style   = VOTE_STYLE[voteKey];
-    const actual  = winner ? justiceVoteSide(v.vote ?? '', winner) : null;
+    const actual  = winner ? justiceVoteSide(v.vote ?? '', winner, c.votes_flipped) : null;
     const guess   = justiceGuesses[name];
     const safe    = escAttr(name);
 

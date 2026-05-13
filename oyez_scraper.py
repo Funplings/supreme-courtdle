@@ -26,6 +26,12 @@ WINNER_OVERRIDES: dict = {
     "20-1199": "first",  # SFFA v. Harvard — SFFA (first/petitioner) won
 }
 
+# Cases where Oyez's majority/minority vote labels are inverted.
+# Keys match schedule.json values (bare docket or year/path).
+VOTES_FLIPPED: set = {
+    "08-205",  # Citizens United — Oyez labels Stevens's dissent group as "majority"
+}
+
 
 def resolve_docket(docket: str) -> Optional[tuple[str, str]]:
     """Resolve a bare docket number (e.g. '00-949') to (year, case_id) by probing
@@ -182,6 +188,7 @@ def parse_case(data: dict) -> dict:
         "question": clean(data.get("question")),
         "conclusion": clean(data.get("conclusion")),
         "winner": winner,
+        "votes_flipped": False,
         "decisions": decisions,
     }
 
@@ -230,6 +237,8 @@ def main():
         parsed = parse_case(data)
         if schedule_key in WINNER_OVERRIDES:
             parsed["winner"] = WINNER_OVERRIDES[schedule_key]
+        if schedule_key in VOTES_FLIPPED:
+            parsed["votes_flipped"] = True
         results[schedule_key] = parsed
         print(f"  Saved: {parsed.get('name')} (winner: {parsed.get('winner')})")
         time.sleep(0.3)

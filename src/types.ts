@@ -22,6 +22,7 @@ export interface CaseData {
   question: string | null;
   conclusion: string | null;
   winner: 'first' | 'second' | null;
+  votes_flipped: boolean;
   decisions: Decision[];
 }
 
