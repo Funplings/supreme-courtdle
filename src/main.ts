@@ -1,6 +1,9 @@
 import './style.css';
 import type { AppState, CaseData, Guess, JusticeGuesses, JusticeInfo, VoteCounts } from './types';
 import { getDailyCase, updateStreak } from './game';
+import { inject } from '@vercel/analytics';
+
+inject();
 
 const loadTime = Date.now();
 
