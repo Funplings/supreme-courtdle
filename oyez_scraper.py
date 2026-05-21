@@ -24,6 +24,29 @@ WINNER_OVERRIDES: dict = {
     "19-1392": "first",  # Dobbs v. Jackson Women's Health — Dobbs/Mississippi (first) won
     "20-843":  "first",  # NYSRPA v. Bruen — NYSRPA (first/petitioner) won
     "20-1199": "first",  # SFFA v. Harvard — SFFA (first/petitioner) won
+    "99-8508": "first",  # Kyllo v. United States — Kyllo (first/petitioner) won
+    "00-795":  "second", # Ashcroft v. Free Speech Coalition — Free Speech Coalition (second/respondent) won
+    "01-618":  "second", # Eldred v. Ashcroft — Ashcroft (second/respondent) won
+    "01-6978": "second", # Ewing v. California — California (second/respondent) won
+    "02-241":  "second", # Grutter v. Bollinger — Bollinger/University of Michigan (second/respondent) won
+    "02-1580": "first",  # Vieth v. Jubelirer — Jubelirer/Pennsylvania officials (first/appellants) won
+    "03-5554": "second", # Hiibel v. Sixth Judicial District Court — Nevada court/respondents (second) won
+    "03-633":  "second", # Roper v. Simmons — Simmons (second/respondent) won
+    "04-108":  "second", # Kelo v. New London — New London (second/respondent) won
+    "04-623":  "second", # Gonzales v. Oregon — Oregon (second/respondent) won
+    "04-1067": "second", # Georgia v. Randolph — Randolph (second/respondent) won
+    "05-1074": "second", # Ledbetter v. Goodyear — Goodyear (second/respondent) won
+    "07-21":   "second", # Crawford v. Marion County Election Board — Marion County (second/respondent) won
+    "07-5439": "second", # Baze v. Rees — Rees/Kentucky officials (second/respondent) won
+    "07-542":  "second", # Arizona v. Gant — Gant (second/respondent) won
+    "07-513":  "second", # Herring v. United States — United States (second/respondent) won
+    "09-751":  "second", # Snyder v. Phelps — Phelps (second/respondent) won
+    "08-1448": "second", # Brown v. Entertainment Merchants Association — EMA (second/respondent) won
+    "11-182":  "second", # Arizona v. United States — United States (second/respondent) won
+    "10-1259": "second", # United States v. Jones — Jones (second/respondent) won
+    "10-945":  "second", # Florence v. Board of Chosen Freeholders — Board (second/respondent) won
+    "12-144":  "second", # Hollingsworth v. Perry — Perry (second/respondent) won
+    "11-564":  "second", # Florida v. Jardines — Jardines (second/respondent) won
 }
 
 
@@ -37,7 +60,7 @@ def resolve_docket(docket: str) -> Optional[tuple[str, str]]:
         print(f"  ERROR unexpected docket format: {docket!r}")
         return None
     yy = int(prefix_match.group(1))
-    base_year = 2000 + yy
+    base_year = 1900 + yy if yy >= 90 else 2000 + yy
     for year in range(base_year, base_year + 5):
         url = f"{OYEZ_API_BASE}/{year}/{docket}"
         resp = requests.get(url, headers={"Accept": "application/json"})
@@ -269,6 +292,13 @@ def main():
         print(f"Fetching {year}/{case_id} ...")
         data = fetch_case(year, case_id)
         if data is None:
+            continue
+        decisions = data.get("decisions") or []
+        if not decisions:
+            print(f"  SKIP: {year}/{case_id} has no decisions array")
+            continue
+        if not any(d.get("votes") for d in decisions):
+            print(f"  SKIP: {year}/{case_id} has decisions but no vote data")
             continue
         winner_hint = WINNER_OVERRIDES.get(schedule_key)
         parsed = parse_case(data, winner_hint)
